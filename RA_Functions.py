@@ -27,6 +27,13 @@ import urllib.error
 import json
 import time
 
+import matplotlib.pyplot as mpl
+import numpy as np
+import operator
+from geopy.geocoders import Nominatim
+from scipy import stats
+
+
 
 def importdata():
     print("Importing Data...")
@@ -108,7 +115,7 @@ def generateAutonames(species):
             strain.name.remove("")
 
 
-def codecoords(l):
+def codecoords(l: Location):
     print("coding", l.getString())
     # try:
     # coords=geocoder.geocode(l.getString(),timeout=5)
@@ -183,7 +190,7 @@ def updateGeocoding(species, recodeStable=False):
                     + f"&key={os.environ['GOOGLE_API_KEY']}"
                 )
                 print("Loading data...")
-                data = json.load(urllib.request.urlopen(URL))
+                #data = json.load(urllib.request.urlopen(URL))
                 try:
                     address = data["results"][0]["address_components"]
                 except IndexError:
