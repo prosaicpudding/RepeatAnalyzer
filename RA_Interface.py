@@ -22,9 +22,7 @@ from RA_Functions import *
 from tkinter import *
 import numpy as np
 from mpl_toolkits.basemap import Basemap
-from matplotlib.patches import Polygon
 import matplotlib.pyplot as mpl
-import matplotlib.colors as colors
 import matplotlib.cm as cm
 
 

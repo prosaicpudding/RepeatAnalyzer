@@ -20,6 +20,7 @@
 
 from RA_Interface import *
 from matplotlib import pyplot as plt
+from scipy.cluster.hierarchy import dendrogram
 
 
 # from jellyfish import levenshtein_distance
