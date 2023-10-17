@@ -115,7 +115,7 @@ def codecoords(l):
     URL = (
         "https://maps.googleapis.com/maps/api/geocode/json?address="
         + l.getString().replace(" ", "+")
-        + "&key=AIzaSyA7p1KIlvZU3VupuRgw2S8nTL4iPbH6ikI"
+        + f"&key={os.environ['GOOGLE_API_KEY']"
     )
     print("Loading data...")
     data = json.load(urllib.request.urlopen(URL))
@@ -180,7 +180,7 @@ def updateGeocoding(species, recodeStable=False):
                     + str(l.latitude)
                     + ","
                     + str(l.longitude)
-                    + "&key=AIzaSyA7p1KIlvZU3VupuRgw2S8nTL4iPbH6ikI"
+                    + f"&key={os.environ['GOOGLE_API_KEY']}"
                 )
                 print("Loading data...")
                 data = json.load(urllib.request.urlopen(URL))
