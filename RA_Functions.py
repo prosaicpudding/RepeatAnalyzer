@@ -115,7 +115,7 @@ def codecoords(l):
     URL = (
         "https://maps.googleapis.com/maps/api/geocode/json?address="
         + l.getString().replace(" ", "+")
-        + f"&key={os.environ['GOOGLE_API_KEY']"
+        + f"&key={os.environ['GOOGLE_API_KEY']}"
     )
     print("Loading data...")
     data = json.load(urllib.request.urlopen(URL))
