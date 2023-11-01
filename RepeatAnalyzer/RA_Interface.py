@@ -18,7 +18,7 @@
 #    along with RepeatAnalyzer.  If not, see <http://www.gnu.org/licenses/>.
 
 
-from RA_Functions import *
+from RepeatAnalyzer.RA_Functions import *
 from tkinter import *
 import numpy as np
 from mpl_toolkits.basemap import Basemap

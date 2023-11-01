@@ -17,7 +17,8 @@
 #    You should have received a copy of the GNU General Public License
 #    along with RepeatAnalyzer.  If not, see <http://www.gnu.org/licenses/>.
 
-from RA_DataStructures import *
+from RepeatAnalyzer.RA_DataStructures import Location, Species, Paper, identifystrain, parserepeats
+from RepeatAnalyzer.utils import sanitize, findID
 import os
 import sys
 import pickle
@@ -30,7 +31,6 @@ import time
 import matplotlib.pyplot as mpl
 import numpy as np
 import operator
-from geopy.geocoders import Nominatim
 from scipy import stats
 
 
@@ -115,10 +115,12 @@ def generateAutonames(species):
             strain.name.remove("")
 
 
+
 def codecoords(l: Location):
     print("coding", l.getString())
     # try:
     # coords=geocoder.geocode(l.getString(),timeout=5)
+
     URL = (
         "https://maps.googleapis.com/maps/api/geocode/json?address="
         + l.getString().replace(" ", "+")
@@ -164,72 +166,23 @@ def codecoords(l: Location):
 
 def updateGeocoding(species, recodeStable=False):
     for ID in species.usedStrainIDs:
-        s = getObjectbyID(ID, species.strains)
-        if s == None:
+        strain = getObjectbyID(ID, species.strains)
+        if strain == None:
             continue
-        # geocoder=GoogleV3()
-        i = 0
-        # s.location=[x for x in s.location if x.country!=""]
-        for l in list(s.location):
+        for l in list(strain.location):
             if (l.country == None or l.country == "") and (
                 (l.latitude == None) or (l.longitude == None)
             ):
                 print("Removing blank location")
-                s.location.remove(l)
-        for l in s.location:
-            # code for country names (if entered by coord)
-            if (l.country == "" and l.latitude != None and l.longitude != None) or (
-                l.stable == True and recodeStable == True
-            ):
-                print("coding " + str(l.latitude) + ", " + str(l.longitude))
-                URL = (
-                    "https://maps.googleapis.com/maps/api/geocode/json?latlng="
-                    + str(l.latitude)
-                    + ","
-                    + str(l.longitude)
-                    + f"&key={os.environ['GOOGLE_API_KEY']}"
-                )
-                print("Loading data...")
-                #data = json.load(urllib.request.urlopen(URL))
-                try:
-                    address = data["results"][0]["address_components"]
-                except IndexError:
-                    print("Could not code ", l.getString())
-                    continue
-                added = 0
-                for element in address:
-                    if "country" in element["types"]:
-                        l.country = element["long_name"]
-                        l.ccode = element["short_name"]
-                        added += 1
-                    if "administrative_area_level_1" in element["types"]:
-                        l.province = element["long_name"]
-                        l.pcode = element["short_name"]
-                        added += 1
-                    if "administrative_area_level_2" in element["types"]:
-                        l.city = element["long_name"]
-                        added += 1
-                l.length = added
-                l.stable = True
-                print("\t" + l.getString().encode("utf-8"))
-                # print geocoder.reverse((38.364625, -99.667969),exactly_one=True)
-                print("wait...")
-                time.sleep(2)
+                strain.location.remove(l)
+        for l in strain.location:
+            print("Loading data...")
 
-            # set coords and normalize names
-            if (l.latitude == None) or (l.longitude == None):
-                codecoords(l)
-                print("wait...")
-                time.sleep(2)
+            l.code_coords()
+            print("wait...")
+            time.sleep(.3)
 
-            # populate dummy locations
-            species.addlocationdummies(l.getString())
-
-        s.location = list(set(s.location))
-        # for l in species.dummyLocations:
-        # 	if (l.latitude==None) or (l.longitude==None):
-        # 		codecoords(l)
-        # 		time.sleep(.5)
+        strain.location = list(set(strain.location))
 
 
 # returns a list as a string with sep separators.

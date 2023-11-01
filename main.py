@@ -18,10 +18,12 @@
 #    along with RepeatAnalyzer.  If not, see <http://www.gnu.org/licenses/>.
 
 
-from RA_Interface import *
+from RepeatAnalyzer.RA_Interface import getAllLocations, createMap, deployWindow, sanitize, searchWindow, getGDLocation, searchByLocation, searchByRepeat, searchByStrain, printspeciesdata
+from RepeatAnalyzer.RA_DataStructures import Species, parserepeats, identifystrain
+from RepeatAnalyzer.RA_Functions import importdata, exportdata, exportEditDistanceCSV, exportRepeatCSV, readdatafromfile, updateGeocoding, generateAutonames
 from matplotlib import pyplot as plt
 from scipy.cluster.hierarchy import dendrogram
-
+import os
 
 # from jellyfish import levenshtein_distance
 # import numpy as np

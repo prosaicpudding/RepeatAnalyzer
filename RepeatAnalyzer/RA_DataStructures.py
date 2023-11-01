@@ -18,11 +18,12 @@
 #    along with RepeatAnalyzer.  If not, see <http://www.gnu.org/licenses/>.
 
 
-import re
 import tkinter.messagebox
 
 # from Tkinter import *
 from tkinter.scrolledtext import *
+from RepeatAnalyzer.utils import get_coords_from_location_name, get_location_name_from_coords, sanitize, newID, findID
+import logging
 
 
 class Repeat:
@@ -272,7 +273,7 @@ class Location:
             if self.length > 3:
                 self.length = 3
 
-    def __eq__(self, l):
+    def __eq__(self, l) -> bool:
         if l == None:
             return False
         if l.length == 0:
@@ -283,7 +284,7 @@ class Location:
             and sanitize(self.city) == sanitize(l.city)
         )
 
-    def getList(self):
+    def getList(self) -> list[str]:
         if self.length == 1:
             return [self.country]
         if self.length == 2:
@@ -291,43 +292,56 @@ class Location:
 
         return [self.country, self.province, self.city]
 
-    def getString(self):
+    def getString(self, country_first=True) -> str:
         if self.length == 0:
             return "(" + str(self.latitude) + ", " + str(self.longitude) + ")"
         if self.length == 1:
             return self.country
-        if self.length == 2:
-            return self.country + ", " + self.province
-        return self.country + ", " + self.province + ", " + self.city
+        if country_first:
+            if self.length == 2:
+                return self.country + ", " + self.province
+            return self.country + ", " + self.province + ", " + self.city
+        else:
+            if self.length == 2:
+                return self.province + ", " + self.country
+            return self.city + ", " + self.province + ", " + self.country
 
-    def __hash__(self):
+    def getDict(self) -> dict:
+        return{"country": self.country, "province": self.province, "city": self.city}
+
+    def __hash__(self) -> int:
         return hash(self.getString())
 
+    def __str__(self) -> str:
+        return self.getString()
 
-# This function takes a given IDlist and returns the earliest unused ID,
-# also adding it to the list
-def newID(IDlist):
-    nextID = 0
-    for id in sorted(IDlist):
-        if id == nextID:
-            nextID += 1
-        else:
-            IDlist.add(nextID)
-            return nextID
-    IDlist.add(nextID)
-    return nextID
+    def __repr__(self) -> str:
+        return f"{self.getString()} ({self.latitude}, {self.longitude})"
 
+    def __len__(self) -> int:
+        length = 0
+        if self.country != "":
+            length += 1
+        if self.province != "":
+            length +=1
+        if self.city != "":
+            length += 1
+        return length
 
-# given a single entity name and a list of entities,
-# returns the id of the entity in the list
-def findID(name, list):
-    name = name.strip()
-    for item in list:
-        for next in item.name:
-            if next == name:
-                return item.ID
-    return None
+    def code_coords(self) -> None:
+        logging.info(f"Coding coords for {self.__repr__()}...")
+        levels = 3
+        if self.latitude is None or self.longitude is None:
+            levels = len(self) # Make sure we know if
+            self.latitude, self.longitude = get_coords_from_location_name(self.getString(country_first=False))
 
+        location_dict = get_location_name_from_coords(self.latitude, self.longitude)
+        self.country = location_dict["country"]
+        if levels >= 2:
+            self.province = location_dict["province"]
+        if levels >= 3:
+            self.city = location_dict["city"]
+        logging.info(f"Coded as {self.__repr__()}")
 
 # takes a string of whitespace separated repeats and returns a list of repeat ids
 def parserepeats(string, species):  # returns an array of IDs
@@ -353,19 +367,3 @@ def identifystrain(repeats, species):
         if strain.sequence == repeats:
             return strain.ID
     return None
-
-
-
-def sanitize(string:str) -> str:
-	"""Remove whitespace, punctuation and numbers from the string. Convert it to lower case
-
-	Args:
-		string (str): the string to be sanitized
-
-	Returns:
-		str : the sanitized string
-	"""
-	string = re.sub(r"[^\w]", "", string)
-	string = re.sub(r"[\d_]", "", string)
-	string = string.lower()
-	return string
