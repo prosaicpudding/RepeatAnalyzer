@@ -809,7 +809,7 @@ W	:	TDSSSASGQQQESSVSSQSGQASTSS-QSR-
 		Mexico/Tlapacoyan/ - (T, C, B2, C2) 	:	T  C  B  B  C  C 	:	Mexico, Tlapacoyan
 		Mexico/Yucatan/G - (T, C, B2,C, B, π) 	:	T  C  B  B  C  B  π 	:	Mexico, Yucatan
 		Nigeria/Zaria/ - (54, 55, F) 	:	54 55 F 	:	Nigeria, Zaria
-		Puerto Rico/Puerto Rico/ C - (E, ϕ5) 	:	E  ϕ  ϕ  ϕ  ϕ  ϕ 	:	Puerto Rico, Puerto Rico
+		Puerto Rico/Puerto Rico/ C - (E, ϕ5) 	:	E  ϕ  ϕ  ϕ  ϕ  ϕ 	:	Puerto Rico
 		Republic of the Philippines/Cebu/ E - (46, 88,46) 	:	46 88 46	:	Republic of the Philippines, Cebu
 		Republic of the Philippines/Cebu/K-(107, M, 107, M2) 	:	107 M  107 M  M 	:	Republic of the Philippines, Cebu
 		Republic of the Philippines/Cebu/D - (462) 	:	46 46	:	Republic of the Philippines, Cebu

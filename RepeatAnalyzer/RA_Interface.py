@@ -24,6 +24,10 @@ import numpy as np
 from mpl_toolkits.basemap import Basemap
 import matplotlib.pyplot as mpl
 import matplotlib.cm as cm
+from tkinter.scrolledtext import ScrolledText
+import math
+from tkinter import Scrollbar, RIGHT, Y, BOTH, LEFT, END
+from matplotlib.collections import LineCollection
 
 
 # sets the window title to the appropriate data
@@ -1383,13 +1387,13 @@ def createMap(
             for id in scoords[coords]:
                 cl.append(colors[sIDs.index(id)])
             draw_pie(
-                sax,
-                [1.0 / len(cl)] * len(cl),
-                x,
-                y,
-                (1200 * sizemod) / scope,
-                cl,
-                "#303030",
+                ax=sax,
+                ratios=[1.0 / len(cl)] * len(cl),
+                X=x,
+                Y=y,
+                size=(1200 * sizemod) / scope,
+                colors=cl,
+                borderColor="#303030",
             )
 
     if rIDs != []:
@@ -1409,13 +1413,13 @@ def createMap(
             for id in rcoords[coords]:
                 cl.append(colors[rIDs.index(id)])
             draw_pie(
-                rax,
-                [1.0 / len(cl)] * len(cl),
-                x,
-                y,
-                (240 * sizemod) / scope,
-                cl,
-                "#000000",
+                ax=rax,
+                ratios=[1.0 / len(cl)] * len(cl),
+                X=x,
+                Y=y,
+                size=(240 * sizemod) / scope,
+                colors=cl,
+                borderColor="#000000",
             )
 
     mpl.rc("font", family="Arial")
