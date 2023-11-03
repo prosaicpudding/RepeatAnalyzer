@@ -17,8 +17,11 @@ from time import sleep
     ("U. S. A., Kansas", (38.27312, -98.5821872)),
     ({"country":"United States", "state":"Washington", 'subdivision': ''},(47.2868352, -120.212613)),
     ({'country': 'South Africa', 'state': 'KwaZulu-Natal', 'subdivision': ''}, (-28.503833, 30.8875009)),
-    ({'subdivision': 'platte', 'state': 'South Dakota', 'country': 'USA'}, (43.38694, -98.84453)),
-    ("Platte, South Dakota, United States", (43.38694, -98.84453))
+    ({'city': 'platte', 'state': 'South Dakota', 'country': 'USA'}, (43.38694, -98.84453)),
+    ("Platte, South Dakota, United States", (43.38694, -98.84453)),
+    ("Batangas, Calabarzon, Philippines", (13.9146826, 121.0867566)),
+    ("Batangas, Philippines", (13.9146826, 121.0867566)),
+
 ])
 def test_get_coords_from_location_name(location_name, expected):
     sleep(0.3)

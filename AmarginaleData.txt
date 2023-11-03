@@ -1,8 +1,8 @@
 Paper:
 Molecular basis for surface antigen size polymorphisms and conservation of a neutralization-sensitive epitope in Anaplasma marginale.
 	Allred DR, McGuire TC, Palmer GH, Leib SR, Harkins TM, McElwain TF, Barbet AF.
-	Proc Natl Acad Sci U S A. 1990 Apr;87(8):3220-4. PMID: 1691504 
-	
+	Proc Natl Acad Sci U S A. 1990 Apr;87(8):3220-4. PMID: 1691504
+
 	Repeats:
 		A : DDSSSASGQQQESSVSSQS-EASTSSQLG-
 		B : ADSSSAGGQQQESSVSSQSDQASTSSQLG-
@@ -14,11 +14,11 @@ Molecular basis for surface antigen size polymorphisms and conservation of a neu
 		Florida	: A B B B B B B B : U. S. A., Florida
 		South Idaho	: D D D D D E : U. S. A., Idaho
 
-Paper:	
+Paper:
 Strain composition of the ehrlichia Anaplasma marginale within persistently infected cattle, a mammalian reservoir for tick transmission.
 	Palmer GH, Rurangirwa FR, McElwain TF.
-	J Clin Microbiol. 2001 Feb;39(2):631-5. PMID: 11158120 
-	
+	J Clin Microbiol. 2001 Feb;39(2):631-5. PMID: 11158120
+
 	Repeats:
 		F : TDSSSASGQQQESSVSSQSGQASTSSQLG—
 		G : DDSSSASGQQQESSVSSQSGQASTSSQSG—
@@ -36,22 +36,22 @@ Strain composition of the ehrlichia Anaplasma marginale within persistently infe
 		Persistent Baker, Oregon : G : U.S.A., Oregon, Baker
 		Acute Baker, Oregon : A F A F H : U.S.A., Oregon, Baker
 		Acute Platte, South Dakota : B B B C : U.S.A., South Dakota, Platte
-		
+
 Paper:
 A msp1alpha polymerase chain reaction assay for specific detection and differentiation of Anaplasma marginale isolates.
 	Lew AE, Bock RE, Minchin CM, Masaka S.
-	Vet Microbiol. 2002 May 24;86(4):325-35. Erratum in: Vet Microbiol 2002 Jul 22;87(4):365-6. PMID: 11955782 
-	
+	Vet Microbiol. 2002 May 24;86(4):325-35. Erratum in: Vet Microbiol 2002 Jul 22;87(4):365-6. PMID: 11955782
+
 	Repeats:
 		Australian type 1 : ADGSSAGDQQQESSVSSQS-GASTSSQSG-
-		
+
 	Strains:
 
 Paper:
 Characterization of Anaplasma marginale isolated from North American bison.
 	De La Fuente J, Golsteyn Thomas EJ, van den Bussche RA, Hamilton RG, Tanaka EE, Druhan SE, Kocan KM.
 	Appl Environ Microbiol. 2003 Aug;69(8):5001-5. PMID: 12902301
-	
+
 	Repeats:
 		K	:	ADGSSAGGQQQESSVSSQSDQASTSS-QLG-
 		L	:	AGSSSADGQQQESSVSSQSDQASTSS-QLG-
@@ -69,19 +69,19 @@ Characterization of Anaplasma marginale isolated from North American bison.
 	Strains:
 		Canadian bison	: D Q Q R : Canada, Saskatchewan
 		U.S. bison		: K B M F W	: U. S. A.
-	
+
 Paper:
 Transmission of Anaplasma marginale by Boophilus microplus: retention of vector competence in the absence of vector-pathogen interaction.
 	Futse JE, Ueti MW, Knowles DP Jr, Palmer GH.
 	J Clin Microbiol. 2003 Aug;41(8):3829-34. PMID: 12904396
-	
+
 	Repeats:
 		Z	:	TDSSSASGQQQESSVSSQSE-ASTSS-QLG
-	
+
 	Strains:
 		Puerto	:	E Z Z Z Z Z	: Puerto Rico
-	
-Paper:	
+
+Paper:
 Genetic diversity and molecular phylogeny of Anaplasma marginale isolates from Minas Gerais, Brazil.
 	de La Fuente J, Passos LM, Van Den Bussche RA, Ribeiro MF, Facury-Filho EJ, Kocan KM.
 	Vet Parasitol. 2004 May 26;121(3-4):307-16. PMID: 15135871
@@ -110,38 +110,38 @@ Stochastic Transmission of Multiple Genotypically Distinct Anaplasma marginale S
 	J Clin Microbiol. 2004 Nov;42(11):5381-4. PMID: 15528749
 
 	Repeats:
-	
+
 	Strains:
 			: E M ϕ	: U. S. A., Kansas
 			: B B B B B	: U. S. A., Kansas
 			: B B B B B	: U. S. A., Kansas
 			: B B B B B B : U. S. A., Kansas
 			: D D D D D D E	: U. S. A., Kansas
-		
+
 Paper:
 Distinctly different msp2 pseudogene repertoires in Anaplasma marginale strains that are capable of superinfection.
 	Rodríguez JL, Palmer GH, Knowles DP Jr, Brayton KA.
 	Gene. 2005 Nov 21;361:127-32. Epub 2005 Oct 3. PMID:16202540
 
 	Repeats:
-	
+
 	Strains:
 		Kansas 2700 : E M ϕ : U. S. A., Kansas
 		Kansas 6192 : B B B B B	: U. S. A., Kansas
 		Kansas 7072 : B B B B B	: U. S. A., Kansas
 		Kansas 9038 : B B B B B B : U. S. A., Kansas
 		Kansas 8416 : D D D D D D E	: U. S. A., Kansas
-		
-Paper:		
+
+Paper:
 Serologic and molecular characterization of Anaplasma species infection in farm animals and ticks from Sicily.
 	de la Fuente J, Torina A, Caracappa S, Tumino G, Furlá R, Almazán C, Kocan KM.
-	Vet Parasitol. 2005 Nov 5;133(4):357-62. PMID: 16043300 
-	
+	Vet Parasitol. 2005 Nov 5;133(4):357-62. PMID: 16043300
+
 	Repeats:
 		5	:	ADSSSASGQQQESSVSSQSD-ASTSSQLG--
 		6	:	ADSSSASGQQQESSVSSHSE-ASTSSQLG--
 		7	:	TDSSSASGQQQESSVSSHSE-ASTSSQLG--
-		
+
 	Strains:
 		Bovine 30 : M M M Q : Italy, Sicily
 		Bovine 31 : M M M Q : Italy, Sicily
@@ -150,12 +150,12 @@ Serologic and molecular characterization of Anaplasma species infection in farm 
 		Bovine 6 : Q M Q Q M : Italy, Sicily
 		Bovine 8 : Q N N N: Italy, Sicily
 		R. turanicus 47 : 6 7 7 7 : Italy, Sicily
-	
-Paper:	
+
+Paper:
 Analysis of world strains of Anaplasma marginale using major surface protein 1a repeat sequences.
 	de la Fuente J, Ruybal P, Mtshali MS, Naranjo V, Shuqing L, Mangold AJ, Rodríguez SD, Jiménez R, Vicente J, Moretta R, Torina A, Almazán C, Mbati PM, de Echaide ST, Farber M, Rosario-Cruz R, Gortazar C, Kocan KM.
-	Vet Microbiol. 2007 Jan 31;119(2-4):382-90. Epub 2006 Nov 2. PMID: 17084044 
-	
+	Vet Microbiol. 2007 Jan 31;119(2-4):382-90. Epub 2006 Nov 2. PMID: 17084044
+
 	Repeats:
 		K	:	ADGSSAGGQQQESSVSSQSDQASTSSQLG--
 		L	:	AGSSSADGQQQESSVSSQSDQASTSSQLG--
@@ -198,7 +198,7 @@ Analysis of world strains of Anaplasma marginale using major surface protein 1a 
 		30	:	ADSSSASGQQQKSSVLSQSSQASTSSQLG--
 		32	:	TDSSSAGGQQQESSVSSQSGQASTSSQLG--
 		47	:	ADSSSAGDQQQESSVSSQSDQASTSSQLG--
-		
+
 	Strains:
 		Virginia	:	A B	:	U. S. A.
 		Washington	:	B B B C	:	U. S. A.
@@ -301,8 +301,8 @@ Analysis of world strains of Anaplasma marginale using major surface protein 1a 
 Paper:
 Prevalence and genetic diversity of Anaplasma marginale strains in cattle in South Africa.
 	Mtshali MS, de la Fuente J, Ruybal P, Kocan KM, Vicente J, Mbati PA, Shkap V, Blouin EF, Mohale NE, Moloi TP, Spickett AM, Latif AA.
-	Zoonoses Public Health. 2007;54(1):23-30. PMID: 17359443 
-	
+	Zoonoses Public Health. 2007;54(1):23-30. PMID: 17359443
+
 	Repeats:
 		A	:	DDSSSASGQQQESSVSSQSE-ASTSSQLG
 		F	:	TDSSSASGQQQESSVSSQSGQASTSSQLG
@@ -329,7 +329,7 @@ Prevalence and genetic diversity of Anaplasma marginale strains in cattle in Sou
 		44	:	TDSSSASAQQQESSVSSQSGQASTSSQSG
 		45	:	TDSSSASGQQQESSVLPQSDQASTSSQLG
 		46	:	TDSSSASGQQQESSVLPQSGQASTSSQLG
-	
+
 	Strains:
 		SA4	:	27 18	:	South Africa
 		SA10	:	33 35 35	:	South Africa
@@ -368,12 +368,12 @@ Anaplasma marginale infection in a Japanese Black cow 13 years after eradication
 
 	Strains:
 		: 72 Is1 81 Is1 M :
-	
+
 Paper:
 Genetic diversity of major surface protein 1a of Anaplasma marginale in beef cattle.
 	Molad T, Fleidrovich L, Mazuz M, Fish L, Leibovitz B, Krigel Y, Shkap V.
-	Vet Microbiol. 2009 Apr 14;136(1-2):54-60. doi: 10.1016/j.vetmic.2008.10.025. Epub 2008 Oct 31. PMID: 19081688 
-	
+	Vet Microbiol. 2009 Apr 14;136(1-2):54-60. doi: 10.1016/j.vetmic.2008.10.025. Epub 2008 Oct 31. PMID: 19081688
+
 	Repeats:
 		Is1	: TDSSSAGDQQQESGVSSQSGQASTSSQLG
 		Is2	: ADSSSASGQQQESGVPSQSGQASTSSQLG
@@ -381,7 +381,7 @@ Genetic diversity of major surface protein 1a of Anaplasma marginale in beef cat
 		Is4	: TDSSSASGQQQESGVSSQSDASTSSQLG
 		Is5	: ADSSSVSGQQQESSVLSQSGQASTSSQLG
 		Is9	: TDSSSASGQQQESSVLSQSSQASTSSQLG
-	
+
 	Strains:
 		Az acute	:	1 F M 3 3	:	Israel
 		OrH acute	:	M F F	:	Israel
@@ -422,7 +422,7 @@ Paper:
 Genetic diversity of Anaplasma marginale in Argentina.
 	Ruybal P, Moretta R, Perez A, Petrigh R, Zimmer P, Alcaraz E, Echaide I, Torioni de Echaide S, Kocan KM, de la Fuente J, Farber M.
 	Vet Parasitol. 2009 May 26;162(1-2):176-80. doi: 10.1016/j.vetpar.2009.02.006. Epub 2009 Feb 12. PMID: 19285808
-	
+
 	Repeats:
 		B	:	ADSSSAGGQQQESSVSSQSDQASTSSQLG--
 		C	:	ADSSSAGGQQQESSVSSQSGQASTSSQLG--
@@ -455,7 +455,7 @@ Genetic diversity of Anaplasma marginale in Argentina.
 		51	:	TDSSSAGDQRQGSGVSSQSGQASTSSQLG--
 		52	:	TDSSSASGQQQVSSVSSQSD-ASTSSQLG--
 		53	:	TDSSSASGQQQESSVLPPSGQASTSSQLG--
-	
+
 	Strains:
 		Entre Rios 1	:	 F M M	:	Argentina, Entre Rios, La Paz
 		Entre Rios 2	:	 F M M	:	Argentina, Entre Rios, La Paz
@@ -485,15 +485,15 @@ Genetic diversity of Anaplasma marginale in Argentina.
 		Corrientes 2 var 2	:	48 11 10	:	Argentina, Corrientes
 		Corrientes 2 var 3	:	 α 49 50 51 52	:	Argentina, Corrientes
 		Corrientes 2 var 4	:	 α β β β β Γ	:	Argentina, Corrientes
-		
+
 Paper:
 Detection of genetic diversity of Anaplasma marginale isolates in Minas Gerais, Brazil.
 	Pohl AE, Cabezas-Cruz A, Ribeiro MF, Silveira JA, Silaghi C, Pfister K, Passos LM.
 	Rev Bras Parasitol Vet. 2013 Jan-Mar;22(1):129-35. PMID: 24252959
-	
+
 	Repeats:
 		72 : ADSSSAGDQQQESSVSSQSGQASTSSQLG
-	
+
 	Strains:
 		Minas-1 :	τ 57 β β γ : Brazil, Minas Gerais
 		Minas-2 :	Is9 24 24 25 31 : Brazil, Minas Gerais
@@ -515,12 +515,12 @@ Detection of genetic diversity of Anaplasma marginale isolates in Minas Gerais, 
 		UFMG-1 :	13 42 13 18 : Brazil, Minas Gerais
 		UFMG-2 :	13 27 27 : Brazil, Minas Gerais
 
-		
+
 Paper:
 Functional and immunological relevance of Anaplasma marginale major surface protein 1a sequence and structural analysis.
 	Cabezas-Cruz A, Passos LM, Lis K, Kenneil R, Valdés JJ, Ferrolho J, Tonk M, Pohl AE, Grubhoffer L, Zweygarth E, Shkap V, Ribeiro MF, Estrada-Peña A, Kocan KM, de la Fuente J.
-	PLoS One. 2013 Jun 11;8(6):e65243. doi: 10.1371/journal.pone.0065243. Print 2013. PMID: 23776456 
-	
+	PLoS One. 2013 Jun 11;8(6):e65243. doi: 10.1371/journal.pone.0065243. Print 2013. PMID: 23776456
+
 	Repeats:
 A	:	DDSSSASGQQQESSVSSQSE-ASTSS-QLG--
 B	:	ADSSSAGGQQQESSVSSQSDQASTSS-QLG-
@@ -787,7 +787,7 @@ W	:	TDSSSASGQQQESSVSSQSGQASTSS-QSR-
 		Italy/Sicily/ G - (M3, Q) 	:	M  M  M  Q 	:	Italy, Sicily
 		Italy/Sicily/ G - (Q, M, Q2, M) 	:	Q  M  Q  Q  M 	:	Italy, Sicily
 		Italy/Sicily/ G - (Q, N3) 	:	Q  N  N  N 	:	Italy, Sicily
-		Japan/Okinawa/ - (80, 73, 81, 73, M) 	:	80 73 81 73 M 	:	Japan, Okinawa, 
+		Japan/Okinawa/ - (80, 73, 81, 73, M) 	:	80 73 81 73 M 	:	Japan, Okinawa,
 		Mexico/ Santa Martha/ - (α, β3, Γ) 	:	α  β  β  Γ  β 	:	Mexico, Santa Martha
 		Mexico/ Tamaulipas/ - (69, 61, 70, 71, 61) 	:	69 61 70 71 61	:	Mexico, Tamaulipas
 		Mexico/Aguascalientes/ E - (4, 9, 10, 11, 9) 	:	4 9 10 11 9	:	Mexico, Aguascalientes
@@ -873,7 +873,7 @@ W	:	TDSSSASGQQQESSVSSQSGQASTSS-QSR-
 		South Africa/WC7/G - (M4) 	:	M  M  M  M 	:	South Africa
 		Spain/Va48/ - (40, 472, 32, C2) 	:	40 47 47 32 C  C 	:	Spain
 		Taiwan/Nantou/ E - (α, β2, Γ, 105) 	:	α  β  β  Γ  105	:	Taiwan, Nantou
-		Taiwan/Taichung/ J - (α, β3, Γ, 105) 	:	α  β  β  β  Γ  105	:	Taiwan, Taichung, 
+		Taiwan/Taichung/ J - (α, β3, Γ, 105) 	:	α  β  β  β  Γ  105	:	Taiwan, Taichung,
 		USA/California/ G - (B2, C) 	:	B  B  C 	:	U. S. A., California
 		USA/Cushing/ G - (L, C, B, C) 	:	L  C  B  C 	:	U. S. A.
 		USA/Cushing2/ G - (K, N2, F, H) 	:	K  N  N  F  H 	:	U. S. A.
@@ -940,11 +940,11 @@ W	:	TDSSSASGQQQESSVSSQSGQASTSS-QSR-
 		Venezuela/Yaracuy/ - (64, 65, D, E) 	:	64 65 D  E 	:	Venezuela, Yaracuy
 		Venezuela/Yaracuy/ - (93, 10, 94, 109, 110) 	:	93 10 94 109 110	:	Venezuela, Yaracuy
 
-Paper:	
+Paper:
 Epidemiology and evolution of the genetic variability of Anaplasma marginale in South Africa.
 	Mutshembele AM, Cabezas-Cruz A, Mtshali MS, Thekisoe OM, Galindo RC, de la Fuente J.
 	Ticks Tick Borne Dis. 2014 Oct;5(6):624-31. doi: 10.1016/j.ttbdis.2014.04.011. Epub 2014 Jul 8. PMID: 25024014
-	
+
 	Repeats:
 		79	:	TDSSSASGQPQESSVLCVSDLSSTSSQLG--
 		82	:	ADSSSASGQQQESSVLSQSDLSSTWSQLG--
@@ -1019,8 +1019,8 @@ Epidemiology and evolution of the genetic variability of Anaplasma marginale in 
 Paper:
 Low genetic diversity associated with low prevalence of Anaplasma marginale in water buffaloes in Marajó Island, Brazil.
 	Silva JB, Fonseca AH, Barbosa JD, Cabezas-Cruz A, de la Fuente J.
-	Ticks Tick Borne Dis. 2014 Oct;5(6):801-4. doi: 10.1016/j.ttbdis.2014.06.003. Epub 2014 Jul 22. PMID: 25108778 
-	
+	Ticks Tick Borne Dis. 2014 Oct;5(6):801-4. doi: 10.1016/j.ttbdis.2014.06.003. Epub 2014 Jul 22. PMID: 25108778
+
 	Repeats:
 		4 : TDSSSASGQQQESSVLSQSGQASTSSQLG
 		162	: TDSSSASGQQQESSVLSQSGQASTSSLLG
@@ -1035,7 +1035,7 @@ Paper:
 High genetic diversity of Anaplasma marginale detected from Philippine cattle.
 	Ybañez AP, Ybañez RH, Claveria FG, Cruz-Flores MJ, Xuenan X, Yokoyama N, Inokuma H.
 	J Vet Med Sci. 2014 Jul;76(7):1009-14. Epub 2014 Apr 9. PMID: 24717413
-	
+
 	Repeats:
 		Ph1	:	ADSSSASGVLSKSDQASTSSQLG
 		Ph2	:	ADSSSAGDRQQESGVSSQSGQASTSSQLG
@@ -1077,66 +1077,66 @@ High genetic diversity of Anaplasma marginale detected from Philippine cattle.
 		Me1	:	ADSSSASGQQQGSSVLSQSGQASTSSQLG
 
 	Strains:
-		:	Ph1 β β Γ β β Γ	:	Phillipines, Calabarzon, Batangas 
-		:	Me1 4 M M 4 4 4	:	Phillipines, Calabarzon, Batangas
-		:	Ph11 Ph11 Ph11 Ph11 M	:	Phillipines, Calabarzon, Batangas
-		:	Ph1 27 27	:	Phillipines, Calabarzon, Batangas
-		:	13 13	:	Phillipines, Calabarzon, Batangas
-		:	13 27	:	Phillipines, Calabarzon, Batangas
-		:	46 F	:	Phillipines, Calabarzon, Batangas
-		:	Me1 4 4 4	:	Phillipines, Calabarzon, Cavite
-		:	Ph11 Ph14 3	:	Phillipines, Calabarzon, Cavite
-		:	Ph13 4 4	:	Phillipines, Calabarzon, Cavite
-		:	Ph16 Ph17 MGl10	:	Phillipines, Calabarzon, Cavite
-		:	Ph15 62	:	Phillipines, Calabarzon, Cavite
-		:	13 13 14 14 13 14 14	:	Phillipines, Central Visayas, Cebu
-		:	Ph4 17 Ph5 Ph6 Ph5 Ph7	:	Phillipines, Central Visayas, Cebu
-		:	13 13 13 14 14	:	Phillipines, Central Visayas, Cebu
-		:	Ph12 M Ph12 M M	:	Phillipines, Central Visayas, Cebu
-		:	Ph21 62 62 61 61	:	Phillipines, Central Visayas, Cebu
-		:	13 13 13 MGl10	:	Phillipines, Central Visayas, Cebu
-		:	Ph9 Is1 Is1 Ph10	:	Phillipines, Central Visayas, Cebu
-		:	13 14 14	:	Phillipines, Central Visayas, Cebu
-		:	13 27 14	:	Phillipines, Central Visayas, Cebu
-		:	13 27 27	:	Phillipines, Central Visayas, Cebu
-		:	21 M M	:	Phillipines, Central Visayas, Cebu
-		:	46 Ph20 46	:	Phillipines, Central Visayas, Cebu
-		:	13 27	:	Phillipines, Central Visayas, Cebu
-		:	13 MGl10	:	Phillipines, Central Visayas, Cebu
-		:	46 46	:	Phillipines, Central Visayas, Cebu
-		:	46 F	:	Phillipines, Central Visayas, Cebu
-		:	14	:	Phillipines, Central Visayas, Cebu
-		:	17	:	Phillipines, Central Visayas, Cebu
-		:	Me1	:	Phillipines, Central Visayas, Cebu
-		:	Ph8	:	Phillipines, Central Visayas, Cebu
-		:	13	:	Phillipines, Central Visayas, Cebu
-		:	Ph4 17 Ph5 Ph7 Ph5 Ph7	:	Phillipines, Western Visayas, Iloilo
-		:	Ph12 M 3 3 M	:	Phillipines, Western Visayas, Iloilo
-		:	Ph4 17 Ph5 Ph5 Ph7	:	Phillipines, Western Visayas, Iloilo
-		:	Me1 4 4 4	:	Phillipines, Western Visayas, Iloilo
-		:	Ph16 Ph17 MGl10	:	Phillipines, Western Visayas, Iloilo
-		:	Ph19 M F	:	Phillipines, Western Visayas, Iloilo
-		:	13 27 13 14	:	Phillipines, Western Visayas, Iloilo
-		:	Me1 4 M M 4 4	:	Phillipines, Negros Island Region, Negros Occidental
-		:	Ph21 62 61 62 61 62	:	Phillipines, Negros Island Region, Negros Occidental
-		:	Me1 4 M M 4	:	Phillipines, Negros Island Region, Negros Occidental
-		:	Ph2 Is1 Is1 Is1	:	Phillipines, Negros Island Region, Negros Occidental
-		:	Ph18 MGl10	:	Phillipines, Negros Island Region, Negros Occidental
-		:	Ph3	:	Phillipines, Negros Island Region, Negros Occidental
-		:	13 14	:	Phillipines, Negros Island Region, Negros Occidental
-		:	Ph4 17 Ph5  Ph7 Ph5 Ph7	:	Phillipines, Negros Island Region, Negros Oriental
-		:	13 27	: Phillipines, Negros Island Region, Negros Oriental	
+		:	Ph1 β β Γ β β Γ	:	Philippines, Calabarzon, Batangas
+		:	Me1 4 M M 4 4 4	:	Philippines, Calabarzon, Batangas
+		:	Ph11 Ph11 Ph11 Ph11 M	:	Philippines, Calabarzon, Batangas
+		:	Ph1 27 27	:	Philippines, Calabarzon, Batangas
+		:	13 13	:	Philippines, Calabarzon, Batangas
+		:	13 27	:	Philippines, Calabarzon, Batangas
+		:	46 F	:	Philippines, Calabarzon, Batangas
+		:	Me1 4 4 4	:	Philippines, Calabarzon, Cavite
+		:	Ph11 Ph14 3	:	Philippines, Calabarzon, Cavite
+		:	Ph13 4 4	:	Philippines, Calabarzon, Cavite
+		:	Ph16 Ph17 MGl10	:	Philippines, Calabarzon, Cavite
+		:	Ph15 62	:	Philippines, Calabarzon, Cavite
+		:	13 13 14 14 13 14 14	:	Philippines, Central Visayas, Cebu
+		:	Ph4 17 Ph5 Ph6 Ph5 Ph7	:	Philippines, Central Visayas, Cebu
+		:	13 13 13 14 14	:	Philippines, Central Visayas, Cebu
+		:	Ph12 M Ph12 M M	:	Philippines, Central Visayas, Cebu
+		:	Ph21 62 62 61 61	:	Philippines, Central Visayas, Cebu
+		:	13 13 13 MGl10	:	Philippines, Central Visayas, Cebu
+		:	Ph9 Is1 Is1 Ph10	:	Philippines, Central Visayas, Cebu
+		:	13 14 14	:	Philippines, Central Visayas, Cebu
+		:	13 27 14	:	Philippines, Central Visayas, Cebu
+		:	13 27 27	:	Philippines, Central Visayas, Cebu
+		:	21 M M	:	Philippines, Central Visayas, Cebu
+		:	46 Ph20 46	:	Philippines, Central Visayas, Cebu
+		:	13 27	:	Philippines, Central Visayas, Cebu
+		:	13 MGl10	:	Philippines, Central Visayas, Cebu
+		:	46 46	:	Philippines, Central Visayas, Cebu
+		:	46 F	:	Philippines, Central Visayas, Cebu
+		:	14	:	Philippines, Central Visayas, Cebu
+		:	17	:	Philippines, Central Visayas, Cebu
+		:	Me1	:	Philippines, Central Visayas, Cebu
+		:	Ph8	:	Philippines, Central Visayas, Cebu
+		:	13	:	Philippines, Central Visayas, Cebu
+		:	Ph4 17 Ph5 Ph7 Ph5 Ph7	:	Philippines, Western Visayas, Iloilo
+		:	Ph12 M 3 3 M	:	Philippines, Western Visayas, Iloilo
+		:	Ph4 17 Ph5 Ph5 Ph7	:	Philippines, Western Visayas, Iloilo
+		:	Me1 4 4 4	:	Philippines, Western Visayas, Iloilo
+		:	Ph16 Ph17 MGl10	:	Philippines, Western Visayas, Iloilo
+		:	Ph19 M F	:	Philippines, Western Visayas, Iloilo
+		:	13 27 13 14	:	Philippines, Western Visayas, Iloilo
+		:	Me1 4 M M 4 4	:	Philippines, Negros Island Region, Negros Occidental
+		:	Ph21 62 61 62 61 62	:	Philippines, Negros Island Region, Negros Occidental
+		:	Me1 4 M M 4	:	Philippines, Negros Island Region, Negros Occidental
+		:	Ph2 Is1 Is1 Is1	:	Philippines, Negros Island Region, Negros Occidental
+		:	Ph18 MGl10	:	Philippines, Negros Island Region, Negros Occidental
+		:	Ph3	:	Philippines, Negros Island Region, Negros Occidental
+		:	13 14	:	Philippines, Negros Island Region, Negros Occidental
+		:	Ph4 17 Ph5  Ph7 Ph5 Ph7	:	Philippines, Negros Island Region, Negros Oriental
+		:	13 27	: Philippines, Negros Island Region, Negros Oriental
 
 Paper:
 Infection of water buffalo in Rio de Janeiro Brazil with Anaplasma marginale strains also reported in cattle.
 	Silva JB, Cabezas-Cruz A, Fonseca AH, Barbosa JD, de la Fuente J.
-	Vet Parasitol. 2014 Oct 15;205(3-4):730-4. doi: 10.1016/j.vetpar.2014.09.009. PMID: 25260335 
-	
+	Vet Parasitol. 2014 Oct 15;205(3-4):730-4. doi: 10.1016/j.vetpar.2014.09.009. PMID: 25260335
+
 	Repeats:
 		163 : VDSSSA-GDQQQESSVSSQSGDSTSSQLG
 		164 : TDSSSA-GDQQQESSVSSQSGDSTSSQLG
 		165 : TDSSSASGQQQESSVLSPSGQASTSSQSG
-	
+
 	Strains:
 		:	τ 10 10 15 10	:	Brazil, Rio de Janeiro		:	KJ626197
 		:	4 10 3	:	Brazil, Rio de Janeiro		:	KJ626198
@@ -1153,36 +1153,36 @@ Infection of water buffalo in Rio de Janeiro Brazil with Anaplasma marginale str
 Paper:
 Genetic diversity and molecular phylogeny of Anaplasma marginale studied longitudinally under natural transmission conditions in Rio de Janeiro, Brazil.
 	Silva JB, Gonçalves LR, Varani Ade M, André MR, Machado RZ.
-	Ticks Tick Borne Dis. 2015 Jun;6(4):499-507. doi: 10.1016/j.ttbdis.2015.04.002. PMID: 25985719 
-	
+	Ticks Tick Borne Dis. 2015 Jun;6(4):499-507. doi: 10.1016/j.ttbdis.2015.04.002. PMID: 25985719
+
 	Repeats:
-		165-2	:	TDSSSASGQQQESSVLSPSGHVRTSSQLG--	
-		166	:	ADSSSGRGQQQESGVLSQSGQASTSSQLG--	
-		167	:	ADSSSASG------VLSQSGEATTSAQLR--	
-		168	:	TDSSSAGDQPQGSGVSSQSGQASTSAQLR--	
-		169	:	TDSSSATDQQQESGVSSQSGQASTSA---VG	
-		170	:	TDSSSASAQQQESSVSSHTD-RSTSSQ--VG	
-		171	:	ADSSSASGQQQESSVLSQSSQASTSSQLR--	
-		172	:	ADSSSAGNQQQESSVLSQSGQASTSSQSG--	
-		173	:	ADSSSAGNQQQESSVSSQSD-ASTSSDYG--	
-		174	:	TDSSSAGDQQQGSGVSSQSGQASTSSQLR--	
-		175	:	TDSSSASGQQQESSVLSQSGHASTSSQLG--	
-		176	:	ADSSSASGQQQESGVLSQSAQASTSSQLG--	
-		177	:	ADSSSASGQQQESSVLSQSDHASTSSQLG--	
-		178	:	DDSSSADDQQQESSVSSQSG-DSTSSQLG--	
-		179	:	TDSSSAGDQQQESSVSSQSG-DSTSSQLG--	
-		180	:	TDSSSAQHQQQESNVSSQTG-NSTSSQLG--	
-		181	:	NDTSSAGHQQQESNVSSQSG-DSTSSQLG--	
-		182	:	TDSSTAGDQQQESSVSSQSG-ASTSSQLG--	
-		183	:	VDSSSAGDQQQESSVSSQSG-DSTSSQLG--	
-		184	:	TDSSSAGDQQQESSVSSQSG-DSTSSQLG--	
-		185	:	TDNSSASGQQQENSVLSQSSQASTSSQLG--	
-		186	:	DDSSSAGNQQQESSVLPQSGQASTSSQLG--	
+		165-2	:	TDSSSASGQQQESSVLSPSGHVRTSSQLG--
+		166	:	ADSSSGRGQQQESGVLSQSGQASTSSQLG--
+		167	:	ADSSSASG------VLSQSGEATTSAQLR--
+		168	:	TDSSSAGDQPQGSGVSSQSGQASTSAQLR--
+		169	:	TDSSSATDQQQESGVSSQSGQASTSA---VG
+		170	:	TDSSSASAQQQESSVSSHTD-RSTSSQ--VG
+		171	:	ADSSSASGQQQESSVLSQSSQASTSSQLR--
+		172	:	ADSSSAGNQQQESSVLSQSGQASTSSQSG--
+		173	:	ADSSSAGNQQQESSVSSQSD-ASTSSDYG--
+		174	:	TDSSSAGDQQQGSGVSSQSGQASTSSQLR--
+		175	:	TDSSSASGQQQESSVLSQSGHASTSSQLG--
+		176	:	ADSSSASGQQQESGVLSQSAQASTSSQLG--
+		177	:	ADSSSASGQQQESSVLSQSDHASTSSQLG--
+		178	:	DDSSSADDQQQESSVSSQSG-DSTSSQLG--
+		179	:	TDSSSAGDQQQESSVSSQSG-DSTSSQLG--
+		180	:	TDSSSAQHQQQESNVSSQTG-NSTSSQLG--
+		181	:	NDTSSAGHQQQESNVSSQSG-DSTSSQLG--
+		182	:	TDSSTAGDQQQESSVSSQSG-ASTSSQLG--
+		183	:	VDSSSAGDQQQESSVSSQSG-DSTSSQLG--
+		184	:	TDSSSAGDQQQESSVSSQSG-DSTSSQLG--
+		185	:	TDNSSASGQQQENSVLSQSSQASTSSQLG--
+		186	:	DDSSSAGNQQQESSVLPQSGQASTSSQLG--
 		rj1	:	YASSQPADSSTASGVLSQRGQASTSSQLR
 		rj2	:	TDSSSAGDQQQGSGVSSQSGQANTSSQLG
 		rj3	:	TDSSSAGDQQQGSGVSSQSGHASTSSQLG
-		rj4	:	AGSSSASGQQQKSSVLSQSGQASTSSQLG 
-		rj5	:	ADSSSARGQQQESGVLSQSGQASTSSQLG 
+		rj4	:	AGSSSASGQQQKSSVLSQSGQASTSSQLG
+		rj5	:	ADSSSARGQQQESGVLSQSGQASTSSQLG
 		rj6	:	CVSSQPADSSSASGVLSQSGEATTSAQLR
 		rj7	:	TDSSSATDQQQESGVSSQSGQASTSAQVG
 		rj8	:	TDSSSASAQQQESSVSSHTDARTSSQVG
@@ -1193,7 +1193,7 @@ Genetic diversity and molecular phylogeny of Anaplasma marginale studied longitu
 		rj13	:	DDSSSAGNQQQESSVSSQSDASTSSQLG
 		rj14	:	NDSSSASGQQQESSVSSQSDASTSSQLG
 
-		
+
 	Strains:
 		Rio1a/E	:	78 24-2 24-2 25 31	:	-22.750000, -43.683333		:	KJ398348
 		Rio1b/E	:	rj1 β rj2 rj3 Γ	:	-22.750000, -43.683333		:	KJ398349
@@ -1245,12 +1245,12 @@ Genetic diversity and molecular phylogeny of Anaplasma marginale studied longitu
 		Rio20a/E	:	4 63 27	:	-22.750000, -43.683333		:	KJ398396
 		Rio20b/E	:	rj9 174 β β 186	:	-22.750000, -43.683333		:	KJ398397
 		Jaboticabal_a	:	α β β Γ	:	-22.750000, -43.683333		:	KJ398398
-		
+
 Paper:
 Association of Anaplasma marginale strain superinfection with infection prevalence within tropical regions.
 	Castañeda-Ortiz EJ1, Ueti MW, Camacho-Nuez M, Mosqueda JJ, Mousel MR, Johnson WC, Palmer GH.
 	PLoS One. 2015 Mar 20;10(3):e0120748. doi: 10.1371/journal.pone.0120748. eCollection 2015. PMID: 25793966
-	
+
 	Repeats:
 		EV1	:	TDSSSASSQQQESSVLSQSDQASTSSQLG
 		EV2	:	TDSSSASGQQQGSSVSSQSGQASTSSQLG
@@ -1464,16 +1464,16 @@ Strains:
 	AmRio1 : 162-3 F 17 F F	: Brazil, Rio de Janeiro	: KM023771
 	AmRio2 : α β β β F	: Brazil, Rio de Janeiro		: KM023772
 
-Paper:		
-Outbreak of Anaplasmosis Associated With the Presence of Different Anaplasma Marginale Strains in Dairy Cattle in the States of São Paulo and Goiás, Brazil 
+Paper:
+Outbreak of Anaplasmosis Associated With the Presence of Different Anaplasma Marginale Strains in Dairy Cattle in the States of São Paulo and Goiás, Brazil
 Machado RZ,da Silva JB, André MR, Gonçalves LR,Matos CA, Obregón D
-Rev Bras Parasitol Vet. Oct-Dec 2015;24(4):438-46. doi: 10.1590/S1984-29612015078. PMID: 26648009 
-	
+Rev Bras Parasitol Vet. Oct-Dec 2015;24(4):438-46. doi: 10.1590/S1984-29612015078. PMID: 26648009
+
 	Repeats:
 		191:TDSSSASGQQQESSVLSPSGQASTSSQSG
 		192:TDSSSASGQQQERSVSSQSDASTSSQLG
 		193:TDSSTASGQQQESSVLSPSGQASTSSQLG
-		 
+
 	Strains:
 		Lins SP/7	:	τ 10 15	:	Brazil, São Paulo, Lins
 		Lins SP/10	:	τ 10 15	:	Brazil, São Paulo, Lins
@@ -1488,33 +1488,33 @@ Rev Bras Parasitol Vet. Oct-Dec 2015;24(4):438-46. doi: 10.1590/S1984-2961201507
 		Lins SP/1453	:	191 13 Γ	:	Brazil, São Paulo, Lins
 		Mambai GO/1017B	:	α β β β Γ	:	Brazil, Goiás, Mambaí
 		Mambai GO/1568B	:	α β β β Γ	:	Brazil, Goiás, Mambaí
-		Mambai GO/1806B	:	E F ϕ F F	:	Brazil, Goiás, Mambaí	
-		
+		Mambai GO/1806B	:	E F ϕ F F	:	Brazil, Goiás, Mambaí
+
 Paper:
 Low genetic diversity of Anaplasma marginale in calves in an endemic area for bovine anaplasmosis in the state of São Paulo, Brazil.
 	da Silva JB, André MR, Machado RZ.
 	Ticks Tick Borne Dis. 2016 Feb;7(1):20-5. doi: 10.1016/j.ttbdis.2015.07.018. PMID: 26318264
-	
+
 	Repeats:
 		190 :	TDSSSAGDQHQGSGVSSQSGQASTSSQLG-
-		
+
 	Strains:
 		:	α β β β Γ	: Brazil, São Paulo
 		:	α β β β Γ	: Brazil, São Paulo
-		:	α β β β Γ	: Brazil, São Paulo	
 		:	α β β β Γ	: Brazil, São Paulo
 		:	α β β β Γ	: Brazil, São Paulo
 		:	α β β β Γ	: Brazil, São Paulo
-		:	α β β β Γ	: Brazil, São Paulo	
+		:	α β β β Γ	: Brazil, São Paulo
+		:	α β β β Γ	: Brazil, São Paulo
 		:	α β β Γ	: Brazil, São Paulo
 		:	α β β 190 Γ	: Brazil, São Paulo
 
-Paper:	
+Paper:
 Prevalence and genetic characterization of Anaplasma marginale in zebu cattle (Bos indicus) and their ticks (Amblyomma variegatum, Rhipicephalus microplus) from Madagascar
-	Pothmann D, Poppert S, Rakotozandrindrainy R, Hogan B, Mastropaolo M, Thiel C, Silaghi C.	
+	Pothmann D, Poppert S, Rakotozandrindrainy R, Hogan B, Mastropaolo M, Thiel C, Silaghi C.
 	Ticks Tick Borne Dis. 2016 Oct;7(6):1116-1123. doi: 10.1016/j.ttbdis.2016.08.013. PMID: 27592064
-	
-	Repeats:		
+
+	Repeats:
 		162-2	 	: TDNSSASGHQQENSVVPPSGGASTSSQLG
 		163-2		: TDSSSASGQQQESSVSSQSGHATTSSLLR
 		164-2		: TDSSSASGQQQESSVSSHSGHATTSSQLG
@@ -1533,7 +1533,7 @@ Prevalence and genetic characterization of Anaplasma marginale in zebu cattle (B
 		177-2		: TDSSSASGHQQESSVLSQSSPANTSSQLR
 		178-2		: TDSSSAGNQQQESSVFSQSDASTSSHLG
 		179-2		: ADSSSAGNQQQESSVSSQSGASTSSKLG
-		
+
 	Strains:
 		:	162-2 163-2 164-2	: Madagascar, Menabe	:	KX395930
 		:	4 165-3 165-3	: Madagascar, Vakinankaratra	:	KX395931
@@ -1545,13 +1545,13 @@ Prevalence and genetic characterization of Anaplasma marginale in zebu cattle (B
 		:	175-2 176-2 177-2 178-2	: Madagascar, Bongolava	:	KX395937
 		:	46 43 25 31	: Madagascar, Sofia	:	KX395938
 		:	179-2 172-2	: Madagascar, Sofia	:	KX395939
-		:	42 25 31	: Madagascar, Sofia	:	KX395940		
-	
-Paper:		
+		:	42 25 31	: Madagascar, Sofia	:	KX395940
+
+Paper:
 	Identification of a Vertically Transmitted Strain From Anaplasma Marginale (UFMG3): Molecular and Phylogenetic Characterization, and Evaluation of Virulence
 	Silvestre BT, Silveira JAG, Meneses RM, Facury-Filho EJ, Carvalho AU, Ribeiro MFB
 	Ticks Tick Borne Dis. 2016 Feb;7(1):80-84. doi: 10.1016/j.ttbdis.2015.09.001. PMID: 26381444
-	
+
 	Repeats:
 		13: 	TDSSSASGQQQESSVLSQSDQASTSSQLG–
 		MGI18:	AESSSASGQQQESSVLSQSDQASTSSQLG–
@@ -1559,14 +1559,14 @@ Paper:
 
 	Strains:
 		UFMG3	:	13 MGI18 MGI18	:	-19.490833, -44.390000	: KF005076
-	
-Paper:	
+
+Paper:
 Low Genetic Diversity of Anaplasma Marginale in Calves in an Endemic Area for Bovine Anaplasmosis in the State of São Paulo, Brazil
 	da Silva JB, André MR, Machado RZ
 	Ticks Tick Borne Dis. 2016 Feb;7(1):20-25. doi: 10.1016/j.ttbdis.2015.07.018. PMID: 26318264
-	
+
 	Repeats:
-		
+
 
 	Strains:
 	SP38	:	α β β β Γ	:	-21.261111, -48.496389
@@ -1579,8 +1579,8 @@ Low Genetic Diversity of Anaplasma Marginale in Calves in an Endemic Area for Bo
 	SP55	:	α β β 	:	-21.261111, -48.496389
 	SP56	:	α β β 190 Γ	:	-21.261111, -48.496389
 
-	
-Paper:	
+
+Paper:
 Molecular identification of Anaplasma marginale in two autochthonous South American wild species revealed an identical new genotype and its phylogenetic relationship with those of bovines
 Guillemi EC, de la Fourniere S, Orozco M, Martinez JP, Correa E, Fernandez J, Arias LL, Paoletta M, Corona B, Pinarello V, Wilkowsky SE, Farber MD
 Parasit Vectors. 2016 May 26;9(1):305. doi: 10.1186/s13071-016-1555-9. PMID: 27229471
@@ -1593,12 +1593,12 @@ Parasit Vectors. 2016 May 26;9(1):305. doi: 10.1186/s13071-016-1555-9. PMID: 272
 	Strains:
 		Oh_N1	:	13 27	: Argentina, Corrientes	: KU879104
 		Tar_F1	:	13 27	:	Argentina, Tucuman	: KU879112
-	
+
 Paper:
 Insight into the genetic diversity of Anaplasma marginale in cattle from ten provinces of China
 	Yang J, Han R, Liu Z, Niu Q, Guan G, Liu G, Luo J, Yin H.
 	Parasit Vectors. 2017 Nov 13;10(1):565. doi: 10.1186/s13071-017-2485-x. PMID: 29132409
-	
+
 	Repeats:
 		13		 : TDSSSASGQQQESSVLSQSDQASTSSQLG
 		14		 : TDSSSASGQQQESSVLSQSGASTSSQLG
@@ -1607,7 +1607,7 @@ Insight into the genetic diversity of Anaplasma marginale in cattle from ten pro
 		27		 : ADSSSASGQQQESSVLSQSDQASTSSQLG
 		37		 : TDSSSASGQQQESSVLSQSGQASTSSQSG
 		72		 : ADSSSAGDQQQESSVSSQSGQASTSSQLG
-		103  	 : ADSSSASGQQQGSSVLSQSGQASTSSQLG 
+		103  	 : ADSSSASGQQQGSSVLSQSGQASTSSQLG
 		154		 : ADSSSASGQQQESSVLSQSDQASTSSQSG
 		C		 : ADSSSAGGQQQESSVSSQSGQASTSSQLG
 		Ch1		 : AYSSSAGDPQQGSGVSSQSGQASTSSQLG
@@ -1642,7 +1642,7 @@ Insight into the genetic diversity of Anaplasma marginale in cattle from ten pro
 		3		 : ADSSSASGQQQESSVLSQSGQASTSSQLG
 		4		 : TDSSSASGQQQESSVLSQSGQASTSSQLG
 		10		 : ADSSSASGQQQESSVLSPSGQASTSSQLG
-		
+
 	Strains:
 		AM1-10a  	:	 Ch1 M					:	 China, Hunan, Yongzhou	:	MF326688
 		AM1-10b  	:	 Ch1 F M M				:	 China, Hunan, Yongzhou	:	MF326689
@@ -1748,7 +1748,7 @@ Insight into the genetic diversity of Anaplasma marginale in cattle from ten pro
 		AM19-9c  	:	 Ph9 Is1 Is1 Is1			:	 China, Guizhou, Rongjiang	:	MF326789
 		AM19-10a 	:	 Ph9 Is1 Is1 Is1			:	 China, Guizhou, Rongjiang		:	MF326790
 
-Paper:	
+Paper:
 Outbreak of Anaplasmosis Associated With Novel Genetic Variants of Anaplasma Marginale in a Dairy Cattle
 Aktas M, Özübek S
 Comp Immunol Microbiol Infect Dis. 2017 Oct;54:20-26. doi: 10.1016/j.cimid.2017.07.008. PMID: 28915997
@@ -1809,12 +1809,12 @@ Strains:
 	No24	:	T B B	:	22.92,-82.09	:	KT121551
 	No25	:	27 13 13 14	:	22.98,-82.09	:	KT121540
 	No26	:	46 27 Cu5 14	:	22.98,-82.09	:	KT121553
-	No27	:	13 13 ϕ ϕ	:	22.98,-82.09	:	KT121555	
-Paper:	
+	No27	:	13 13 ϕ ϕ	:	22.98,-82.09	:	KT121555
+Paper:
 Co-infections with multiple genotypes of Anaplasma marginale in cattle indicate pathogen diversity.
 	Hove P, Chaisi ME, Brayton KA, Ganesan H, Catanese HN, Mtshali MS, Mutshembele AM, Oosthuizen MC, Collins NE.
 	Parasit Vectors. 2018 Jan 3;11(1):5. doi: 10.1186/s13071-017-2595-5. PMID: 29298712
-	
+
 Repeats:
 	UP1 : ADSSSASGQQQESSVPSQSEASTSSQSG
 	UP2 : ADSSSASGQQQESSVPSQSGQASTSSQLG
@@ -1894,7 +1894,7 @@ Strains:
 	GP-K C6A	:	27 13 3 36 38			:	South Africa, Gauteng
 	GP-K C9	:	34 13 37			:	South Africa, Gauteng
 	GP-K C9	:	41 18			:	South Africa, Gauteng
-	GP-K C9	:	41 13 37			:	South Africa, Gauteng	
+	GP-K C9	:	41 13 37			:	South Africa, Gauteng
 	GP-K C9	:	3 4 37			:	South Africa, Gauteng
 	GP-K C9	:	34 4 37 			:	South Africa, Gauteng
 	GP-K C10	:	27 18			:	South Africa, Gauteng
@@ -2079,7 +2079,7 @@ Strains:
 	WC 20	:	27 13 37 		:	South Africa, Western Cape
 	WC 25	:	34 13 37 		:	South Africa, Western Cape
 	WC 25	:	3 4 37 			:	South Africa, Western Cape
-	
+
 Paper:
 Genetic, host and environmental factors associated with a high prevalence of Anaplasma marginale.
 	Jaimes-Dueñez J, Triana-Chávez O, Mejía-Jaramillo AM.
@@ -2156,11 +2156,11 @@ Strains:
 	Cattle_1287	:	201 202 203	:	Columbia, Arauca Department	:	MF771047
 	Cattle_11325	:	198 199 200	:	Columbia, Arauca Department	:	MF771048
 
-	
+
 Paper:
 Molecular survey and genetic characterization of Anaplasma marginale isolates in cattle from two regions of Russia.
 	Fedorina EA, Arkhipova AL, Kosovskiy GY, Kovalchuk SN.
-	Ticks Tick Borne Dis. 2019 Feb;10(2):251-257. doi: 10.1016/j.ttbdis.2018.10.011. Epub 2018 Oct 26. PMID: 30442571 
+	Ticks Tick Borne Dis. 2019 Feb;10(2):251-257. doi: 10.1016/j.ttbdis.2018.10.011. Epub 2018 Oct 26. PMID: 30442571
 
 Repeats:
 	A		:	DDSSSASGQQQESSVSSQSEASTSSQLG
@@ -2173,7 +2173,7 @@ Repeats:
 	ru7		:	ADSSSASGQQQESGLSSQSEASTSSQLG
 	ru7-2	:	TDSSSASGQQQESGLSSQSEASTSSQLG
 	ru8		:	ADSLSAGNQQQESDVSSQSEASTSSQLG
-	
+
 Strains:
 	RM1		:	ru4 ru7								:	Russia, Moscow Oblast	: MG570149
 	RM2		:	ru4 ru7								:	Russia, Moscow Oblast	: MG570150
@@ -2191,15 +2191,15 @@ Strains:
 	RS3		:	ru5 ru6 ru6 ru6 ru6					:	Russia, Saratov Oblast	: MG570162
 	RS4		:	ru5 ru6 ru6 ru6 ru6					:	Russia, Saratov Oblast	: MG570163
 	RS5		:	ru5 ru6 ru6 ru6 ru6 ru6				:	Russia, Saratov Oblast	: MG570164
-	
-Paper:		
+
+Paper:
 Development and Application of a Multiplex TaqMan® Real-Time qPCR Assay for the Simultaneous Detection of Anaplasma Marginale and Theileria Annulata and Molecular Characterization of Anaplasma Marginale From Cattle in Western Cuba
 Díaz-Sánchez AA, Meli ML, Álvarez DO, Fonseca-Rodríguez O, Cabezas-Cruz A, Hofmann-Lehmann R, Corona-González B
 Ticks Tick Borne Dis. 2020 Mar;11(2):101356. doi: 10.1016/j.ttbdis.2019.101356. PMID:31870635
-	
+
 	Repeats:
 		Cu6	:	ADSSSAGGQQQESSVSSQSDQASTSSQSG
-	
+
 	Strains:
 		CuBovRS140 	: M F N	:	20.233882, -76.990982	:	MK809370
 		CuBov09	: T T T T	:	23.028997, -82.187039	:	MK809371
@@ -2210,9 +2210,9 @@ Ticks Tick Borne Dis. 2020 Mar;11(2):101356. doi: 10.1016/j.ttbdis.2019.101356. 
 		CuBov100 	: T B B B M	:	22.909048, -82.020256	:	MK809376
 		CuBov132 	: α β β Γ	:	22.909048, -82.020256	:	MK809377
 		CuBov135	: T B C F	:	22.931056, -82.083517	:	MK809378
-	
+
 Paper:
-	Epidemiology and Genetic Diversity of Anaplasma Marginale in Zamora-Chinchipe, Ecuador	
+	Epidemiology and Genetic Diversity of Anaplasma Marginale in Zamora-Chinchipe, Ecuador
 	Guarnizo TRM, Alvarez DO, Díaz-Sánchez AA, Cabezas-Cruz A, Gutiérrez LZ, Marrero SM, Corona-González B
 	Ticks Tick Borne Dis. 2020 May;11(3):101380. doi: 10.1016/j.ttbdis.2020.101380. PMID: 32001158
 
@@ -2231,7 +2231,7 @@ Paper:
 		Z1	:	α 17 17	:	Ecuador, Zamora-Chinchipe, Zamora	:	MF288041
 		Z11	:	27 13 18	:	Ecuador, Zamora-Chinchipe, Zamora	:	MF288042
 		Z19	:	27 13 18	:	Ecuador, Zamora-Chinchipe, Zamora	:	MF288043
-		Z25	:	27 13 18	:	Ecuador, Zamora-Chinchipe, Zamora	:	MF288044 
+		Z25	:	27 13 18	:	Ecuador, Zamora-Chinchipe, Zamora	:	MF288044
 
-		
+
 Unpublished:
