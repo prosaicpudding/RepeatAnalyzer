@@ -28,6 +28,7 @@ from tkinter.scrolledtext import ScrolledText
 import math
 from tkinter import Scrollbar, RIGHT, Y, BOTH, LEFT, END
 from matplotlib.collections import LineCollection
+import shapefile
 
 
 # sets the window title to the appropriate data
