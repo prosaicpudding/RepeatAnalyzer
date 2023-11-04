@@ -1209,8 +1209,8 @@ def draw_pie(ax, ratios, X, Y, size, colors, borderColor="black"):
         y_start = np.sin(2 * math.pi * start)
 
         # These are the coordinates along the edge of the pie section
-        x_edge = np.cos(np.linspace(2 * math.pi * start, 2 * math.pi * (start + ratio), 10)).tolist()
-        y_edge = np.sin(np.linspace(2 * math.pi * start, 2 * math.pi * (start + ratio), 10)).tolist()
+        x_edge = np.cos(np.linspace(2 * math.pi * start, 2 * math.pi * (start + ratio), 20)).tolist()
+        y_edge = np.sin(np.linspace(2 * math.pi * start, 2 * math.pi * (start + ratio), 20)).tolist()
 
         # Combine the starting point, edge, and the center point to create a closed path
         x = [0] + [x_start] + x_edge + [0]
