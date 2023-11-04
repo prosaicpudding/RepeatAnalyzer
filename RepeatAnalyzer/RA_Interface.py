@@ -18,17 +18,21 @@
 #    along with RepeatAnalyzer.  If not, see <http://www.gnu.org/licenses/>.
 
 
-from RepeatAnalyzer.RA_Functions import *
-from tkinter import *
-import numpy as np
-from mpl_toolkits.basemap import Basemap
-import matplotlib.pyplot as mpl
-import matplotlib.cm as cm
-from tkinter.scrolledtext import ScrolledText
 import math
-from tkinter import Scrollbar, RIGHT, Y, BOTH, LEFT, END
-from matplotlib.collections import LineCollection
+from tkinter import *
+from tkinter import BOTH, END, LEFT, RIGHT, Scrollbar, Y
+from tkinter.scrolledtext import ScrolledText
+
+import matplotlib.cm as cm
+import matplotlib.pyplot as mpl
+import numpy as np
 import shapefile
+from matplotlib.collections import LineCollection
+from matplotlib.path import Path
+from matplotlib.transforms import Affine2D
+from mpl_toolkits.basemap import Basemap
+
+from RepeatAnalyzer.RA_Functions import *
 
 
 # sets the window title to the appropriate data
@@ -1200,15 +1204,23 @@ def draw_pie(ax, ratios, X, Y, size, colors, borderColor="black"):
     start = 0.0
 
     for ratio in ratios:
-        x = [0] + np.cos(
-            np.linspace(2 * math.pi * start, 2 * math.pi * (start + ratio), 30)
-        ).tolist()
-        y = [0] + np.sin(
-            np.linspace(2 * math.pi * start, 2 * math.pi * (start + ratio), 30)
-        ).tolist()
+        # This will create the starting point of the section
+        x_start = np.cos(2 * math.pi * start)
+        y_start = np.sin(2 * math.pi * start)
 
+        # These are the coordinates along the edge of the pie section
+        x_edge = np.cos(np.linspace(2 * math.pi * start, 2 * math.pi * (start + ratio), 10)).tolist()
+        y_edge = np.sin(np.linspace(2 * math.pi * start, 2 * math.pi * (start + ratio), 10)).tolist()
+
+        # Combine the starting point, edge, and the center point to create a closed path
+        x = [0] + [x_start] + x_edge + [0]
+        y = [0] + [y_start] + y_edge + [0]
+
+        # Create the (x, y) pairs for each point
         xy1 = list(zip(x, y))
         xy.append(xy1)
+
+        # Update the start to be the end of the last section
         start += ratio
 
     ax.scatter(
@@ -1221,11 +1233,13 @@ def draw_pie(ax, ratios, X, Y, size, colors, borderColor="black"):
         zorder=2,
         edgecolors=borderColor,
     )
-    for i, xyi in enumerate(xy):
+    for i, verts in enumerate(xy):
+        codes = [Path.MOVETO] + [Path.LINETO]*(len(verts) - 2) + [Path.CLOSEPOLY]
+        path = Path(verts, codes)
         ax.scatter(
-            [X],
-            [Y],
-            marker=(xyi, 0),
+            X,
+            Y,
+            marker=path,
             s=size,
             facecolor=colors[i],
             linewidth=0,
@@ -1351,7 +1365,7 @@ def createMap(
     m.readshapefile("MapData/Admin_0", "countries", linewidth=2, ax=ax)
     m.drawcoastlines(linewidth=1)
     m.drawmapboundary(fill_color="#D3E9F0")
-    m.fillcontinents(color="white", lake_color="#D3E9F0", zorder=0)
+    m.fillcontinents(color="white", lake_color="#D3E9F0")
 
     # plotBorders(m, ax, r"MapData\Admin_1")
     m.readshapefile("MapData/Admin_1", "provinces", linewidth=0.5, ax=ax)
@@ -1376,7 +1390,7 @@ def createMap(
         colors = cm.nipy_spectral(np.linspace(0.05, 0.95, len(sIDs)))
         for i in range(len(snames)):
             m.scatter(
-                0, 0, c=colors[i], marker="o", s=0, label=snames[i]
+                0, 0, color=colors[i], marker="o", s=0, label=snames[i]
             )
 
         for coords in scoords:
@@ -1402,7 +1416,7 @@ def createMap(
         colors = cm.gist_rainbow(np.linspace(0.05, 1, len(rIDs)))
         for i in range(len(rnames)):
             m.scatter(
-                0, 0, c=colors[i], marker="o", s=0, label=rnames[i]
+                0, 0, color=colors[i], marker="o", s=0, label=rnames[i]
             )
 
         for coords in rcoords:

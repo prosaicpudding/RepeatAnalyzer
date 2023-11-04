@@ -17,22 +17,23 @@
 #    You should have received a copy of the GNU General Public License
 #    along with RepeatAnalyzer.  If not, see <http://www.gnu.org/licenses/>.
 
-from RepeatAnalyzer.RA_DataStructures import Location, Species, Paper, identifystrain, parserepeats
-from RepeatAnalyzer.utils import sanitize, findID
-import os
-import sys
-import pickle
-import urllib.request
-import urllib.parse
-import urllib.error
 import json
+import operator
+import os
+import pickle
+import sys
 import time
+import urllib.error
+import urllib.parse
+import urllib.request
 
 import matplotlib.pyplot as mpl
 import numpy as np
-import operator
 from scipy import stats
 
+from RepeatAnalyzer.RA_DataStructures import (Location, Paper, Species,
+                                              identifystrain, parserepeats)
+from RepeatAnalyzer.utils import findID, sanitize
 
 
 def importdata():
@@ -849,8 +850,7 @@ def exportCSV(coords, names, file, species):
 
 def exportRepeatCSV(species, file):
     firstline = "Name, Sequence, Source"
-    with open(file, "w") as csv:
-        csv.write("\ufeff".encode("utf-8"))
+    with open(file, "w", encoding="UTF-8") as csv:
         csv.write(firstline + "\n")
         for repeat in species.repeats:
             csv.write(
