@@ -1117,15 +1117,15 @@ High genetic diversity of Anaplasma marginale detected from Philippine cattle.
 		:	Ph16 Ph17 MGl10	:	Philippines, Western Visayas, Iloilo
 		:	Ph19 M F	:	Philippines, Western Visayas, Iloilo
 		:	13 27 13 14	:	Philippines, Western Visayas, Iloilo
-		:	Me1 4 M M 4 4	:	Philippines, Negros Island Region, Negros Occidental
-		:	Ph21 62 61 62 61 62	:	Philippines, Negros Island Region, Negros Occidental
-		:	Me1 4 M M 4	:	Philippines, Negros Island Region, Negros Occidental
-		:	Ph2 Is1 Is1 Is1	:	Philippines, Negros Island Region, Negros Occidental
-		:	Ph18 MGl10	:	Philippines, Negros Island Region, Negros Occidental
-		:	Ph3	:	Philippines, Negros Island Region, Negros Occidental
-		:	13 14	:	Philippines, Negros Island Region, Negros Occidental
-		:	Ph4 17 Ph5  Ph7 Ph5 Ph7	:	Philippines, Negros Island Region, Negros Oriental
-		:	13 27	: Philippines, Negros Island Region, Negros Oriental
+		:	Me1 4 M M 4 4	:	Philippines, Western Visayas, Negros Occidental
+		:	Ph21 62 61 62 61 62	:	Philippines, Western Visayas, Negros Occidental
+		:	Me1 4 M M 4	:	Philippines, Western Visayas, Negros Occidental
+		:	Ph2 Is1 Is1 Is1	:	Philippines, Western Visayas, Negros Occidental
+		:	Ph18 MGl10	:	Philippines, Western Visayas, Negros Occidental
+		:	Ph3	:	Philippines, Western Visayas, Negros Occidental
+		:	13 14	:	Philippines, Western Visayas, Negros Occidental
+		:	Ph4 17 Ph5  Ph7 Ph5 Ph7	:	Philippines, Central Visayas, Negros Oriental
+		:	13 27	: Philippines, Central Visayas, Negros Oriental
 
 Paper:
 Infection of water buffalo in Rio de Janeiro Brazil with Anaplasma marginale strains also reported in cattle.
@@ -2137,24 +2137,24 @@ Repeats:
 	213	:	TDSSSAGDQQQESSVSSQSGHASTSS-QLG
 
 Strains:
-	Buffaloe_1103	:	180-2 181-2 80 4	:	Columbia, Antioquia Department	:	MF771031
-	Buffaloe_1104	:	4 25 27 27	:	Columbia, Antioquia Department	:	MF771032
-	Buffaloe_1100	:	182-2 183-2 F	:	Columbia, Antioquia Department	:	MF771033
-	Cattle_1376	:	197 M 37	:	Columbia, Antioquia Department	:	MF771034
-	Cattle_1419	:	194 195 196	:	Columbia, Antioquia Department	:	MF771035
-	Cattle_1484	:	191-2 154 13	:	Columbia, Antioquia Department	:	MF771036
-	Cattle_1513	:	200b 27 27-2	:	Columbia, Antioquia Department	:	MF771037
-	Cattle_1528	:	188 189 190-2	:	Columbia, Antioquia Department	:	MF771038
-	Cattle_1587	:	184-2 185-2 186-2 187	:	Columbia, Antioquia Department	:	MF771039
-	Cattle_1610	:	78 25 27	:	Columbia, Antioquia Department	:	MF771040
-	Cattle_1111	:	211 212 213	:	Columbia, Arauca Department	:	MF771041
-	Cattle_1133	:	B 209 210	:	Columbia, Arauca Department	:	MF771042
-	Cattle_1166	:	208 27	:	Columbia, Arauca Department	:	MF771043
-	Cattle_1201	:	M Q 207	:	Columbia, Arauca Department	:	MF771044
-	Cattle_1230	:	206 C H	:	Columbia, Arauca Department	:	MF771045
-	Cattle_1277	:	204 27 205 27	:	Columbia, Arauca Department	:	MF771046
-	Cattle_1287	:	201 202 203	:	Columbia, Arauca Department	:	MF771047
-	Cattle_11325	:	198 199 200	:	Columbia, Arauca Department	:	MF771048
+	Buffaloe_1103	:	180-2 181-2 80 4	:	Columbia, Antioquia 	:	MF771031
+	Buffaloe_1104	:	4 25 27 27	:	Columbia, Antioquia 	:	MF771032
+	Buffaloe_1100	:	182-2 183-2 F	:	Columbia, Antioquia 	:	MF771033
+	Cattle_1376	:	197 M 37	:	Columbia, Antioquia 	:	MF771034
+	Cattle_1419	:	194 195 196	:	Columbia, Antioquia 	:	MF771035
+	Cattle_1484	:	191-2 154 13	:	Columbia, Antioquia 	:	MF771036
+	Cattle_1513	:	200b 27 27-2	:	Columbia, Antioquia 	:	MF771037
+	Cattle_1528	:	188 189 190-2	:	Columbia, Antioquia 	:	MF771038
+	Cattle_1587	:	184-2 185-2 186-2 187	:	Columbia, Antioquia 	:	MF771039
+	Cattle_1610	:	78 25 27	:	Columbia, Antioquia 	:	MF771040
+	Cattle_1111	:	211 212 213	:	Columbia, Arauca 	:	MF771041
+	Cattle_1133	:	B 209 210	:	Columbia, Arauca 	:	MF771042
+	Cattle_1166	:	208 27	:	Columbia, Arauca 	:	MF771043
+	Cattle_1201	:	M Q 207	:	Columbia, Arauca 	:	MF771044
+	Cattle_1230	:	206 C H	:	Columbia, Arauca 	:	MF771045
+	Cattle_1277	:	204 27 205 27	:	Columbia, Arauca 	:	MF771046
+	Cattle_1287	:	201 202 203	:	Columbia, Arauca 	:	MF771047
+	Cattle_11325	:	198 199 200	:	Columbia, Arauca 	:	MF771048
 
 
 Paper:

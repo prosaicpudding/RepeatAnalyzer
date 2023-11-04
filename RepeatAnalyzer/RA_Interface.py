@@ -22,14 +22,15 @@ import math
 from tkinter import *
 from tkinter import BOTH, END, LEFT, RIGHT, Scrollbar, Y
 from tkinter.scrolledtext import ScrolledText
+from typing import Union
 
+import matplotlib
 import matplotlib.cm as cm
 import matplotlib.pyplot as mpl
 import numpy as np
 import shapefile
 from matplotlib.collections import LineCollection
 from matplotlib.path import Path
-from matplotlib.transforms import Affine2D
 from mpl_toolkits.basemap import Basemap
 
 from RepeatAnalyzer.RA_Functions import *
@@ -1196,7 +1197,7 @@ def displaySearchResult(
 # http://www.geophysique.be/2010/11/15/matplotlib-basemap-tutorial-05-adding-some-pie-charts/
 # added colors parameter, fixed plot appearance with 1 and 2 colors
 # plots a pie chart on a given axis of a basemap
-def draw_pie(ax, ratios, X, Y, size, colors, borderColor="black"):
+def draw_pie(ax:matplotlib.axes.Axes, ratios:list[float], X:float, Y:float, size:float, colors:list[Union[str, tuple[float, float, float]]], borderColor:str="black"):
     N = len(ratios)
 
     xy = []

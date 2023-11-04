@@ -1,6 +1,9 @@
-from RepeatAnalyzer.utils import get_coords_from_location_name, get_location_name_from_coords
-import pytest
 from time import sleep
+
+import pytest
+
+from RepeatAnalyzer.utils import (get_coords_from_location_name,
+                                  get_location_name_from_coords)
 
 
 @pytest.mark.parametrize("location_name,expected", [
@@ -21,6 +24,10 @@ from time import sleep
     ("Platte, South Dakota, United States", (43.38694, -98.84453)),
     ("Batangas, Calabarzon, Philippines", (13.9146826, 121.0867566)),
     ("Philippines, Batangas", (13.9146826, 121.0867566)),
+    ("Philippines, Central Visayas, Negros Oriental", (9.75, 123.0)),
+    ("Philippines, Western Visayas, Negros Occidental", (10.416667, 123.0)),
+    ("Antioquia, Columbia", (7.0000085, -75.5000086)),
+    ({"state":"Antioquia", "country":"Columbia"}, (7.0000085, -75.5000086)),
 
 ])
 def test_get_coords_from_location_name(location_name, expected):
