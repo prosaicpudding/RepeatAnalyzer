@@ -1,8 +1,10 @@
-from geopy.geocoders import Nominatim
 import logging
 import re
-from RepeatAnalyzer.constants import version, problem_place_names
 from typing import Union
+
+from geopy.geocoders import Nominatim
+
+from RepeatAnalyzer.constants import problem_place_names, version
 
 logging.basicConfig(format=f'%(asctime)s %(levelname)s:%(message)s', level=logging.INFO)
 
@@ -59,7 +61,7 @@ def replace_words(string:str, replacements:dict[str,str]=problem_place_names) ->
     return string
 
 
-def get_coords_from_location_name(location_name:Union[str,dict]) -> tuple[float, float]:
+def get_coords_from_location_name(location_name:Union[str,dict], verbose:bool=True) -> tuple[float, float]:
     """ Get the coordinates of a location from its name
 
     Args:
@@ -69,8 +71,6 @@ def get_coords_from_location_name(location_name:Union[str,dict]) -> tuple[float,
     Returns:
         tuple[float, float]: the latitude and longitude of the location
     """
-    logging.info(f"Getting coordinates for {location_name}.")
-
     if isinstance(location_name, str):
         location_name = remove_punctuation_except_comma(replace_words(location_name))
     else:
@@ -86,7 +86,7 @@ def get_coords_from_location_name(location_name:Union[str,dict]) -> tuple[float,
 
     return (location.latitude, location.longitude)
 
-def get_location_name_from_coords(latitude:float, longitude:float) -> dict[str]:
+def get_location_name_from_coords(latitude:float, longitude:float, verbose:bool=False) -> dict[str]:
     """ Find a location name from its coordinates
 
     Args:
@@ -97,7 +97,6 @@ def get_location_name_from_coords(latitude:float, longitude:float) -> dict[str]:
         dict[str]: A dictionary containing the location name
             ex. {"country":"USA", "province":"Maine"}
     """
-    logging.info(f"Getting location name for ({latitude}, {longitude})")
     geolocator = Nominatim(user_agent=f"RepeatAnalyzer_{version}", timeout=10)
     location = geolocator.reverse((latitude, longitude), exactly_one=True, language='en')
     if location == None:
@@ -105,7 +104,8 @@ def get_location_name_from_coords(latitude:float, longitude:float) -> dict[str]:
 
     # Accessing the raw JSON data
     address = location.raw['address']
-    logging.info(f"Full result: {address}")
+    if verbose:
+        logging.info(f"Full result: {address}")
 
     # Constructing our standardized dictionary
     address_dict = {
@@ -114,7 +114,7 @@ def get_location_name_from_coords(latitude:float, longitude:float) -> dict[str]:
                                             address.get('village',
                                                         address.get('hamlet',
                                                                     address.get('county', ''))))),
-        "province": address.get('state', address.get('province', '')),
+        "province": address.get('state', address.get('province', address.get('region',''))),
         "country": address.get('country', '')
     }
     return address_dict

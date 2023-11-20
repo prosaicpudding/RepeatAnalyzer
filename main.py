@@ -18,12 +18,22 @@
 #    along with RepeatAnalyzer.  If not, see <http://www.gnu.org/licenses/>.
 
 
-from RepeatAnalyzer.RA_Interface import getAllLocations, createMap, deployWindow, sanitize, searchWindow, getGDLocation, searchByLocation, searchByRepeat, searchByStrain, printspeciesdata
-from RepeatAnalyzer.RA_DataStructures import Species, parserepeats, identifystrain
-from RepeatAnalyzer.RA_Functions import importdata, exportdata, exportEditDistanceCSV, exportRepeatCSV, readdatafromfile, updateGeocoding, generateAutonames
+import os
+
 from matplotlib import pyplot as plt
 from scipy.cluster.hierarchy import dendrogram
-import os
+
+from RepeatAnalyzer.RA_DataStructures import (Species, identifystrain,
+                                              parserepeats)
+from RepeatAnalyzer.RA_Functions import (exportdata, exportEditDistanceCSV,
+                                         exportRepeatCSV, generateAutonames,
+                                         importdata, readdatafromfile,
+                                         updateGeocoding)
+from RepeatAnalyzer.RA_Interface import (createMap, deployWindow,
+                                         getAllLocations, getGDLocation,
+                                         printspeciesdata, sanitize,
+                                         searchByLocation, searchByRepeat,
+                                         searchByStrain, searchWindow)
 
 # from jellyfish import levenshtein_distance
 # import numpy as np
@@ -189,7 +199,7 @@ def menuloop(speciesList, currentSpecies):
             searchWindow(speciesList[currentSpecies])
 
         if command == 10:  # Print summary
-            with open(speciesList[currentSpecies].name + ".txt", "wb") as out:
+            with open(f"{speciesList[currentSpecies].name}.txt", "w", encoding="UTF-8") as out:
                 printspeciesdata(speciesList[currentSpecies], out)
 
             exportRepeatCSV(
