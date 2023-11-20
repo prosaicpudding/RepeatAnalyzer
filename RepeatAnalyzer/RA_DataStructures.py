@@ -18,12 +18,14 @@
 #    along with RepeatAnalyzer.  If not, see <http://www.gnu.org/licenses/>.
 
 
+import logging
 import tkinter.messagebox
-
 # from Tkinter import *
 from tkinter.scrolledtext import *
-from RepeatAnalyzer.utils import get_coords_from_location_name, get_location_name_from_coords, sanitize, newID, findID
-import logging
+
+from RepeatAnalyzer.utils import (findID, get_coords_from_location_name,
+                                  get_location_name_from_coords, newID,
+                                  sanitize)
 
 
 class Repeat:
@@ -292,19 +294,30 @@ class Location:
 
         return [self.country, self.province, self.city]
 
-    def getString(self, country_first=True) -> str:
-        if self.length == 0:
-            return "(" + str(self.latitude) + ", " + str(self.longitude) + ")"
-        if self.length == 1:
-            return self.country
-        if country_first:
-            if self.length == 2:
-                return self.country + ", " + self.province
-            return self.country + ", " + self.province + ", " + self.city
-        else:
-            if self.length == 2:
-                return self.province + ", " + self.country
-            return self.city + ", " + self.province + ", " + self.country
+    def getString(self, country_first=True, coords=False) -> str:
+        # Initialize an empty list to hold the location parts.
+        location_parts = []
+
+        # Add the location parts based on the 'length' attribute.
+        if self.length >= 1:
+            location_parts.append(self.country)
+        if self.length >= 2:
+            location_parts.append(self.province)
+        if self.length == 3:
+            location_parts.append(self.city)
+
+        # Reverse the order if country should not be first.
+        if not country_first:
+            location_parts.reverse()
+
+        # Add the coordinates if requested.
+        if coords:
+            location_parts.append(f"({self.latitude}, {self.longitude})")
+
+        # Join the location parts into a single string.
+        location_str = ', '.join(location_parts)
+
+        return location_str
 
     def getDict(self) -> dict:
         return{"country": self.country, "province": self.province, "city": self.city}
@@ -316,7 +329,7 @@ class Location:
         return self.getString()
 
     def __repr__(self) -> str:
-        return f"{self.getString()} ({self.latitude}, {self.longitude})"
+        return f"{self.getString(coords=True)}"
 
     def __len__(self) -> int:
         length = 0
@@ -336,11 +349,14 @@ class Location:
             self.latitude, self.longitude = get_coords_from_location_name(self.getString(country_first=False))
 
         location_dict = get_location_name_from_coords(self.latitude, self.longitude)
+        logging.info(f"Got {location_dict}")
         self.country = location_dict["country"]
         if levels >= 2:
             self.province = location_dict["province"]
         if levels >= 3:
             self.city = location_dict["city"]
+        #deprecate later:
+        self.length = len(self)
         logging.info(f"Coded as {self.__repr__()}")
 
 # takes a string of whitespace separated repeats and returns a list of repeat ids
