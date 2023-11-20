@@ -355,7 +355,7 @@ class Location:
             self.province = location_dict["province"]
         if levels >= 3:
             self.city = location_dict["city"]
-        #deprecate later:
+        # deprecate in next MR
         self.length = len(self)
         logging.info(f"Coded as {self.__repr__()}")
 

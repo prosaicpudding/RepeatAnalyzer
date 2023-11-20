@@ -4,6 +4,10 @@
 
 * Import code to github and reformat readme
 * Move version log to its own file
+* Convert code to python 3
+* Update Geocoding to using geopy (rather than google maps) for less restrictive rate limits
+* Bugfixes lingering from transition (file encoding, changes to mapping and geocoding)
+* Unit tests for geocoding utils and Location class
 
 ## 2.8
 
