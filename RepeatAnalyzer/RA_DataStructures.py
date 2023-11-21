@@ -255,7 +255,6 @@ class Location:
         self.ccode = ""
         self.latitude = None
         self.longitude = None
-        self.length = 0
         self.stable = False
         if string == "":
             return
@@ -271,14 +270,11 @@ class Location:
                 self.province = list[1].strip()  # the province or region
             if len(list) > 2:
                 self.city = list[2].strip()  # the city, town or county
-            self.length = len(list)
-            if self.length > 3:
-                self.length = 3
 
     def __eq__(self, l) -> bool:
         if l == None:
             return False
-        if l.length == 0:
+        if len(l) == 0:
             return self.latitude == l.latitude and self.longitude == l.longitude
         return (
             sanitize(self.country) == sanitize(l.country)
@@ -287,9 +283,9 @@ class Location:
         )
 
     def getList(self) -> list[str]:
-        if self.length == 1:
+        if len(self) == 1:
             return [self.country]
-        if self.length == 2:
+        if len(self) == 2:
             return [self.country, self.province]
 
         return [self.country, self.province, self.city]
@@ -299,11 +295,11 @@ class Location:
         location_parts = []
 
         # Add the location parts based on the 'length' attribute.
-        if self.length >= 1:
+        if len(self) >= 1:
             location_parts.append(self.country)
-        if self.length >= 2:
+        if len(self) >= 2:
             location_parts.append(self.province)
-        if self.length == 3:
+        if len(self) == 3:
             location_parts.append(self.city)
 
         # Reverse the order if country should not be first.
@@ -355,8 +351,7 @@ class Location:
             self.province = location_dict["province"]
         if levels >= 3:
             self.city = location_dict["city"]
-        # deprecate in next MR
-        self.length = len(self)
+
         logging.info(f"Coded as {self.__repr__()}")
 
 # takes a string of whitespace separated repeats and returns a list of repeat ids

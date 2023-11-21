@@ -153,10 +153,10 @@ def codecoords(l: Location):
             if "country" in element["types"]:
                 l.country = element["long_name"]
                 l.ccode = element["short_name"]
-            if "administrative_area_level_1" in element["types"] and l.length > 1:
+            if "administrative_area_level_1" in element["types"] and len(l) > 1:
                 l.province = element["long_name"]
                 l.pcode = element["short_name"]
-            if "administrative_area_level_2" in element["types"] and l.length == 3:
+            if "administrative_area_level_2" in element["types"] and len(l) == 3:
                 l.city = element["long_name"]
         print("\t" + str(l.latitude) + ", " + str(l.longitude))
         print("\t" + l.getString().encode("utf-8"))
@@ -392,9 +392,9 @@ def getAllLocations(id, type, species, removeImplied=False):
         for l in locs:
             isImplied = False
             for l2 in locs:
-                if l.length < l2.length:
+                if len(l) < len(l2):
                     if l.country == l2.country and (
-                        (l.length == 2 and l.province == l2.province) or l.length == 1
+                        (len(l) == 2 and l.province == l2.province) or len(l) == 1
                     ):
                         isImplied = True
             if isImplied == False:
@@ -414,11 +414,11 @@ def getAllStrainsFrom(locationstring, species):
             if l == loc:
                 res.append(strain)
                 break
-            if loc.length == 1:
+            if len(loc) == 1:
                 if sanitize(l.country) == sanitize(loc.country):
                     res.append(strain)
                     break
-            if loc.length == 2:
+            if len(loc) == 2:
                 if sanitize(l.country) == sanitize(loc.country) and sanitize(
                     l.province
                 ) == sanitize(loc.province):
@@ -1081,17 +1081,17 @@ def getUnique(species, locationstring):
         for strain in species.strains:
             if repeat.ID in strain.sequence:
                 for loc in strain.location:
-                    if location.length == 1:
+                    if len(location) == 1:
                         if sanitize(loc.country) != sanitize(location.country):
                             Unique = False
                             break
-                    if location.length == 2:
+                    if len(location) == 2:
                         if sanitize(loc.country) != sanitize(
                             location.country
                         ) or sanitize(loc.province) != sanitize(location.province):
                             Unique = False
                             break
-                    if location.length == 3:
+                    if len(location) == 3:
                         if location == loc:
                             continue
                         else:
