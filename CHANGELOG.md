@@ -2,6 +2,12 @@
 
 ## As of yet unversioned changes
 
+## 3.0.1
+
+* Refactoring and cleanup (no functional changes)
+
+## 3.0.0
+
 * Import code to github and reformat readme
 * Move version log to its own file
 * Convert code to python 3

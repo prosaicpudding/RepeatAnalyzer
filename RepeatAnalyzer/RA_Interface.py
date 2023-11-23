@@ -333,7 +333,7 @@ def searchWindow(species):
     loclist = set([l.getString() for l in species.dummyLocations])
     if len(locations) > 0:
         for l in locations:
-            if l.length != 0:
+            if len(l) != 0:
                 loclist.add(l.getString())
     loclist = sorted(list(loclist))
     loclist.insert(0, "Any")
@@ -639,7 +639,7 @@ def searchByLocation(species):
     loclist = set([l.getString() for l in species.dummyLocations])
     if len(locations) > 0:
         for l in locations:
-            if l.length != 0:
+            if len(l) != 0:
                 loclist.add(l.getString())
     loclist = sorted(list(loclist))
     locationV.set(loclist[0])
@@ -681,7 +681,7 @@ def getGDLocation(species):
     loclist = set([l.getString() for l in species.dummyLocations])
     if len(locations) > 0:
         for l in locations:
-            if l.length != 0:
+            if len(l) != 0:
                 loclist.add(l.getString())
     loclist = sorted(list(loclist))
     loclist.insert(0, "Any")
@@ -1032,9 +1032,9 @@ def displaySearchResult(
             if len(i.location) >= 2:
                 for l in i.location:
                     countries.add(l.country)
-                    if l.length > 1:
+                    if len(l) > 1:
                         provinces.add(l.province)
-                    if l.length > 2:
+                    if len(l) > 2:
                         counties.add(l.city)
             if len(countries) < 2 and len(provinces) < 2 and len(counties) < 2:
                 continue
@@ -1049,9 +1049,9 @@ def displaySearchResult(
             if len(locs) >= 2:
                 for l in locs:
                     countries.add(l.country)
-                    if l.length > 1:
+                    if len(l) > 1:
                         provinces.add(l.province)
-                    if l.length > 2:
+                    if len(l) > 2:
                         counties.add(l.city)
             if len(countries) < 2 and len(provinces) < 2 and len(counties) < 2:
                 # print listtostring(matchnames(seq, species.repeats)+" only found once"

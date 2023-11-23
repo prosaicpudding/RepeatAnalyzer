@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "repeatanalyzer"
-version = "0.1.0"
+version = "3.0.1"
 description = "This is a project is a tool for genotyping certain microbes base on varying patterns of short sequence repeats (SSRs)."
 authors = ["Helen Catanese <hncatanese@gmail.com>"]
 license = "GPL-3.0"
