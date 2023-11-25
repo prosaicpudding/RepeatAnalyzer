@@ -23,7 +23,6 @@ jobs:
           poetry run pytest --cov=RepeatAnalyzer tests
           mv .coverage htmlcov
 
-
       - name: Upload Coverage Report (Only on Main Branch)
         if: github.ref == 'refs/heads/main'
         uses: actions/upload-artifact@v2
@@ -43,7 +42,7 @@ jobs:
         id: coverage_diff
         run: |
           Write-Host "Current Directory: $(Get-Location)"
-          Write-Host "Files in htmlcov directory: $(Get-ChildItem -Path htmlcov)"
+          Get-ChildItem -Path . -Recurse
           $MAIN_COVERAGE = try {
               [xml]::new().Load('main-coverage/htmlcov/coverage.xml').SelectSingleNode('//line-rate').InnerText
           } catch {
