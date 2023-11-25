@@ -22,8 +22,6 @@ jobs:
           poetry install
       - name: Run unit tests
         run: |
-          python -v
-          pip freeze
-          pytest tests
+          poetry run pytest tests
 
       - run: echo "✅ If you see this message, unit tests have passed."
