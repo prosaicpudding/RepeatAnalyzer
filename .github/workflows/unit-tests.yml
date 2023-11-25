@@ -28,6 +28,3 @@ jobs:
         with:
           name: coverage-report
           path: htmlcov
-
-      - name: List Contents of Working Directory
-        run: dir /S
