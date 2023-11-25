@@ -23,11 +23,14 @@ jobs:
           poetry run pytest --cov=RepeatAnalyzer tests
           mv .coverage htmlcov
 
-      - name: Upload Coverage Report
+
+      - name: Upload Coverage Report (Only on Main Branch)
+        #if: github.ref == 'refs/heads/main'
         uses: actions/upload-artifact@v2
         with:
-          name: ${{ github.head_ref }}-report
+          name: main-coverage
           path: htmlcov
+
 
       - name: Download Main Branch Coverage Artifact
         uses: actions/download-artifact@v2
