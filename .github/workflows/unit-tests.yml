@@ -26,5 +26,35 @@ jobs:
       - name: Upload Coverage Report
         uses: actions/upload-artifact@v2
         with:
-          name: coverage-report
+          name: ${{ github.head_ref }}-report
           path: htmlcov
+
+      - name: Download Main Branch Coverage Artifact
+        uses: actions/download-artifact@v2
+        id: download_main_coverage
+        with:
+          name: main-coverage
+          path: main-coverage
+        continue-on-error: true
+
+      - name: Calculate Coverage Difference
+        id: coverage_diff
+        run: |
+          MIN_COVERAGE=$(python -c "import xml.etree.ElementTree as ET; root = ET.parse('htmlcov/coverage.xml').getroot(); print(root.find('.//line-rate').text)")
+          MAIN_COVERAGE=$(python -c "import xml.etree.ElementTree as ET; root = ET.parse('main-coverage/htmlcov/coverage.xml').getroot(); print(root.find('.//line-rate').text)" 2>/dev/null || echo '')
+
+          echo "::set-output name=MIN_COVERAGE::$MIN_COVERAGE"
+          echo "::set-output name=MAIN_COVERAGE::$MAIN_COVERAGE"
+
+      - name: Check Coverage
+        run: |
+          ACTUAL_COVERAGE=$(python -c "import xml.etree.ElementTree as ET; root = ET.parse('htmlcov/coverage.xml').getroot(); print(root.find('.//line-rate').text)")
+
+          if [ -z "${{ steps.coverage_diff.outputs.MAIN_COVERAGE }}" ] || (( $(awk 'BEGIN {print ("'$ACTUAL_COVERAGE'" >= "'$MIN_COVERAGE'")}') )); then
+            echo "Coverage is above or equal to the minimum required."
+          else
+            echo "Error: Coverage is below the minimum required."
+            exit 1
+          fi
+        env:
+          MIN_COVERAGE: ${{ steps.coverage_diff.outputs.MIN_COVERAGE }}
