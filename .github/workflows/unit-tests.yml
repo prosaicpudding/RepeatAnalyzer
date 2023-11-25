@@ -18,11 +18,12 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: Install python dependencies
         run: |
-          python -m pip install --upgrade pip
           pip install poetry
           poetry install
       - name: Run unit tests
         run: |
-          python -m pytest tests
+          python -v
+          pip freeze
+          pytest tests
 
       - run: echo "✅ If you see this message, unit tests have passed."
