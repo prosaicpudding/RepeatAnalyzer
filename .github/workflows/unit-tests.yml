@@ -25,12 +25,11 @@ jobs:
 
 
       - name: Upload Coverage Report (Only on Main Branch)
-        #if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main'
         uses: actions/upload-artifact@v2
         with:
           name: main-coverage
           path: htmlcov
-
 
       - name: Download Main Branch Coverage Artifact
         uses: actions/download-artifact@v2
@@ -43,15 +42,15 @@ jobs:
       - name: Calculate Coverage Difference
         id: coverage_diff
         run: |
-          $MIN_COVERAGE = [xml]::new().Load('htmlcov/coverage.xml').SelectSingleNode('//line-rate').InnerText
+          Write-Host "Current Directory: $(Get-Location)"
+          Write-Host "Files in htmlcov directory: $(Get-ChildItem -Path htmlcov)"
           $MAIN_COVERAGE = try {
               [xml]::new().Load('main-coverage/htmlcov/coverage.xml').SelectSingleNode('//line-rate').InnerText
           } catch {
               Write-Host ''  # Do nothing if file not found
           }
 
-          Write-Host "::set-output name=MIN_COVERAGE::$MIN_COVERAGE"
-          Write-Host "::set-output name=MAIN_COVERAGE::$MAIN_COVERAGE"
+          Write-Host "::set-output name=MIN_COVERAGE::$MAIN_COVERAGE"
 
       - name: Check Coverage
         run: |
