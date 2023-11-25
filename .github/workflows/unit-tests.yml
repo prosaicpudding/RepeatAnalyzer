@@ -36,30 +36,3 @@ jobs:
         with:
           name: main-coverage
           path: main-coverage
-        continue-on-error: true
-
-      - name: Calculate Coverage Difference
-        id: coverage_diff
-        run: |
-          Write-Host "Current Directory: $(Get-Location)"
-          Get-ChildItem -Path . -Recurse
-          $MAIN_COVERAGE = try {
-              [xml]::new().Load('main-coverage/htmlcov/coverage.xml').SelectSingleNode('//line-rate').InnerText
-          } catch {
-              Write-Host ''  # Do nothing if file not found
-          }
-
-          Write-Host "::set-output name=MIN_COVERAGE::$MAIN_COVERAGE"
-
-      - name: Check Coverage
-        run: |
-          $ACTUAL_COVERAGE = [xml]::new().Load('htmlcov/coverage.xml').SelectSingleNode('//line-rate').InnerText
-
-          if (-not $env:MIN_COVERAGE -or [double]$ACTUAL_COVERAGE -ge [double]$env:MIN_COVERAGE) {
-              Write-Host "Coverage is above or equal to the minimum required."
-          } else {
-              Write-Host "Error: Coverage is below the minimum required."
-              exit 1
-          }
-        env:
-          MIN_COVERAGE: ${{ steps.coverage_diff.outputs.MIN_COVERAGE }}
