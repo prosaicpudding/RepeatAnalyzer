@@ -43,21 +43,25 @@ jobs:
       - name: Calculate Coverage Difference
         id: coverage_diff
         run: |
-          MIN_COVERAGE=$(python -c "import xml.etree.ElementTree as ET; root = ET.parse('htmlcov/coverage.xml').getroot(); print(root.find('.//line-rate').text)")
-          MAIN_COVERAGE=$(python -c "import xml.etree.ElementTree as ET; root = ET.parse('main-coverage/htmlcov/coverage.xml').getroot(); print(root.find('.//line-rate').text)" 2>/dev/null || echo '')
+          $MIN_COVERAGE = [xml]::new().Load('htmlcov/coverage.xml').SelectSingleNode('//line-rate').InnerText
+          $MAIN_COVERAGE = try {
+              [xml]::new().Load('main-coverage/htmlcov/coverage.xml').SelectSingleNode('//line-rate').InnerText
+          } catch {
+              Write-Host ''  # Do nothing if file not found
+          }
 
-          echo "::set-output name=MIN_COVERAGE::$MIN_COVERAGE"
-          echo "::set-output name=MAIN_COVERAGE::$MAIN_COVERAGE"
+          Write-Host "::set-output name=MIN_COVERAGE::$MIN_COVERAGE"
+          Write-Host "::set-output name=MAIN_COVERAGE::$MAIN_COVERAGE"
 
       - name: Check Coverage
         run: |
-          ACTUAL_COVERAGE=$(python -c "import xml.etree.ElementTree as ET; root = ET.parse('htmlcov/coverage.xml').getroot(); print(root.find('.//line-rate').text)")
+          $ACTUAL_COVERAGE = [xml]::new().Load('htmlcov/coverage.xml').SelectSingleNode('//line-rate').InnerText
 
-          if [ -z "${{ steps.coverage_diff.outputs.MAIN_COVERAGE }}" ] || (( $(awk 'BEGIN {print ("'$ACTUAL_COVERAGE'" >= "'$MIN_COVERAGE'")}') )); then
-            echo "Coverage is above or equal to the minimum required."
-          else
-            echo "Error: Coverage is below the minimum required."
-            exit 1
-          fi
+          if (-not $env:MIN_COVERAGE -or [double]$ACTUAL_COVERAGE -ge [double]$env:MIN_COVERAGE) {
+              Write-Host "Coverage is above or equal to the minimum required."
+          } else {
+              Write-Host "Error: Coverage is below the minimum required."
+              exit 1
+          }
         env:
           MIN_COVERAGE: ${{ steps.coverage_diff.outputs.MIN_COVERAGE }}
