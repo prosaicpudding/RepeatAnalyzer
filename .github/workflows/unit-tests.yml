@@ -22,6 +22,12 @@ jobs:
           pip install poetry
           poetry install
 
+      - name: Check basemap on macOS
+        if: matrix.os == 'macos-latest'
+        run: |
+          pip wheel --no-cache-dir --use-pep517 "basemap (==1.3.8)"
+          poetry search basemap
+
       - name: Run Unit Tests
         run: |
           poetry run pytest --cov=RepeatAnalyzer tests
