@@ -20,6 +20,7 @@ jobs:
       - name: Check basemap on macOS
         if: matrix.os == 'macos-latest'
         run: |
+          pip install poetry
           poetry search basemap
 
       - name: Install Dependencies
