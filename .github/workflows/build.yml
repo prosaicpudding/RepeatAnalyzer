@@ -20,6 +20,8 @@ jobs:
 
       - name: Build Executable
         run: |
+          poetry show -v
+          poetry env info -p
           poetry run pyinstaller RepeatAnalyzer.spec
 
       - name: Upload Artifact
