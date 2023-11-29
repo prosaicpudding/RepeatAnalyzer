@@ -20,7 +20,7 @@ jobs:
 
       - name: Build Executable
         run: |
-          pyinstaller RepeatAnalyzer.spec
+          poetry run pyinstaller RepeatAnalyzer.spec
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
