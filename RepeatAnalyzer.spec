@@ -47,7 +47,7 @@ a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[(mpl_toolkits_path, os.path.join("mpl_toolkits", "basemap_data"))],
-    datas=[('.\\MapData', 'MapData')],
+    datas=[('MapData', 'MapData')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
