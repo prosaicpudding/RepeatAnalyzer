@@ -33,7 +33,7 @@ def extract_version_from_pyproject_toml(file_path='pyproject.toml'):
         return None
 
 version = extract_version_from_pyproject_toml()
-app_name = f"RepeatAnalyzer_v{version}.exe"
+app_name = f"RepeatAnalyzer_v{version}"
 
 def print_directory_contents(directory):
     for root, dirs, files in os.walk(directory):
