@@ -1,6 +1,21 @@
 # -*- mode: python ; coding: utf-8 -*-
 
 import toml
+import sys
+import os
+import platform
+
+# Get the path to the currently running Python executable
+python_executable = sys.executable
+
+
+# Get the venv directory
+python_executable_dir = os.path.dirname(os.path.dirname(python_executable))
+
+if platform.system().lower() == 'windows':
+    lib = "Lib"
+else:
+    lib = "lib"
 
 def extract_version_from_pyproject_toml(file_path='pyproject.toml'):
     try:
@@ -21,7 +36,7 @@ app_name = f"RepeatAnalyzer_v{version}.exe"
 a = Analysis(
     ['main.py'],
     pathex=[],
-    binaries=[('.\\venv\\Lib\\site-packages\\mpl_toolkits\\basemap_data\\*', 'mpl_toolkits\\basemap_data')],
+    binaries=[(f"{python_executable_dir}\\{lib}\\site-packages\\mpl_toolkits\\basemap_data\\*", 'mpl_toolkits\\basemap_data')],
     datas=[('.\\MapData', 'MapData')],
     hiddenimports=[],
     hookspath=[],
