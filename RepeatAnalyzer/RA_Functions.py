@@ -38,8 +38,9 @@ from RepeatAnalyzer.utils import findID, sanitize
 
 def importdata():
     print("Importing Data...")
-    if os.path.isfile("RepeatAnalyzer.dat"):
-        with open(r"RepeatAnalyzer.dat", "rb") as data:
+    pickle_path = f"{get_working_directory()}/RepeatAnalyzer.dat"
+    if os.path.isfile(pickle_path):
+        with open(pickle_path, "rb") as data:
             return pickle.load(data)  # import data
             print("Data Imported.")
     else:
@@ -58,11 +59,12 @@ def importdata():
 # older backups may be deleted.
 def exportdata(speciesList):
     print("Exporting data...")
-    if os.path.isfile("RepeatAnalyzer.dat.bak"):
-        os.remove("RepeatAnalyzer.dat.bak")
-    if os.path.isfile("RepeatAnalyzer.dat"):
-        os.rename("RepeatAnalyzer.dat", "RepeatAnalyzer.dat.bak")
-    with open("RepeatAnalyzer.dat", "wb") as data:
+    pickle_path = f"{get_working_directory()}/RepeatAnalyzer.dat"
+    if os.path.isfile(f"{pickle_path}.bak"):
+        os.remove(f"{pickle_path}.bak")
+    if os.path.isfile(pickle_path):
+        os.rename(pickle_path, f"{pickle_path}.bak")
+    with open(pickle_path, "wb") as data:
         pickle.dump(speciesList, data)
 
 
@@ -493,10 +495,27 @@ def printresult(repeats, species, tabs=""):
 
     return res
 
+def get_working_directory() -> str:
+    """
+    Get the working directory of the script/exe.
+    This allows us to keep data files in the same directory as the script/exe.
+
+    Returns:
+        str: The working directory of the script/file.
+    """
+    if getattr(sys, 'frozen', False):
+        # Running as a PyInstaller bundle
+        return os.path.dirname(sys.executable)
+    else:
+        # Running as a script
+        return os.path.dirname(os.path.realpath(__file__))
 
 def readdatafromfile(file, species):
     if "." not in file:
         file += ".txt"
+
+    file = f"{get_working_directory()}/{file}"
+
     if os.path.isfile(file):
         for numpass in range(1, 3):
             print("Pass", numpass, "in progress...")
