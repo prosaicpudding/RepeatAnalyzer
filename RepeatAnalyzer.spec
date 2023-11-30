@@ -17,6 +17,8 @@ if platform.system().lower() == 'windows':
 else:
     lib = "lib"
 
+mpl_toolkits_path = os.path.join(python_executable_dir, lib, "site-packages", "mpl_toolkits", "basemap_data", "*")
+
 def extract_version_from_pyproject_toml(file_path='pyproject.toml'):
     try:
         with open(file_path, 'r') as toml_file:
@@ -36,7 +38,7 @@ app_name = f"RepeatAnalyzer_v{version}.exe"
 a = Analysis(
     ['main.py'],
     pathex=[],
-    binaries=[(f"{python_executable_dir}\\{lib}\\site-packages\\mpl_toolkits\\basemap_data\\*", 'mpl_toolkits\\basemap_data')],
+    binaries=[(mpl_toolkits_path, os.path.join("mpl_toolkits", "basemap_data"))],
     datas=[('.\\MapData', 'MapData')],
     hiddenimports=[],
     hookspath=[],
