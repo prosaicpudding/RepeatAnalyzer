@@ -35,6 +35,14 @@ def extract_version_from_pyproject_toml(file_path='pyproject.toml'):
 version = extract_version_from_pyproject_toml()
 app_name = f"RepeatAnalyzer_v{version}.exe"
 
+def print_directory_contents(directory):
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            print(os.path.join(root, file))
+
+# Example usage
+print_directory_contents(python_executable_dir)
+
 a = Analysis(
     ['main.py'],
     pathex=[],
