@@ -15,7 +15,7 @@ python_executable_dir = os.path.dirname(os.path.dirname(python_executable))
 if platform.system().lower() == 'windows':
     lib = "Lib"
 else:
-    lib = "lib"
+    lib = "lib/python3.10"
 
 mpl_toolkits_path = os.path.join(python_executable_dir, lib, "site-packages", "mpl_toolkits", "basemap_data", "*")
 
