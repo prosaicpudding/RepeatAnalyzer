@@ -18,6 +18,8 @@ else:
     lib = "lib/python3.10"
 
 mpl_toolkits_path = os.path.join(python_executable_dir, lib, "site-packages", "mpl_toolkits", "basemap_data", "*")
+print(f"Looking for additional requirements in: {mpl_toolkits_path}")
+
 
 def extract_version_from_pyproject_toml(file_path='pyproject.toml'):
     try:
@@ -34,14 +36,6 @@ def extract_version_from_pyproject_toml(file_path='pyproject.toml'):
 
 version = extract_version_from_pyproject_toml()
 app_name = f"RepeatAnalyzer_v{version}"
-
-def print_directory_contents(directory):
-    for root, dirs, files in os.walk(directory):
-        for file in files:
-            print(os.path.join(root, file))
-
-# Example usage
-print_directory_contents(mpl_toolkits_path)
 
 a = Analysis(
     ['main.py'],
