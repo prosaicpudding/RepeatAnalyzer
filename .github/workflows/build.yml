@@ -3,7 +3,11 @@ run-name: ${{ github.actor }} is running our tests 🚀
 on: [push]
 jobs:
   Build:
-    runs-on: windows-latest
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+        matrix:
+            os: [macos-latest, windows-latest]
     steps:
       - name: Check out Repository Code
         uses: actions/checkout@v4
