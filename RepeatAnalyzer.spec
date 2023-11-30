@@ -41,7 +41,7 @@ def print_directory_contents(directory):
             print(os.path.join(root, file))
 
 # Example usage
-print_directory_contents(python_executable_dir)
+print_directory_contents(mpl_toolkits_path)
 
 a = Analysis(
     ['main.py'],
