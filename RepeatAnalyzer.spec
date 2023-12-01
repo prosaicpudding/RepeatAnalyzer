@@ -39,7 +39,7 @@ app_name = f"RepeatAnalyzer_v{version}"
 
 a = Analysis(
     ['main.py'],
-    pathex=[],
+    pathex=[os.path.dirname(os.path.abspath(__file__))],
     binaries=[(mpl_toolkits_path, os.path.join("mpl_toolkits", "basemap_data"))],
     datas=[('MapData', 'MapData')],
     hiddenimports=[],
@@ -72,15 +72,3 @@ exe = EXE(
     codesign_identity=None,
     entitlements_file=None,
 )
-
-if platform.system().lower() == 'darwin':
-    app = BUNDLE(exe,
-        name=app_name,
-        icon=None,
-        bundle_identifier='com.hncatanese.RepeatAnalyzer',
-        info_plist={
-        'CFBundleDisplayName': app_name,
-        'CFBundleVersion': version,
-        'CFBundleShortVersionString': version,
-        },
-    )

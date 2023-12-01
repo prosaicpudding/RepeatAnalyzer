@@ -28,11 +28,15 @@ jobs:
           pip install poetry
           poetry install
 
-      - name: Build Executable
+      - name: Build Executable (Windows)
+        if: matrix.os == 'windows-latest'
         run: |
-          poetry show -v
-          poetry env info -p
           poetry run pyinstaller RepeatAnalyzer.spec
+
+      - name: Build Executable (MacOS)
+        if: matrix.os == 'macos-latest'
+        run: |
+          poetry run setup.py py2app
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2

@@ -671,6 +671,21 @@ python-dateutil = ">=2.7"
 setuptools_scm = ">=7"
 
 [[package]]
+name = "modulegraph"
+version = "0.19.6"
+description = "Python module dependency analysis tool"
+optional = false
+python-versions = "*"
+files = [
+    {file = "modulegraph-0.19.6-py2.py3-none-any.whl", hash = "sha256:5443e6d93c0b263f4ea309e2ff01312eef7c424dd51981a1e78e960c90e572b8"},
+    {file = "modulegraph-0.19.6.tar.gz", hash = "sha256:c914c8c95a0e10fe88505d4e9c2284b4e3dbc70943e306cc6567e36cc541bf4b"},
+]
+
+[package.dependencies]
+altgraph = ">=0.15"
+setuptools = "*"
+
+[[package]]
 name = "mypy-extensions"
 version = "1.0.0"
 description = "Type system extensions for programs checked with the mypy type checker."
@@ -876,6 +891,22 @@ identify = ">=1.0.0"
 nodeenv = ">=0.11.1"
 pyyaml = ">=5.1"
 virtualenv = ">=20.10.0"
+
+[[package]]
+name = "py2app"
+version = "0.28.6"
+description = "Create standalone Mac OS X applications with Python"
+optional = false
+python-versions = "*"
+files = [
+    {file = "py2app-0.28.6-py2.py3-none-any.whl", hash = "sha256:f8cd88624450317e95497c43ab22f36c956a70560c67cf8d99c597b5ad7b81b7"},
+    {file = "py2app-0.28.6.tar.gz", hash = "sha256:8dbd5f638d1cf63d6479f3095922b4e030d13de83da6a2a802c58c7d0f9e0a8e"},
+]
+
+[package.dependencies]
+altgraph = ">=0.17.3"
+macholib = ">=1.16.2"
+modulegraph = ">=0.19.5"
 
 [[package]]
 name = "pyinstaller"
@@ -1257,4 +1288,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10, <3.13"
-content-hash = "cdee6e7682cebc45935e11730f0a5072756b7a0bd49ca2f00b8cd7ff343bc1b9"
+content-hash = "27fea08e502907f810062584f66d3a9f459cc4cda5950a0246194ba25fba509d"
