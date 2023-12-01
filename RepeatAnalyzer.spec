@@ -48,6 +48,7 @@ a = Analysis(
     runtime_hooks=[],
     excludes=[],
     noarchive=False,
+    onefile=True,
 )
 pyz = PYZ(a.pure)
 
@@ -72,15 +73,14 @@ exe = EXE(
     entitlements_file=None,
 )
 
-if platform.system().lower() != 'windows':
+if platform.system().lower() == 'darwin':
     app = BUNDLE(exe,
         name=app_name,
-        version=version,
+        icon=None,
+        bundle_identifier='com.hncatanese.RepeatAnalyzer'
         info_plist={
-        'CFBundleName': 'app_name',
-        'CFBundleDisplayName': 'app_name',
+        'CFBundleDisplayName': app_name,
         'CFBundleVersion': version,
         'CFBundleShortVersionString': version,
-        'LSMinimumSystemVersion': '10.x'
         },
     )
