@@ -73,7 +73,7 @@ exe = EXE(
     entitlements_file=None,
 )
 
-if platform.system().lower() == 'darwin':
+if platform.system().lower() == 'darwin' and platform.sysyem() != 'windows':
     app = BUNDLE(exe,
         name=app_name,
         icon=None,
