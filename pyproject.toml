@@ -24,11 +24,10 @@ coverage = "^7.3.2"
 pytest-cov = "^4.1.0"
 
 [tool.poetry.group.win.dependencies]
-pyinstaller = {version = "^6.2.0", optional = true}
-
+pyinstaller = "^6.2.0"
 
 [tool.poetry.group.mac.dependencies]
-pyinstaller = {version = "^6.2.0", optional = true}
+py2app = "^0.28.6"
 
 [build-system]
 requires = ["poetry-core"]
