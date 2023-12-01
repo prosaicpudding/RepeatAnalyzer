@@ -71,3 +71,16 @@ exe = EXE(
     codesign_identity=None,
     entitlements_file=None,
 )
+
+if platform.system().lower() != 'windows':
+    app = BUNDLE(exe,
+        name=app_name,
+        version=version,
+        info_plist={
+        'CFBundleName': 'app_name',
+        'CFBundleDisplayName': 'app_name',
+        'CFBundleVersion': version,
+        'CFBundleShortVersionString': version,
+        'LSMinimumSystemVersion': '10.x'
+        },
+    )

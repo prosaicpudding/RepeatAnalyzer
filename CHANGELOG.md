@@ -5,6 +5,7 @@
 ## 3.0.1
 
 * Refactoring and cleanup (no functional changes)
+* Build with pyinstaller
 
 ## 3.0.0
 
