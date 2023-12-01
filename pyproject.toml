@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "repeatanalyzer"
-version = "3.0.1"
+version = "3.0.2"
 description = "This is a project is a tool for genotyping certain microbes base on varying patterns of short sequence repeats (SSRs)."
 authors = ["Helen Catanese <hncatanese@gmail.com>"]
 license = "GPL-3.0"
@@ -22,8 +22,13 @@ black = "^23.9.1"
 pytest = "^7.4.2"
 coverage = "^7.3.2"
 pytest-cov = "^4.1.0"
-pyinstaller = "^6.2.0"
-py2app = "^0.28.6"
+
+[tool.poetry.group.win.dependencies]
+pyinstaller = {version = "^6.2.0", optional = true}
+
+
+[tool.poetry.group.mac.dependencies]
+pyinstaller = {version = "^6.2.0", optional = true}
 
 [build-system]
 requires = ["poetry-core"]
