@@ -73,11 +73,11 @@ exe = EXE(
     entitlements_file=None,
 )
 
-if platform.system().lower() == 'darwin' and platform.sysyem() != 'windows':
+if platform.system().lower() == 'darwin':
     app = BUNDLE(exe,
         name=app_name,
         icon=None,
-        bundle_identifier='com.hncatanese.RepeatAnalyzer'
+        bundle_identifier='com.hncatanese.RepeatAnalyzer',
         info_plist={
         'CFBundleDisplayName': app_name,
         'CFBundleVersion': version,
