@@ -2,9 +2,13 @@
 
 ## As of yet unversioned changes
 
+## 3.0.2
+* Build macOS app with py2app
+
 ## 3.0.1
 
 * Refactoring and cleanup (no functional changes)
+* Build with pyinstaller
 
 ## 3.0.0
 

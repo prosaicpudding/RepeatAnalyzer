@@ -3,7 +3,11 @@ run-name: ${{ github.actor }} is running our tests 🚀
 on: [push]
 jobs:
   Build:
-    runs-on: windows-latest
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+        matrix:
+            os: [macos-latest, windows-latest]
     steps:
       - name: Check out Repository Code
         uses: actions/checkout@v4
@@ -13,16 +17,27 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Install Geos (Dependency for basemap)
+        if: matrix.os == 'macos-latest'
+        run: |
+          brew update
+          brew install geos
+
       - name: Install Dependencies
         run: |
           pip install poetry
-          poetry install
 
-      - name: Build Executable
+      - name: Build Executable (Windows)
+        if: matrix.os == 'windows-latest'
         run: |
-          poetry show -v
-          poetry env info -p
+          poetry install --without dev,mac --with win --sync
           poetry run pyinstaller RepeatAnalyzer.spec
+
+      - name: Build Executable (MacOS)
+        if: matrix.os == 'macos-latest'
+        run: |
+          poetry install --without dev,win --with mac --sync
+          poetry run python setup.py py2app
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2

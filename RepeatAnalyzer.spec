@@ -15,7 +15,11 @@ python_executable_dir = os.path.dirname(os.path.dirname(python_executable))
 if platform.system().lower() == 'windows':
     lib = "Lib"
 else:
-    lib = "lib"
+    lib = "lib/python3.10"
+
+mpl_toolkits_path = os.path.join(python_executable_dir, lib, "site-packages", "mpl_toolkits", "basemap_data", "*")
+print(f"Looking for additional requirements in: {mpl_toolkits_path}")
+
 
 def extract_version_from_pyproject_toml(file_path='pyproject.toml'):
     try:
@@ -31,19 +35,20 @@ def extract_version_from_pyproject_toml(file_path='pyproject.toml'):
         return None
 
 version = extract_version_from_pyproject_toml()
-app_name = f"RepeatAnalyzer_v{version}.exe"
+app_name = f"RepeatAnalyzer_v{version}"
 
 a = Analysis(
     ['main.py'],
     pathex=[],
-    binaries=[(f"{python_executable_dir}\\{lib}\\site-packages\\mpl_toolkits\\basemap_data\\*", 'mpl_toolkits\\basemap_data')],
-    datas=[('.\\MapData', 'MapData')],
+    binaries=[(mpl_toolkits_path, os.path.join("mpl_toolkits", "basemap_data"))],
+    datas=[('MapData', 'MapData')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
     excludes=[],
     noarchive=False,
+    onefile=True,
 )
 pyz = PYZ(a.pure)
 
