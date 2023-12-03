@@ -319,7 +319,7 @@ class Location:
         return{"country": self.country, "province": self.province, "city": self.city}
 
     def __hash__(self) -> int:
-        return hash(self.getString())
+        return hash(self.getString(coords=True))
 
     def __str__(self) -> str:
         return self.getString()
