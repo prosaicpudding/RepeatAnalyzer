@@ -1,6 +1,6 @@
 from setuptools import setup
 
-APP = ['main.py']
+APP = ['main.py', "RepeatAnalyzer"]
 DATA_FILES = [('MapData', ['MapData'])]
 OPTIONS = {
     'argv_emulation': True,
