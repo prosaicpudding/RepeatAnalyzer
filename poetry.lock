@@ -673,7 +673,7 @@ python-dateutil = ">=2.7"
 name = "modulegraph"
 version = "0.19.6"
 description = "Python module dependency analysis tool"
-optional = true
+optional = false
 python-versions = "*"
 files = [
     {file = "modulegraph-0.19.6-py2.py3-none-any.whl", hash = "sha256:5443e6d93c0b263f4ea309e2ff01312eef7c424dd51981a1e78e960c90e572b8"},
@@ -895,7 +895,7 @@ virtualenv = ">=20.10.0"
 name = "py2app"
 version = "0.28.6"
 description = "Create standalone Mac OS X applications with Python"
-optional = true
+optional = false
 python-versions = "*"
 files = [
     {file = "py2app-0.28.6-py2.py3-none-any.whl", hash = "sha256:f8cd88624450317e95497c43ab22f36c956a70560c67cf8d99c597b5ad7b81b7"},
@@ -1265,4 +1265,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10, <3.13"
-content-hash = "f5fc3d1ad2de07cd2ed407adb846530999a89a7fc85500af84f55b96771239ec"
+content-hash = "cc8bf9f25e143514a82733266f895cd046f1eb7d4a76472beb3bdb5304ef861e"
