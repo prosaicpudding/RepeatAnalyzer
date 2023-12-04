@@ -10,7 +10,7 @@ app_name = f"RepeatAnalyzer_v{version}"
 a = Analysis(
     ['main.py'],
     pathex=[],
-    binaries=[(mpl_toolkits_path, os.path.join("mpl_toolkits", "basemap_data"))],
+    binaries=[(mpl_toolkits_path, "mpl_toolkits")],
     datas=[('MapData', 'MapData')],
     hiddenimports=[],
     hookspath=[],

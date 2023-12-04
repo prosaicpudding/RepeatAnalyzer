@@ -34,5 +34,5 @@ for root, dirs, files in os.walk(f"{python_executable_dir}/{lib}"):
     for file in files:
         print(os.path.join(root, file))
 
-mpl_toolkits_path = os.path.join(python_executable_dir, lib, "site-packages", "mpl_toolkits", "basemap_data", "*")
+mpl_toolkits_path = os.path.join(python_executable_dir, lib, "site-packages", "mpl_toolkits")
 print(f"Looking for additional requirements in: {mpl_toolkits_path}")
