@@ -3,7 +3,7 @@
 import sys
 import os
 import platform
-from packaging_utils import extract_version_from_pyproject_toml
+from packaging_utils import extract_version_from_pyproject_toml, mpl_toolkits_path
 
 # Get the path to the currently running Python executable
 python_executable = sys.executable
