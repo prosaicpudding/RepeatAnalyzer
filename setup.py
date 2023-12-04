@@ -8,9 +8,7 @@ APP = ['main.py', "RepeatAnalyzer"]
 DATA_FILES = [('MapData', ['MapData'])]
 OPTIONS = {
     'argv_emulation': True,
-    'py2app': {
-        'APP_NAME': f'RepeatAnalyzer_V{version}',
-    },
+    'packages': f"RepeatAnalyzer_V{version}",
 }
 
 setup(
