@@ -28,5 +28,11 @@ if platform.system().lower() == 'windows':
 else:
     lib = "lib/python3.10"
 
+# print python_executable_dir contents recursively
+print(f"Contents of {python_executable_dir}/{lib}:")
+for root, dirs, files in os.walk(f"{python_executable_dir}/{lib}""):
+    for file in files:
+        print(os.path.join(root, file))
+
 mpl_toolkits_path = os.path.join(python_executable_dir, lib, "site-packages", "mpl_toolkits", "basemap_data", "*")
 print(f"Looking for additional requirements in: {mpl_toolkits_path}")
