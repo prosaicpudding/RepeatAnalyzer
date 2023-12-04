@@ -1,7 +1,11 @@
 import os
+import platform
+import sys
 
 import toml
 
+# Get the path to the currently running Python executable
+python_executable = sys.executable
 
 def extract_version_from_pyproject_toml(file_path='pyproject.toml'):
     try:

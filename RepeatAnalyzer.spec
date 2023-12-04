@@ -1,12 +1,8 @@
 # -*- mode: python ; coding: utf-8 -*-
 
-import sys
 import os
-import platform
-from packaging_utils import extract_version_from_pyproject_toml, mpl_toolkits_path
 
-# Get the path to the currently running Python executable
-python_executable = sys.executable
+from packaging_utils import extract_version_from_pyproject_toml, mpl_toolkits_path
 
 version = extract_version_from_pyproject_toml()
 app_name = f"RepeatAnalyzer_v{version}"
