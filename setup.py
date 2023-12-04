@@ -7,14 +7,13 @@ version = extract_version_from_pyproject_toml()
 APP = ['main.py']
 DATA_FILES = [
         ('MapData', ['MapData']),
-        ("RepeatAnalyzer", ["RepeatAnalyzer"]),
     ]
 OPTIONS = {
     'argv_emulation': True,
 }
 
 setup(
-    name= f"RepeatAnalyzer_V{version}",
+    #name= f"RepeatAnalyzer_V{version}",
     app=APP,
     data_files=DATA_FILES,
     options={'py2app': OPTIONS},
