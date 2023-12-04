@@ -30,7 +30,7 @@ else:
 
 # print python_executable_dir contents recursively
 print(f"Contents of {python_executable_dir}/{lib}:")
-for root, dirs, files in os.walk(f"{python_executable_dir}/{lib}""):
+for root, dirs, files in os.walk(f"{python_executable_dir}/{lib}"):
     for file in files:
         print(os.path.join(root, file))
 
