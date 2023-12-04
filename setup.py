@@ -1,3 +1,5 @@
+import os
+
 from setuptools import setup
 
 from packaging_utils import (extract_version_from_pyproject_toml,
