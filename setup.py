@@ -10,10 +10,11 @@ version = extract_version_from_pyproject_toml()
 APP = ['main.py']
 DATA_FILES = [
         ('MapData', ['MapData']),
-        (mpl_toolkits_path, [os.path.join("lib","python3.10","mpl_toolkits")])
+        #(mpl_toolkits_path, [os.path.join("lib","python3.10","mpl_toolkits")])
     ]
 OPTIONS = {
     'argv_emulation': True,
+    'packages': ['mpl_toolkits'],
 }
 
 setup(
