@@ -10,6 +10,7 @@ DATA_FILES = [
     ]
 OPTIONS = {
     'argv_emulation': True,
+    'packages': ['mpl_toolkits'],
 }
 
 setup(
