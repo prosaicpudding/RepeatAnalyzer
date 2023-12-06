@@ -19,13 +19,12 @@ pyproj_dynlibs = collect_dynamic_libs('pyproj')
 pyproj_data = collect_data_files('pyproj', subdir=None)
 
 from PyInstaller.utils.hooks import copy_metadata
-binaries = copy_metadata('Pillow')
 
 a = Analysis(
     ['main.py'],
     pathex=[],
-    binaries=matplotlib_dynlibs + basemap_dynlibs + pyproj_dynlibs,
-    datas=[('MapData', 'MapData'),('pyproject.toml', 'pyproject.toml')] + matplotlib_data + basemap_data + pyproj_data,
+    binaries=matplotlib_dynlibs + basemap_dynlibs + pyproj_dynlibs + copy_metadata('Pillow'),
+    datas=[('MapData', 'MapData'),('pyproject.toml', '.')] + matplotlib_data + basemap_data + pyproj_data,
     hiddenimports=matplotlib_submodules,
     hookspath=[],
     hooksconfig={},
