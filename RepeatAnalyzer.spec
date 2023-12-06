@@ -3,15 +3,26 @@
 import os
 
 from packaging_utils import extract_version_from_pyproject_toml, mpl_toolkits_path
+from PyInstaller.utils.hooks import collect_data_files, collect_dynamic_libs
 
-version = extract_version_from_pyproject_toml()
-app_name = f"RepeatAnalyzer_v{version}"
+app_name = f"RepeatAnalyzer"
+
+# Collect dynamic libs and data files from Matplotlib and Basemap
+matplotlib_dynlibs = collect_dynamic_libs('matplotlib')
+matplotlib_data = collect_data_files('matplotlib', subdir=None)
+
+basemap_dynlibs = collect_dynamic_libs('mpl_toolkits.basemap')
+basemap_data = collect_data_files('mpl_toolkits.basemap_data', subdir=None)
+
+pyproj_data = collect_data_files('pyproj', subdir=None)
+
+
 
 a = Analysis(
     ['main.py'],
     pathex=[],
-    binaries=[(mpl_toolkits_path, "mpl_toolkits")],
-    datas=[('MapData', 'MapData')],
+    binaries=collect_data_files('pyproj') + matplotlib_dynlibs + basemap_dynlibs,
+    datas=[('MapData', 'MapData')] + matplotlib_data + basemap_data + pyproj_data,
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

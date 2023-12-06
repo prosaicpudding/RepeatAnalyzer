@@ -20,6 +20,7 @@
 
 import os
 
+import toml
 from matplotlib import pyplot as plt
 from scipy.cluster.hierarchy import dendrogram
 
@@ -88,12 +89,26 @@ def printClusterMap(species, clusters):
     createMap(rlons, rlats, rIDs, [], [], [], cnames, species, 4.5, 1, 0, True)
 
 
+def extract_version_from_pyproject_toml(file_path='pyproject.toml'):
+    try:
+        with open(file_path, 'r') as toml_file:
+            toml_content = toml.load(toml_file)
+            version = toml_content['tool']['poetry']['version']
+            return version
+    except FileNotFoundError:
+        print(f"Error: File {file_path} not found.")
+        return None
+    except KeyError:
+        print(f"Error: Unable to find version in {file_path}. Make sure the file structure is correct.")
+        return None
+
 def menuloop(speciesList, currentSpecies):
     # process=multiprocessing.Process(target=, args=())
     # process.start()
+    version = extract_version_from_pyproject_toml()
     goAgain = True
     while goAgain == True:
-        print("\nWelcome to RepeatAnalyzer.")
+        print(f"\nWelcome to RepeatAnalyzer {version}.")
         if speciesList != []:
             print(
                 "Currently working on", speciesList[currentSpecies].name + ":", end=" "

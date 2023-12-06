@@ -27,7 +27,7 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install poetry
-          poetry install --without win,mac
+          poetry install --without build
 
       - name: Run Unit Tests
         run: |
