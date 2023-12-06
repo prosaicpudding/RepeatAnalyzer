@@ -15,7 +15,7 @@ DATA_FILES = [
 OPTIONS = {
     'argv_emulation': True,
     'packages': ['matplotlib'],
-    'includes': ['mpl_toolkits.basemap'],
+    'includes': ["mpl_toolkits"],
 }
 
 setup(
