@@ -28,7 +28,7 @@ jobs:
           pip install poetry
 
       - name: Build Executable (Windows)
-        if: matrix.os == 'windows-latest'
+        # if: matrix.os == 'windows-latest'
         run: |
           poetry install --without dev,mac --with win --sync
           poetry run pyinstaller RepeatAnalyzer.spec
@@ -36,8 +36,8 @@ jobs:
       - name: Build Executable (MacOS)
         if: matrix.os == 'macos-latest'
         run: |
-          poetry install --without dev,win --with mac --sync
-          poetry run python setup.py py2app
+          # poetry install --without dev,win --with mac --sync
+          # poetry run python setup.py py2app
           chmod +x dist/RepeatAnalyzer_v3.0.3.app/Contents/MacOS/RepeatAnalyzer*
           xattr -r -d com.apple.quarantine dist/RepeatAnalyzer*
           ls -l dist/RepeatAnalyzer_v3.0.3.app/Contents/Resources/lib/python3.10/

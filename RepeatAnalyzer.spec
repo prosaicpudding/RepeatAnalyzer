@@ -17,8 +17,8 @@ a = Analysis(
     hooksconfig={},
     runtime_hooks=[],
     excludes=[],
-    noarchive=False,
-    onefile=True,
+    # noarchive=False,
+    # onefile=True,
 )
 pyz = PYZ(a.pure)
 
