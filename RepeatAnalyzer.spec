@@ -18,7 +18,8 @@ basemap_data = collect_data_files('mpl_toolkits.basemap_data', subdir=None)
 pyproj_dynlibs = collect_dynamic_libs('pyproj')
 pyproj_data = collect_data_files('pyproj', subdir=None)
 
-
+from PyInstaller.utils.hooks import copy_metadata
+binaries = copy_metadata('Pillow')
 
 a = Analysis(
     ['main.py'],
