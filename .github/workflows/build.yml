@@ -7,7 +7,7 @@ jobs:
 
     strategy:
         matrix:
-            os: [macos-latest, windows-latest]
+            os: [macos-11, windows-latest]
     steps:
       - name: Check out Repository Code
         uses: actions/checkout@v4
