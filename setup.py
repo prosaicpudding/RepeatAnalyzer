@@ -2,8 +2,7 @@ import os
 
 from setuptools import setup
 
-from packaging_utils import (extract_version_from_pyproject_toml,
-                             mpl_toolkits_path)
+from packaging_utils import extract_version_from_pyproject_toml
 
 version = extract_version_from_pyproject_toml()
 
@@ -14,8 +13,7 @@ DATA_FILES = [
     ]
 OPTIONS = {
     'argv_emulation': True,
-    'packages': ['matplotlib'],
-    'includes': ["mpl_toolkits"],
+    'zipfile': 'no',  # Disable zipping of dependencies
 }
 
 setup(
