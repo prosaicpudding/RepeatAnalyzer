@@ -101,6 +101,9 @@ def extract_version_from_pyproject_toml(file_path='pyproject.toml'):
     except KeyError:
         print(f"Error: Unable to find version in {file_path}. Make sure the file structure is correct.")
         return None
+    except PermissionError:
+        print(f"Error: Permission denied when opening {file_path}.")
+        return None
 
 def menuloop(speciesList, currentSpecies):
     # process=multiprocessing.Process(target=, args=())
