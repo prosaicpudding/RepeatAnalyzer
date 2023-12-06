@@ -14,7 +14,7 @@ DATA_FILES = [
 OPTIONS = {
     'argv_emulation': True,
     #'zipfile': None,
-    'maybe-packages': ['mpl_toolkits.basemap']n
+    'maybe-packages': ['mpl_toolkits.basemap'],
 }
 
 setup(
