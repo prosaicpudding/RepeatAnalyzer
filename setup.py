@@ -13,7 +13,12 @@ DATA_FILES = [
     ]
 OPTIONS = {
     'argv_emulation': True,
-    "maybe-packages": ["mpl_toolkits"],
+    'plist': {
+        'CFBundleName': 'RepeatAnalyzer',
+        'CFBundleShortVersionString': version,
+        'CFBundleGetInfoString': f'RepeatAnalyzer {version}',
+        'CFBundleExecutable': 'RepeatAnalyzer',
+    },
 }
 
 setup(
