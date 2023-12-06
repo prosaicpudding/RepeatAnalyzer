@@ -33,15 +33,6 @@ jobs:
           poetry install --without dev,mac --with win --sync
           poetry run pyinstaller RepeatAnalyzer.spec
 
-      - name: Build Executable (MacOS)
-        if: matrix.os == 'macos-latest'
-        run: |
-          # poetry install --without dev,win --with mac --sync
-          # poetry run python setup.py py2app
-          # chmod +x dist/RepeatAnalyzer_v3.0.3.app/Contents/MacOS/RepeatAnalyzer*
-          xattr -r -d com.apple.quarantine dist/RepeatAnalyzer*
-          ls -l dist
-
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
