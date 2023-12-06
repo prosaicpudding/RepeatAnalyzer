@@ -38,9 +38,9 @@ jobs:
         run: |
           poetry install --without dev,win --with mac --sync
           poetry run python setup.py py2app
-          chmod +x dist/RepeatAnalyzer.app/Contents/MacOS/RepeatAnalyzer*
+          chmod +x dist/RepeatAnalyzer_v3.0.3/Contents/MacOS/RepeatAnalyzer*
           xattr -r -d com.apple.quarantine dist/RepeatAnalyzer*
-          ls -l dist/RepeatAnalyzer.app/Contents/Resources/lib/python3.10/
+          ls -l dist/RepeatAnalyzer_v3.0.3/Contents/Resources/lib/python3.10/
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
