@@ -13,7 +13,7 @@ DATA_FILES = [
     ]
 OPTIONS = {
     'argv_emulation': True,
-    'zipfile': 'no',  # Disable zipping of dependencies
+    "maybe-packages": ["mpl_toolkits"],
 }
 
 setup(
