@@ -14,6 +14,7 @@ matplotlib_data = collect_data_files('matplotlib', subdir=None)
 basemap_dynlibs = collect_dynamic_libs('mpl_toolkits.basemap')
 basemap_data = collect_data_files('mpl_toolkits.basemap_data', subdir=None)
 
+pyproj_dynlibs = collect_dynamic_libs('pyproj')
 pyproj_data = collect_data_files('pyproj', subdir=None)
 
 
@@ -21,7 +22,7 @@ pyproj_data = collect_data_files('pyproj', subdir=None)
 a = Analysis(
     ['main.py'],
     pathex=[],
-    binaries=collect_data_files('pyproj') + matplotlib_dynlibs + basemap_dynlibs,
+    binaries=collect_data_files('pyproj') + matplotlib_dynlibs + basemap_dynlibs + pyproj_dynlibs,
     datas=[('MapData', 'MapData')] + matplotlib_data + basemap_data + pyproj_data,
     hiddenimports=[],
     hookspath=[],
