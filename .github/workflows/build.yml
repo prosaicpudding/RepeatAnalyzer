@@ -32,12 +32,12 @@ jobs:
           brew install geos
 
           # for pyproj
-          pip -y uninstall pyproj
+          pip uninstall -y  pyproj
           brew install proj
           poetry run pip install pyproj --no-binary pyproj
 
           # For Pillow
-          pip -y uninstall Pillow
+          pip uninstall -y Pillow
           brew install libjpeg libtiff little-cms2 openjpeg webp
           poetry run pip install Pillow --no-binary :all:
 
