@@ -15,13 +15,18 @@ basemap_data = collect_data_files('mpl_toolkits.basemap_data', subdir=None)
 
 #pyproj_dynlibs = collect_dynamic_libs('pyproj')
 #pyproj_data = collect_data_files('pyproj', subdir=None)
-pillow_dynlibs = collect_dynamic_libs('Pillow')
+#pillow_dynlibs = collect_dynamic_libs('Pillow')
 
 a = Analysis(
     ['main.py'],
     pathex=[],
-    binaries=pillow_dynlibs, #matplotlib_dynlibs + basemap_dynlibs + pyproj_dynlibs + copy_metadata('Pillow'),
-    datas=[('MapData', 'MapData'),('pyproject.toml', '.')] + basemap_data, # + pyproj_data + matplotlib_data,
+    binaries=[
+        ("/usr/local/lib/libtiff.6.dylib", "."), # For Pillow on macos
+        ], #matplotlib_dynlibs + basemap_dynlibs + pyproj_dynlibs + copy_metadata('Pillow'),
+    datas=[
+        ('MapData', 'MapData'), # Map boundaries
+        ('pyproject.toml', '.'), # For versioning
+        ] + basemap_data, # + pyproj_data + matplotlib_data,
     hiddenimports=[], #matplotlib_submodules,
     hookspath=[],
     hooksconfig={},
