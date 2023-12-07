@@ -1,6 +1,7 @@
 # -*- mode: python ; coding: utf-8 -*-
 
 import os
+import platform
 
 from PyInstaller.utils.hooks import collect_data_files, collect_dynamic_libs
 
@@ -17,12 +18,12 @@ basemap_data = collect_data_files('mpl_toolkits.basemap_data', subdir=None)
 #pyproj_data = collect_data_files('pyproj', subdir=None)
 #pillow_dynlibs = collect_dynamic_libs('Pillow')
 
+binaries = [] if platform.system() == 'Windows' else [("/usr/local/lib/libtiff.6.dylib", ".")]
+
 a = Analysis(
     ['main.py'],
     pathex=[],
-    binaries=[
-        ("/usr/local/lib/libtiff.6.dylib", "."), # For Pillow on macos
-        ], #matplotlib_dynlibs + basemap_dynlibs + pyproj_dynlibs + copy_metadata('Pillow'),
+    binaries=binaries, #matplotlib_dynlibs + basemap_dynlibs + pyproj_dynlibs + copy_metadata('Pillow'),
     datas=[
         ('MapData', 'MapData'), # Map boundaries
         ('pyproject.toml', '.'), # For versioning
