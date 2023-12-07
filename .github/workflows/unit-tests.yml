@@ -7,7 +7,7 @@ jobs:
 
     strategy:
         matrix:
-            os: [macos-latest, macos-11, windows-latest]
+            os: [macos-latest, windows-latest]
 
     steps:
       - name: Check out Repository Code

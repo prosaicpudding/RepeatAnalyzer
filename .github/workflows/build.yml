@@ -41,8 +41,8 @@ jobs:
         if: matrix.os == 'macos-latest'
         run: |
           ls build
-          ls -l \usr\lib
-          ls -l \usr\local\lib
+          ls -l /usr/lib
+          ls -l /usr/local/lib
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
