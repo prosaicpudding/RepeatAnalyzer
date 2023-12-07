@@ -14,7 +14,7 @@ app_name = f"RepeatAnalyzer"
 #basemap_dynlibs = collect_dynamic_libs('mpl_toolkits.basemap')
 basemap_data = collect_data_files('mpl_toolkits.basemap_data', subdir=None)
 
-pyproj_dynlibs = collect_dynamic_libs('pyproj')
+#pyproj_dynlibs = collect_dynamic_libs('pyproj')
 #pyproj_data = collect_data_files('pyproj', subdir=None)
 #pillow_dynlibs = collect_dynamic_libs('Pillow')
 

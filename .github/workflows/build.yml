@@ -27,6 +27,8 @@ jobs:
           brew update
           # For Basemap
           brew install geos
+          # for pyproj
+          brew install proj
           # For Pillow
           #  brew install libtiff libjpeg webp little-cms2
           brew install pillow
@@ -36,6 +38,7 @@ jobs:
       - name: Build Executable
         run: |
           poetry install --without dev --with build --sync
+          poetry run pip install pyproj --no-binary pyproj
           poetry run pyinstaller --log-level DEBUG RepeatAnalyzer.spec
 
       - name: Macos debug
