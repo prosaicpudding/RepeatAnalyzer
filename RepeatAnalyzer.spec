@@ -14,11 +14,11 @@ app_name = f"RepeatAnalyzer"
 #basemap_dynlibs = collect_dynamic_libs('mpl_toolkits.basemap')
 basemap_data = collect_data_files('mpl_toolkits.basemap_data', subdir=None)
 
-#pyproj_dynlibs = collect_dynamic_libs('pyproj')
+pyproj_dynlibs = collect_dynamic_libs('pyproj')
 #pyproj_data = collect_data_files('pyproj', subdir=None)
 #pillow_dynlibs = collect_dynamic_libs('Pillow')
 
-binaries = [] if platform.system() == 'Windows' else [("/usr/local/lib/libtiff.6.dylib", ".")]
+binaries = [] if platform.system() == 'Windows' else [("/usr/local/lib/libtiff.6.dylib", "pyproj/.dylibs")] + pyproj_dynlibs
 
 a = Analysis(
     ['main.py'],
