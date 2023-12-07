@@ -40,7 +40,7 @@ jobs:
       - name: Macos debug
         if: matrix.os == 'macos-latest'
         run: |
-          mv build/warn-RepeatAnalyzer.txt dist/
+          ls build
           ls -l \usr\lib
           ls -l \usr\local\lib
 
