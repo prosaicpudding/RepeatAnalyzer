@@ -19,6 +19,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
+          pip install --upgrade pip
           pip install poetry
 
       - name: Install Macos Dependencies
@@ -37,8 +38,10 @@ jobs:
 
       - name: Build Executable
         run: |
-          poetry install --without dev --with build --sync
+          pip freeze
+          poetry show
           poetry run pip install pyproj --no-binary pyproj
+          poetry install --without dev --with build --sync
           poetry run pyinstaller --log-level DEBUG RepeatAnalyzer.spec
 
       - name: Macos debug
