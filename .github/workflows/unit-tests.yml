@@ -7,7 +7,7 @@ jobs:
 
     strategy:
         matrix:
-            os: [macos-latest, windows-latest]
+            os: [macos-latest, macos-11, windows-latest]
 
     steps:
       - name: Check out Repository Code
@@ -19,7 +19,7 @@ jobs:
           python-version: '3.10'
 
       - name: Install Geos (Dependency for basemap)
-        if: matrix.os == 'macos-latest'
+        if: matrix.os != 'windows-latest'
         run: |
           brew update
           brew install geos

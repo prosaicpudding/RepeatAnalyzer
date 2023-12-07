@@ -2,36 +2,33 @@
 
 import os
 
-from packaging_utils import extract_version_from_pyproject_toml, mpl_toolkits_path
-from PyInstaller.utils.hooks import collect_data_files, collect_dynamic_libs, collect_submodules
+from PyInstaller.utils.hooks import collect_data_files, collect_dynamic_libs
 
 app_name = f"RepeatAnalyzer"
 
 # Collect dynamic libs and data files from Matplotlib and Basemap
-matplotlib_dynlibs = collect_dynamic_libs('matplotlib')
-matplotlib_data = collect_data_files('matplotlib', subdir=None)
-matplotlib_submodules = collect_submodules('matplotlib')
+#matplotlib_dynlibs = collect_dynamic_libs('matplotlib')
+#matplotlib_data = collect_data_files('matplotlib', subdir=None)
 
-basemap_dynlibs = collect_dynamic_libs('mpl_toolkits.basemap')
+#basemap_dynlibs = collect_dynamic_libs('mpl_toolkits.basemap')
 basemap_data = collect_data_files('mpl_toolkits.basemap_data', subdir=None)
 
-pyproj_dynlibs = collect_dynamic_libs('pyproj')
-pyproj_data = collect_data_files('pyproj', subdir=None)
-
-from PyInstaller.utils.hooks import copy_metadata
+#pyproj_dynlibs = collect_dynamic_libs('pyproj')
+#pyproj_data = collect_data_files('pyproj', subdir=None)
+pillow_dynlibs = collect_dynamic_libs('Pillow')
 
 a = Analysis(
     ['main.py'],
     pathex=[],
-    binaries=matplotlib_dynlibs + basemap_dynlibs + pyproj_dynlibs + copy_metadata('Pillow'),
-    datas=[('MapData', 'MapData'),('pyproject.toml', '.')] + matplotlib_data + basemap_data + pyproj_data,
-    hiddenimports=matplotlib_submodules,
+    binaries=pillow_dynlibs, #matplotlib_dynlibs + basemap_dynlibs + pyproj_dynlibs + copy_metadata('Pillow'),
+    datas=[('MapData', 'MapData'),('pyproject.toml', '.')] + basemap_data, # + pyproj_data + matplotlib_data,
+    hiddenimports=[], #matplotlib_submodules,
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
     excludes=[],
-    # noarchive=False,
-    onefile=False,
+    noarchive=False,
+    onefile=True,
 )
 pyz = PYZ(a.pure)
 
