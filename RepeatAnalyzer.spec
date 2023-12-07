@@ -18,7 +18,7 @@ pyproj_dynlibs = collect_dynamic_libs('pyproj')
 #pyproj_data = collect_data_files('pyproj', subdir=None)
 #pillow_dynlibs = collect_dynamic_libs('Pillow')
 
-binaries = [] if platform.system() == 'Windows' else [("/usr/local/lib/libtiff.6.dylib", "pyproj/.dylibs")]# + pyproj_dynlibs
+binaries = [] #if platform.system() == 'Windows' else [("/usr/local/lib/libtiff.6.dylib", "pyproj/.dylibs")]# + pyproj_dynlibs
 
 a = Analysis(
     ['main.py'],

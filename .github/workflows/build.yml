@@ -28,7 +28,8 @@ jobs:
           # For Basemap
           brew install geos
           # For Pillow
-          brew install libtiff libjpeg webp little-cms2
+          #  brew install libtiff libjpeg webp little-cms2
+          brew install pillow
           # Update package versions
           poetry lock
 
