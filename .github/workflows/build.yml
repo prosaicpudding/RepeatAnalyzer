@@ -28,18 +28,23 @@ jobs:
         if: matrix.os == 'macos-latest'
         run: |
           brew update
+
           # For Basemap
           brew install geos
 
           # for pyproj
           pip uninstall -y  pyproj
           brew install proj
-          poetry run pip install pyproj --no-binary pyproj
+          poetry run pip install pyproj --no-binary :all:
 
           # For Pillow
           pip uninstall -y Pillow
           brew install libjpeg libtiff little-cms2 openjpeg webp
           poetry run pip install Pillow --no-binary :all:
+
+          # For matplotlib
+          brew install freetype
+          poetry run pip install matplotlib --no-binary :all:
 
           # Update package versions
           poetry lock
