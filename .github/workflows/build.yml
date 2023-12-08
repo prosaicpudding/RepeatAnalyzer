@@ -27,8 +27,10 @@ jobs:
 
       - name: Install Macos Dependencies
         if: matrix.os == 'macos-latest'
+        env:
+          HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK: 1
         run: |
-          # brew update
+          brew update
 
           # For Basemap
           brew install geos
@@ -36,7 +38,7 @@ jobs:
           # for pyproj
           pip uninstall -y  pyproj
           brew install proj
-          #poetry run pip install pyproj --no-binary :all:
+          poetry run pip install pyproj --no-binary :all:
 
           # For Pillow
           pip uninstall -y Pillow
