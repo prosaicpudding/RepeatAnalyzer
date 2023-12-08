@@ -41,7 +41,7 @@ jobs:
           # For Pillow
           pip uninstall -y Pillow
           brew install libjpeg libtiff little-cms2 openjpeg webp
-          #poetry run pip install Pillow --no-binary :all:
+          poetry run pip install Pillow --no-binary :all:
 
           # For Tkinter
           brew install tcl-tk
