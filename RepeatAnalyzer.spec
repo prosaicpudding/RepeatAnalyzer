@@ -9,7 +9,7 @@ app_name = f"RepeatAnalyzer"
 
 
 basemap_data = collect_data_files('mpl_toolkits.basemap_data', subdir=None)
-tkinter_data = collect_dynamic_libs('tkinter')
+# tkinter_data = collect_dynamic_libs('tkinter')
 
 
 binaries = [] #if platform.system() == 'Windows' else [("/usr/local/lib/libtiff.6.dylib", "pyproj/.dylibs")]# + pyproj_dynlibs
@@ -21,8 +21,8 @@ a = Analysis(
     datas=[
         ('MapData', 'MapData'), # Map boundaries
         ('pyproject.toml', '.'), # For versioning
-        ] + basemap_data, + tkinter_data
-    hiddenimports=["tkinter"],
+        ] + basemap_data, # , + tkinter_data
+    hiddenimports=[],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
