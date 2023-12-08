@@ -19,6 +19,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
+          python -V
           pip install --upgrade pip
           pip install poetry
           pip freeze
@@ -27,7 +28,7 @@ jobs:
       - name: Install Macos Dependencies
         if: matrix.os == 'macos-latest'
         run: |
-          brew update
+          # brew update
 
           # For Basemap
           brew install geos
@@ -35,12 +36,12 @@ jobs:
           # for pyproj
           pip uninstall -y  pyproj
           brew install proj
-          poetry run pip install pyproj --no-binary :all:
+          #poetry run pip install pyproj --no-binary :all:
 
           # For Pillow
           pip uninstall -y Pillow
           brew install libjpeg libtiff little-cms2 openjpeg webp
-          poetry run pip install Pillow --no-binary :all:
+          #poetry run pip install Pillow --no-binary :all:
 
           # For Tkinter
           brew install tcl-tk
