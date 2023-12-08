@@ -7,28 +7,22 @@ from PyInstaller.utils.hooks import collect_data_files, collect_dynamic_libs
 
 app_name = f"RepeatAnalyzer"
 
-# Collect dynamic libs and data files from Matplotlib and Basemap
-#matplotlib_dynlibs = collect_dynamic_libs('matplotlib')
-#matplotlib_data = collect_data_files('matplotlib', subdir=None)
 
-#basemap_dynlibs = collect_dynamic_libs('mpl_toolkits.basemap')
 basemap_data = collect_data_files('mpl_toolkits.basemap_data', subdir=None)
+tkinter_data = collect_dynamic_libs('tkinter')
 
-#pyproj_dynlibs = collect_dynamic_libs('pyproj')
-#pyproj_data = collect_data_files('pyproj', subdir=None)
-#pillow_dynlibs = collect_dynamic_libs('Pillow')
 
 binaries = [] #if platform.system() == 'Windows' else [("/usr/local/lib/libtiff.6.dylib", "pyproj/.dylibs")]# + pyproj_dynlibs
 
 a = Analysis(
     ['main.py'],
     pathex=[],
-    binaries=binaries, #matplotlib_dynlibs + basemap_dynlibs + pyproj_dynlibs + copy_metadata('Pillow'),
+    binaries=binaries,
     datas=[
         ('MapData', 'MapData'), # Map boundaries
         ('pyproject.toml', '.'), # For versioning
-        ] + basemap_data, # + pyproj_data + matplotlib_data,
-    hiddenimports=[], #matplotlib_submodules,
+        ] + basemap_data, + tkinter_data
+    hiddenimports=["tkinter"],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],

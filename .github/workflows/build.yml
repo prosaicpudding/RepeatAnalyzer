@@ -42,9 +42,8 @@ jobs:
           brew install libjpeg libtiff little-cms2 openjpeg webp
           poetry run pip install Pillow --no-binary :all:
 
-          # For matplotlib
-          brew install freetype
-          #poetry run pip install matplotlib --no-binary :all:
+          # For Tkinter
+          brew install tcl-tk
 
           # Update package versions
           poetry lock
