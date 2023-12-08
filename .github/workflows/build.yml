@@ -44,7 +44,7 @@ jobs:
 
           # For matplotlib
           brew install freetype
-          poetry run pip install matplotlib --no-binary :all:
+          #poetry run pip install matplotlib --no-binary :all:
 
           # Update package versions
           poetry lock
