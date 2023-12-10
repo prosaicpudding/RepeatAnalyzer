@@ -11,8 +11,8 @@ app_name = f"RepeatAnalyzer"
 basemap_data = collect_data_files('mpl_toolkits.basemap_data', subdir=None)
 
 # Tcl/Tk paths
-tcl_path = '/usr/local/Cellar/tcl-tk/8.6.13_5/lib/tcl8.6'
-tk_path = '/usr/local/Cellar/tcl-tk/8.6.13_5/lib/tk8.6'
+tcl_path = '/System/Library/Frameworks/Tcl.framework/Versions/8.5/Tcl'
+tk_path = '/System/Library/Frameworks/Tk.framework/Tk'
 
 binaries = [] #if platform.system() == 'Windows' else [("/usr/local/lib/libtiff.6.dylib", "pyproj/.dylibs")]# + pyproj_dynlibs
 tcl_tk_datas = [] if platform.system() == 'Windows' else [(tcl_path, 'tcl'), (tk_path, 'tk')]
