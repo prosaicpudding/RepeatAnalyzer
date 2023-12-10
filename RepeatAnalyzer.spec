@@ -11,11 +11,11 @@ app_name = f"RepeatAnalyzer"
 basemap_data = collect_data_files('mpl_toolkits.basemap_data', subdir=None)
 
 # Tcl/Tk paths
-#tcl_path = '/usr/local/Cellar/tcl-tk/8.6.13_5/lib/tcl8.6'
-#tk_path = '/usr/local/Cellar/tcl-tk/8.6.13_5/lib/tk8.6'
+tcl_path = '/usr/local/Cellar/tcl-tk/8.6.13_5/lib/tcl8.6'
+tk_path = '/usr/local/Cellar/tcl-tk/8.6.13_5/lib/tk8.6'
 
 binaries = [] #if platform.system() == 'Windows' else [("/usr/local/lib/libtiff.6.dylib", "pyproj/.dylibs")]# + pyproj_dynlibs
-#tcl_tk_datas = [] if platform.system() == 'Windows' else [(tcl_path, 'tcl'), (tk_path, 'tk')]
+tcl_tk_datas = [] if platform.system() == 'Windows' else [(tcl_path, 'tcl'), (tk_path, 'tk')]
 
 a = Analysis(
     ['main.py'],
@@ -24,7 +24,7 @@ a = Analysis(
     datas=[
         ('MapData', 'MapData'), # Map boundaries
         ('pyproject.toml', '.'), # For versioning
-        ] + basemap_data, # + tcl_tk_datas,
+        ] + basemap_data, + tcl_tk_datas,
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

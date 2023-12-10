@@ -46,7 +46,7 @@ jobs:
           poetry run pip install Pillow --no-binary :all:
 
           # For Tkinter
-          brew install tcl-tk@8.5
+          # brew install tcl-tk@8.5
 
           # Update package versions
           poetry lock
