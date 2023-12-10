@@ -46,7 +46,7 @@ jobs:
           poetry run pip install Pillow --no-binary :all:
 
           # For Tkinter
-          ls -l /System/Library/Frameworks/Tk.framework/Tk
+          ls -l /System/Library/Frameworks/Tk.framework/
           ls -l /System/Library/Frameworks/Tcl.framework/
 
           # Update package versions
