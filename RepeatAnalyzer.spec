@@ -24,7 +24,7 @@ a = Analysis(
     datas=[
         ('MapData', 'MapData'), # Map boundaries
         ('pyproject.toml', '.'), # For versioning
-        ] + basemap_data, + tcl_tk_datas,
+        ] + basemap_data + tcl_tk_datas,
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

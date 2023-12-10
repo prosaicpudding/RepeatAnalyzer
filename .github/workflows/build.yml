@@ -64,6 +64,8 @@ jobs:
         run: |
           ls build
           ls -l /usr/local/lib
+          ls -l /System/Library/Frameworks/
+
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
