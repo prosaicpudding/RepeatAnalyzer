@@ -63,7 +63,7 @@ jobs:
       - name: Macos debug
         if: matrix.os == 'macos-latest'
         run: |
-          ls build
+          ls build/RepeatAnalyzer
           ls -l /usr/local/lib
           ls -l /System/Library/Frameworks/
 
