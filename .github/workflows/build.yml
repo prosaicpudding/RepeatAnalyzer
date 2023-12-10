@@ -46,7 +46,7 @@ jobs:
           poetry run pip install Pillow --no-binary :all:
 
           # For Tkinter
-          brew uninstall tcl-tk
+          brew uninstall --ignore-dependencies tcl-tk
           brew install tcl-tk
           brew link --force tcl-tk
           brew install python-tk@3.10
