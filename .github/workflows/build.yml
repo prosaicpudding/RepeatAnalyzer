@@ -33,12 +33,10 @@ jobs:
         env:
           HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK: 1
         run: |
-          # For Tkinter
-          ls -l /System/Library/Frameworks/Tk.framework/Versions/8.5/Resources/
-          ls -l /System/Library/Frameworks/Tcl.framework/Versions/8.5/tclsh8.5
-          ls -l /System/Library/Frameworks/Tk.framework/Versions/8.5/Resources/Scripts
-
           brew update
+
+          # For tkinter
+          brew install python-tk
 
           # For Basemap
           brew install geos
