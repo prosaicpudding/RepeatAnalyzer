@@ -26,7 +26,6 @@ jobs:
           poetry show
 
           python -c "import tkinter; print(tkinter)"
-          python -c "import tkinter;  tcl = tkinter.Tcl(); print(tcl.call("info", "patchlevel"))"
           python -m tkinter
           python -c "import tkinter; print(tkinter.TkVersion); print(tkinter.TclVersion); print(tkinter.Tcl().eval('info library'))"
 
