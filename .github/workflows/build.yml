@@ -25,15 +25,17 @@ jobs:
           pip freeze
           poetry show
 
+          python -c "import tkinter; print(tkinter)"
+          python -c "import tkinter;  tcl = tkinter.Tcl(); print(tcl.call("info", "patchlevel"))"
+          python -m tkinter
+          python -c "import tkinter; print(tkinter.TkVersion); print(tkinter.TclVersion); print(tkinter.Tcl().eval('info library'))"
+
       - name: Install Macos Dependencies
         if: matrix.os == 'macos-latest'
         env:
           HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK: 1
         run: |
           # For Tkinter
-          python -c "import tkinter; print(tkinter)"
-          python -m tkinter
-          python -c "import tkinter; print(tkinter.TkVersion); print(tkinter.TclVersion); print(tkinter.Tcl().eval('info library'))"
           ls -l /System/Library/Frameworks/Tk.framework/Versions/8.5/Resources/
           ls -l /System/Library/Frameworks/Tcl.framework/Versions/8.5/tclsh8.5
           ls -l /System/Library/Frameworks/Tk.framework/Versions/8.5/Resources/Scripts
