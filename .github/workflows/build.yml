@@ -30,6 +30,14 @@ jobs:
         env:
           HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK: 1
         run: |
+          # For Tkinter
+          python -c "import tkinter; print(tkinter)"
+          python -m tkinter
+          python -c "import tkinter; print(tkinter.TkVersion); print(tkinter.TclVersion); print(tkinter.Tcl().eval('info library'))"
+          ls -l /System/Library/Frameworks/Tk.framework/Versions/8.5/Resources/
+          ls -l /System/Library/Frameworks/Tcl.framework/Versions/8.5/tclsh8.5
+          ls -l /System/Library/Frameworks/Tk.framework/Versions/8.5/Resources/Scripts
+
           brew update
 
           # For Basemap
@@ -44,11 +52,6 @@ jobs:
           pip uninstall -y Pillow
           brew install libjpeg libtiff little-cms2 openjpeg webp
           poetry run pip install Pillow --no-binary :all:
-
-          # For Tkinter
-          ls -l /System/Library/Frameworks/Tk.framework/Versions/8.5/Resources/
-          ls -l /System/Library/Frameworks/Tcl.framework/Versions/8.5/tclsh8.5
-          ls -l /System/Library/Frameworks/Tk.framework/Versions/8.5/Resources/Scripts
 
           # Update package versions
           poetry lock
