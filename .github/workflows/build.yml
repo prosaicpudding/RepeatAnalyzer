@@ -49,8 +49,7 @@ jobs:
           poetry run pip install Pillow --no-binary :all:
 
           # for certifi
-          brew install openssl
-
+          #brew install openssl
 
           # Update package versions
           poetry lock
