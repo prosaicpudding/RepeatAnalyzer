@@ -39,8 +39,7 @@ jobs:
           brew install geos
 
           # for certifi
-          brew install openssl
-          poetry run pip install certifi --no-binary :all:
+          /Applications/Python\ 3.11/Install\ Certificates.command
 
           # for pyproj
           pip uninstall -y  pyproj
