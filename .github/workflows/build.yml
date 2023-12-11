@@ -36,7 +36,7 @@ jobs:
           brew update
 
           # For tkinter
-          brew install python-tk@python3.10
+          #brew install python-tk
 
           # For Basemap
           brew install geos
