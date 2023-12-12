@@ -460,7 +460,7 @@ def get_working_directory() -> str:
         return os.path.dirname(sys.executable)
     else:
         # Running as a script
-        return os.path.dirname(os.path.realpath(__file__))
+        return os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
 def readdatafromfile(file, species):
     if "." not in file:

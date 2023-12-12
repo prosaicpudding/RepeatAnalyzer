@@ -1,21 +1,13 @@
 # -*- mode: python ; coding: utf-8 -*-
 
-import os
-import platform
-
-from PyInstaller.utils.hooks import collect_data_files, collect_dynamic_libs
+from PyInstaller.utils.hooks import collect_data_files
 
 app_name = f"RepeatAnalyzer"
 
 
 basemap_data = collect_data_files('mpl_toolkits.basemap_data', subdir=None)
 
-# Tcl/Tk paths
-#tcl_path = '/System/Library/Frameworks/Tcl.framework/Versions/Current/8.5/tcl'
-#tk_path = '/System/Library/Frameworks/Tk.framework/Current/8.5/tk'
-
 binaries = [] #if platform.system() == 'Windows' else [("/usr/local/lib/libtiff.6.dylib", "pyproj/.dylibs")]# + pyproj_dynlibs
-#tcl_tk_datas = [] if platform.system() == 'Windows' else [(tcl_path, 'tcl'), (tk_path, 'tk')]
 
 a = Analysis(
     ['main.py'],
@@ -24,7 +16,7 @@ a = Analysis(
     datas=[
         ('MapData', 'MapData'), # Map boundaries
         ('pyproject.toml', '.'), # For versioning
-        ] + basemap_data, #+ tcl_tk_datas,
+        ] + basemap_data,
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
