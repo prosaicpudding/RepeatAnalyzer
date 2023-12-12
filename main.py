@@ -20,6 +20,7 @@
 
 import os
 
+import toml
 from matplotlib import pyplot as plt
 from scipy.cluster.hierarchy import dendrogram
 
@@ -27,19 +28,13 @@ from RepeatAnalyzer.RA_DataStructures import (Species, identifystrain,
                                               parserepeats)
 from RepeatAnalyzer.RA_Functions import (exportdata, exportEditDistanceCSV,
                                          exportRepeatCSV, generateAutonames,
-                                         importdata, readdatafromfile,
-                                         updateGeocoding)
+                                         get_working_directory, importdata,
+                                         readdatafromfile, updateGeocoding)
 from RepeatAnalyzer.RA_Interface import (createMap, deployWindow,
                                          getAllLocations, getGDLocation,
                                          printspeciesdata, sanitize,
                                          searchByLocation, searchByRepeat,
                                          searchByStrain, searchWindow)
-
-# from jellyfish import levenshtein_distance
-# import numpy as np
-# def d(coord):
-# 	i, j = coord
-# 	return levenshtein_distance(R[i], R[j])
 
 
 def fancy_dendrogram(*args, **kwargs):
@@ -94,12 +89,29 @@ def printClusterMap(species, clusters):
     createMap(rlons, rlats, rIDs, [], [], [], cnames, species, 4.5, 1, 0, True)
 
 
+def extract_version_from_pyproject_toml(file_path='pyproject.toml'):
+    try:
+        with open(file_path, 'r') as toml_file:
+            toml_content = toml.load(toml_file)
+            version = toml_content['tool']['poetry']['version']
+            return version
+    except FileNotFoundError:
+        print(f"Error: File {file_path} not found.")
+        return None
+    except KeyError:
+        print(f"Error: Unable to find version in {file_path}. Make sure the file structure is correct.")
+        return None
+    except PermissionError:
+        print(f"Error: Permission denied when opening {file_path}.")
+        return None
+
 def menuloop(speciesList, currentSpecies):
     # process=multiprocessing.Process(target=, args=())
     # process.start()
+    version = extract_version_from_pyproject_toml()
     goAgain = True
     while goAgain == True:
-        print("\nWelcome to RepeatAnalyzer.")
+        print(f"\nWelcome to RepeatAnalyzer {version}.")
         if speciesList != []:
             print(
                 "Currently working on", speciesList[currentSpecies].name + ":", end=" "
@@ -199,7 +211,7 @@ def menuloop(speciesList, currentSpecies):
             searchWindow(speciesList[currentSpecies])
 
         if command == 10:  # Print summary
-            with open(f"{speciesList[currentSpecies].name}.txt", "w", encoding="UTF-8") as out:
+            with open(f"{get_working_directory()}/{speciesList[currentSpecies].name}.txt", "w", encoding="UTF-8") as out:
                 printspeciesdata(speciesList[currentSpecies], out)
 
             exportRepeatCSV(

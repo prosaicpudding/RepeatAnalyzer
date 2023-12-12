@@ -118,61 +118,13 @@ def generateAutonames(species):
             strain.name.remove("")
 
 
-
-def codecoords(l: Location):
-    print("coding", l.getString())
-    # try:
-    # coords=geocoder.geocode(l.getString(),timeout=5)
-
-    URL = (
-        "https://maps.googleapis.com/maps/api/geocode/json?address="
-        + l.getString().replace(" ", "+")
-        + f"&key={os.environ['GOOGLE_API_KEY']}"
-    )
-    print("Loading data...")
-    data = json.load(urllib.request.urlopen(URL))
-    # except GeocoderTimedOut as e:
-    # 	print "Error: Geocoder timed out, check your internet connection"
-    # 	return
-    # except GeocoderQuotaExceeded:
-    if data["status"] != "OK":
-        print(
-            "Error: Check your internet connection for stability, \notherwise the error status below should give you an idea of what the problem is."
-        )
-        print("The query status is:", data["status"])
-        return
-    coords = data["results"][0]["geometry"]["location"]
-    if coords != None:
-        # l.latitude=coords.latitude
-        # l.longitude=coords.longitude
-        l.latitude = coords["lat"]
-        l.longitude = coords["lng"]
-        # unify name formatting VVV
-        # URL='https://maps.googleapis.com/maps/api/geocode/json?latlng='+str(l.latitude)+','+str(l.longitude)
-        # data = json.load(urllib2.urlopen(URL))
-        address = data["results"][0]["address_components"]
-        for element in address:
-            if "country" in element["types"]:
-                l.country = element["long_name"]
-                l.ccode = element["short_name"]
-            if "administrative_area_level_1" in element["types"] and len(l) > 1:
-                l.province = element["long_name"]
-                l.pcode = element["short_name"]
-            if "administrative_area_level_2" in element["types"] and len(l) == 3:
-                l.city = element["long_name"]
-        print("\t" + str(l.latitude) + ", " + str(l.longitude))
-        print("\t" + l.getString().encode("utf-8"))
-        l.stable = True
-    else:
-        print("\t Not found")
-
-
 def updateGeocoding(species, recodeStable=False):
     for ID in species.usedStrainIDs:
         strain = getObjectbyID(ID, species.strains)
         if strain == None:
             continue
         for l in list(strain.location):
+            print(l.getString(coords=True))
             if (l.country == None or l.country == "") and (
                 (l.latitude == None) or (l.longitude == None)
             ):
@@ -467,7 +419,7 @@ def printresult(repeats, species, tabs=""):
         s = getObjectbyID(strain, species.strains)
         res += "\n" + tabs + "Found at:"
         for l in s.location:
-            res += "\n" + tabs + "\t" + l.getString()  # .decode('utf-8')
+            res += "\n" + tabs + "\t" + l.getString(coords=True)
         res += "\n" + tabs + "Referenced in:"
         papers = getAllPapers(strain, "s", species)
         for p in papers:
@@ -853,7 +805,7 @@ def exportCSV(coords, names, file, species):
     firstLine = "lon, lat"
     for index in names:
         firstLine += ", '" + names[index] + "'"
-    with open(file, "w") as csv:
+    with open(f"{get_working_directory()}/{file}", "w") as csv:
         # print columns to file (lon, lat, name1, name2,...nameN)
         csv.write(firstLine + "\n")
         # print each line to file (lon and lat value, with name boolean 1 or 0)
@@ -869,7 +821,7 @@ def exportCSV(coords, names, file, species):
 
 def exportRepeatCSV(species, file):
     firstline = "Name, Sequence, Source"
-    with open(file, "w", encoding="UTF-8") as csv:
+    with open(f"{get_working_directory()}/{file}", "w", encoding="UTF-8") as csv:
         csv.write(firstline + "\n")
         for repeat in species.repeats:
             csv.write(
@@ -896,7 +848,7 @@ def exportEditDistanceCSV(species, file):
 
     d = [[0 for x in range(len(species.repeats))] for x in range(len(species.repeats))]
 
-    with open(file, "w") as csv:
+    with open(f"{get_working_directory()}/{file}", "w") as csv:
         csv.write("\ufeff".encode("utf-8"))
         csv.write(firstline + "\n")
         for ind, repeat in enumerate(species.repeats):

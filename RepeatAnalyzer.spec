@@ -1,47 +1,30 @@
 # -*- mode: python ; coding: utf-8 -*-
 
-import toml
-import sys
 import os
 import platform
 
-# Get the path to the currently running Python executable
-python_executable = sys.executable
+from PyInstaller.utils.hooks import collect_data_files, collect_dynamic_libs
+
+app_name = f"RepeatAnalyzer"
 
 
-# Get the venv directory
-python_executable_dir = os.path.dirname(os.path.dirname(python_executable))
+basemap_data = collect_data_files('mpl_toolkits.basemap_data', subdir=None)
 
-if platform.system().lower() == 'windows':
-    lib = "Lib"
-else:
-    lib = "lib/python3.10"
+# Tcl/Tk paths
+#tcl_path = '/System/Library/Frameworks/Tcl.framework/Versions/Current/8.5/tcl'
+#tk_path = '/System/Library/Frameworks/Tk.framework/Current/8.5/tk'
 
-mpl_toolkits_path = os.path.join(python_executable_dir, lib, "site-packages", "mpl_toolkits", "basemap_data", "*")
-print(f"Looking for additional requirements in: {mpl_toolkits_path}")
-
-
-def extract_version_from_pyproject_toml(file_path='pyproject.toml'):
-    try:
-        with open(file_path, 'r') as toml_file:
-            toml_content = toml.load(toml_file)
-            version = toml_content['tool']['poetry']['version']
-            return version
-    except FileNotFoundError:
-        print(f"Error: File {file_path} not found.")
-        return None
-    except KeyError:
-        print(f"Error: Unable to find version in {file_path}. Make sure the file structure is correct.")
-        return None
-
-version = extract_version_from_pyproject_toml()
-app_name = f"RepeatAnalyzer_v{version}"
+binaries = [] #if platform.system() == 'Windows' else [("/usr/local/lib/libtiff.6.dylib", "pyproj/.dylibs")]# + pyproj_dynlibs
+#tcl_tk_datas = [] if platform.system() == 'Windows' else [(tcl_path, 'tcl'), (tk_path, 'tk')]
 
 a = Analysis(
     ['main.py'],
     pathex=[],
-    binaries=[(mpl_toolkits_path, os.path.join("mpl_toolkits", "basemap_data"))],
-    datas=[('MapData', 'MapData')],
+    binaries=binaries,
+    datas=[
+        ('MapData', 'MapData'), # Map boundaries
+        ('pyproject.toml', '.'), # For versioning
+        ] + basemap_data, #+ tcl_tk_datas,
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
