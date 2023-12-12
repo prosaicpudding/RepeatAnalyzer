@@ -2,6 +2,12 @@
 
 ## As of yet unversioned changes
 
+## 3.0.4
+- Added basic logging (logs/repeatanalyzer.log)
+
+## 3.0.3
+- Bugfix: build will now expect files to be in the executable directory (rather than hidden system dir)
+
 ## 3.0.2
 * Build macOS app with py2app
 
