@@ -25,9 +25,6 @@ jobs:
           pip freeze
           poetry show
 
-          python -c "import tkinter; print(tkinter)"
-          python -c "import tkinter; print(tkinter.TkVersion); print(tkinter.TclVersion); print(tkinter.Tcl().eval('info library'))"
-
       - name: Install Macos Dependencies
         if: matrix.os == 'macos-latest'
         env:
@@ -40,7 +37,9 @@ jobs:
 
           # for certifi
           /Applications/Python\ 3.11/Install\ Certificates.command
-
+          ls /etc/ssl
+          ln -s /etc/ssl/* /Library/Frameworks/Python.framework/Versions/Current/etc/openssl/
+          
           # for pyproj
           pip uninstall -y  pyproj
           brew install proj
