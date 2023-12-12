@@ -36,9 +36,8 @@ jobs:
           brew install geos
 
           # for certifi
-          /Applications/Python\ 3.11/Install\ Certificates.command
-          ls /etc/ssl
-          ln -s /etc/ssl/* /Library/Frameworks/Python.framework/Versions/Current/etc/openssl/
+          #/Applications/Python\ 3.11/Install\ Certificates.command
+          # Build is currently broken with a certificate issue
           
           # for pyproj
           pip uninstall -y  pyproj
