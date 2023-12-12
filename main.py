@@ -52,7 +52,7 @@ fh = RotatingFileHandler(
         backupCount=10
     )
 fh.setLevel(logging.DEBUG)
-log_formatter = logging.Formatter('%(asctime)s: %(message)s %(levelname)s')
+log_formatter = logging.Formatter('%(asctime)s: %(levelname)8s: %(message)s')
 fh.setFormatter(log_formatter)
 logger.addHandler(fh)
 
