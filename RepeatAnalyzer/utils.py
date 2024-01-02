@@ -6,8 +6,6 @@ from geopy.geocoders import Nominatim
 
 from RepeatAnalyzer.constants import problem_place_names, version
 
-logging.basicConfig(format=f'%(asctime)s %(levelname)s:%(message)s', level=logging.INFO)
-
 
 # This function takes a given IDlist and returns the earliest unused ID,
 # also adding it to the list
