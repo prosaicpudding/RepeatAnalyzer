@@ -1,5 +1,5 @@
 name: Build Executable
-run-name: ${{ github.actor }} is running our tests 🚀
+run-name: ${{ github.actor }} is building our windows executable 🚀
 on: [push]
 jobs:
   Build:
