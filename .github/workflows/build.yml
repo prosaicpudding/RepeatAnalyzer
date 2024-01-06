@@ -1,4 +1,4 @@
-name: Build executable
+name: Build Executable
 run-name: ${{ github.actor }} is running our tests 🚀
 on: [push]
 jobs:
@@ -38,7 +38,7 @@ jobs:
           # for certifi
           #/Applications/Python\ 3.11/Install\ Certificates.command
           # Build is currently broken with a certificate issue
-          
+
           # for pyproj
           pip uninstall -y  pyproj
           brew install proj
