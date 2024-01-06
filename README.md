@@ -25,7 +25,7 @@ poetry run python. A managed virtual environment will be created on your system 
 ``` bash
     python -m pip install poetry
     poetry install
-    poetry run main.py
+    poetry run python main.py
     poetry run pre-commit install  # this will activate the hooks in .pre-commit-config.yml
 ```
 
