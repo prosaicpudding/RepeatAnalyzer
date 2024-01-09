@@ -1,5 +1,5 @@
-name: Build executable
-run-name: ${{ github.actor }} is running our tests 🚀
+name: Build Executable
+run-name: ${{ github.actor }} is building our windows executable 🚀
 on: [push]
 jobs:
   Build:
@@ -38,7 +38,7 @@ jobs:
           # for certifi
           #/Applications/Python\ 3.11/Install\ Certificates.command
           # Build is currently broken with a certificate issue
-          
+
           # for pyproj
           pip uninstall -y  pyproj
           brew install proj
@@ -67,9 +67,35 @@ jobs:
           ls -l /usr/local/lib
           ls -l /System/Library/Frameworks/
 
-
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
             name: RepeatAnalyzer
             path: dist/*
+
+    # if this is a tagged commit, create a release
+      - name: Create Release
+        if: startsWith(github.ref, 'refs/tags/')
+        id: create_release
+        uses: actions/create-release@v1
+        continue-on-error: true  # if the release already exists, this step will fail. So we continue on error.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          draft: false
+          prerelease: false
+
+    # if this is a tagged commit, create a release
+      - name: Upload Release Asset
+        if: startsWith(github.ref, 'refs/tags/')
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
+          asset_path: dist/RepeatAnalyzer.exe
+          asset_name: RepeatAnalyzer.exe
+          asset_content_type: application/octet-stream
