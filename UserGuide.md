@@ -163,11 +163,11 @@ __Output:__ A printout with all diversity scores, repeat frequencies, unique rep
 #### Metric Formulas
 
 - __GD2:__
-    $Total \# Unique SSRs \over \# Genotypes$
+    $Total Num Unique SSRs \over Num Genotypes$
 - __GDM1 (Local):__
-    $𝐴𝑣𝑔({ \# 𝑈𝑛𝑖𝑞𝑢𝑒 𝑆𝑆𝑅𝑠 𝑖𝑛 𝐺𝑒𝑛𝑜𝑡𝑦𝑝𝑒_i \over 𝐿𝑒𝑛𝑔𝑡ℎ(𝐺𝑒𝑛𝑜𝑡𝑦𝑝𝑒_i)} )$
+    $𝐴𝑣𝑔({ Num 𝑈𝑛𝑖𝑞𝑢𝑒 𝑆𝑆𝑅𝑠 𝑖𝑛 𝐺𝑒𝑛𝑜𝑡𝑦𝑝𝑒_i \over 𝐿𝑒𝑛𝑔𝑡ℎ(𝐺𝑒𝑛𝑜𝑡𝑦𝑝𝑒_i)} )$
 - __GDM1 (Global):__
-    $𝑇𝑜𝑡𝑎𝑙 \# 𝑈𝑛𝑖𝑞𝑢𝑒 𝑆𝑆𝑅𝑠 \over 𝑇𝑜𝑡𝑎𝑙 𝐿𝑒𝑛𝑔𝑡ℎ(𝐴𝑙𝑙 𝐺𝑒𝑛𝑜𝑡𝑦𝑝𝑒𝑠)$
+    $𝑇𝑜𝑡𝑎𝑙 Num 𝑈𝑛𝑖𝑞𝑢𝑒 𝑆𝑆𝑅𝑠 \over 𝑇𝑜𝑡𝑎𝑙 𝐿𝑒𝑛𝑔𝑡ℎ(𝐴𝑙𝑙 𝐺𝑒𝑛𝑜𝑡𝑦𝑝𝑒𝑠)$
 - __GDM2 (Local):__
     $𝐴𝑣𝑔(𝐷𝑒𝑣𝑖𝑎𝑡𝑖𝑜𝑛({𝐹𝑟𝑒𝑞𝑢𝑒𝑛𝑐𝑦(𝑆𝑆𝑅_i 𝑖𝑛 𝐺𝑒𝑛𝑜𝑡𝑦𝑝𝑒_j) \over 𝐿𝑒𝑛𝑔th(𝐺𝑒𝑛𝑜𝑡𝑦𝑝𝑒_j)}))$
 - __GDM2 (Global):__
