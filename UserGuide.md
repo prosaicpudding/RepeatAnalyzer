@@ -86,7 +86,7 @@ __Input:__ One full or partial gene sequence either in DNA or protein form OR mu
 
 __Output:__ The names of the maximal set of repeats in each sample with genotype name and publication details if any.
 
-![An example illustrating repeat identification](Documentation\RA_fig1.png "An example illustrating repeat identification")
+![An example illustrating repeat identification](https://github.com/prosaicpudding/RepeatAnalyzer/blob/main/Documentation/RA_fig1.png?raw=true "An example illustrating repeat identification")
 
 *__Figure 1__ Shows the repeat/genotype identification interface. Once a sequence or sequences have been entered into the identification window (bottom left) and the correct input type is chosen (DNA or Protein), the match window will appear with which (known) repeats occur in the sequence and all relevant information on the genotype (if it has been reported previously). All windows can be resized and/or have their contents copied as needed.*
 
@@ -96,7 +96,7 @@ __Input:__ The number of the species (as listed on-screen) OR 0 followed by name
 
 __Output:__ The main menu header will change as appropriate.
 
-![An example illustrating species change](Documentation\RA_fig2.png "An example illustrating species change")
+![An example illustrating species change](https://github.com/prosaicpudding/RepeatAnalyzer/blob/main/Documentation/RA_fig2.png?raw=true "An example illustrating species change")
 
 *__Figure 2__ Shows the interface to change species or add a new species. Specifically, showing the series of commands used to add a new species to RepeatAnalyzer. The first command opens the species change menu. The second selects add a species. Finally, the third accepts the name of the species from the user. Before the species is added, RepeatAnalyzer will also ask the user to enter the command 'y' to confirm that the new name is correct.*
 
@@ -110,15 +110,15 @@ __Input:__ Select entity type by number, repeat, strain or location. Check boxes
 
 __Output:__ A summary of information for the entity or entities selected. See Figures 3, 4 and 5 for illustrations of each of the three search types.
 
-![An example illustrating search by repeat](Documentation\RA_fig3.png "An example illustrating search by repeat")
+![An example illustrating search by repeat](https://github.com/prosaicpudding/RepeatAnalyzer/blob/main/Documentation/RA_fig3.png?raw=true "An example illustrating search by repeat")
 
 *__Figure 3__ Shows the search by repeat interface. Once one or more repeat names or sequences (in FASTA format) is entered along with a maximum edit distance (default zero), the search result window appears with the relevant details for that repeat. The windows are scrollable and can be copied.*
 
-![An example illustrating search by location](Documentation\RA_fig4.png "An example illustrating search by location")
+![An example illustrating search by location](https://github.com/prosaicpudding/RepeatAnalyzer/blob/main/Documentation/RA_fig4.png?raw=true "An example illustrating search by location")
 
 *__Figure 4__ Shows the search by location interface. Similar to Figure 3, search by location shows all relevant information for a given location, selected from the alphabetized list in the search window. Locations can be as broad as a country, or as narrow as a county, and broader location will include results from all narrower locations as well. (i.e. the result for Brazil includes results for any Brazilian province or county with data.) If a location does not appear on the list, then there are no genotype reports in that location.*
 
-![An example illustrating search by strain](Documentation\RA_fig5.png "An example illustrating search by strain")
+![An example illustrating search by strain](https://github.com/prosaicpudding/RepeatAnalyzer/blob/main/Documentation/RA_fig5.png?raw=true "An example illustrating search by strain")
 
 *__Figure 5__ Shows the search by strain interface. It can accept either a single strain name or sequence, or multiple in FASTA. For each input it returns the edit distances for all repeats in the strain, all locations it has been reported, and the associated publications.*
 
@@ -128,15 +128,15 @@ __Input:__ Any combination of: A list of repeats by name or sequence, a list of 
 
 __Output:__ A printout of data on the mapped entities and a world map showing where those entities occur. The map can be zoomed and it can be saved.
 
-![An example illustrating mapping](Documentation\RA_fig6.png "An example illustrating mapping")
+![An example illustrating mapping](https://github.com/prosaicpudding/RepeatAnalyzer/blob/main/Documentation/RA_fig6.png?raw=true "An example illustrating mapping")
 
 *__Figure 6__ Shows a sample mapping query and result. Each map query can be modified by a number of options including region (results include only repeats/genotypes present in that region, but all locations they occur in the world), marker scale, legend location and the specific repeats/genotypes of interest. The map plot can be scaled, zoomed, panned and saved to a separate file using the options on the top left of the panel.*
 
-![Another example illustrating mapping query](Documentation\RA_fig7.png "Another example illustrating mappingquery")
+![Another example illustrating mapping query](https://github.com/prosaicpudding/RepeatAnalyzer/blob/main/Documentation/RA_fig7.png?raw=true "Another example illustrating mappingquery")
 
 *__Figure 7__ Shows a sample mapping query. When sequence is set to 'All' the map will show all results for the specified region. There is also an option to ignore items that appear at only a single location.*
 
-![An example illustrating the resuts of the query in Figure 7](Documentation\RA_fig8.png "An example illustrating the resuts of the query in Figure 7")
+![An example illustrating the resuts of the query in Figure 7](https://github.com/prosaicpudding/RepeatAnalyzer/blob/main/Documentation/RA_fig8.png?raw=true "An example illustrating the resuts of the query in Figure 7")
 
 *__Figure 8__ Shows a sample mapping result for the query in figure 7.*
 
@@ -146,7 +146,7 @@ __Input:__ The name of a file formatted as described in the Sample Input File Fo
 
 __Output:__ Any error in the input file will be noted. The main menu header will change as appropriate.
 
-![An example illustrating add new data](Documentation\RA_fig9.png "An example illustrating add new data")
+![An example illustrating add new data](https://github.com/prosaicpudding/RepeatAnalyzer/blob/main/Documentation/RA_fig9.png?raw=true "An example illustrating add new data")
 
 *__Figure 9__ Shows the sequence of commands to input new data for a species. The first command opens the data input menu. While the second allows the user to enter the name of the file where the data is stored. Note that if there are any errors which prevent the file from reading, the line number of the error will be shown. If any repeats are listed in strains, but never specified in the repeats section, the error shown above the third command will print, and that strain will be omitted, but the rest of the file will be read in correctly. Finally, the third command may either be entered 'y' if a stable internet connection is available, or anything else, if not. This step is required for certain program features to work correctly, and can be done later if it is skipped now (function 11).*
 
@@ -156,7 +156,7 @@ __Input:__ Region, selected from a dropdown menu and checkboxes for additional p
 
 __Output:__ A printout with all diversity scores, repeat frequencies, unique repeats and (if selected) appropriate plots.
 
-![An example illustrating regional diversity analysis](Documentation\RA_fig10.png "An example illustrating regional diversity analysis")
+![An example illustrating regional diversity analysis](https://github.com/prosaicpudding/RepeatAnalyzer/blob/main/Documentation/RA_fig10.png?raw=true "An example illustrating regional diversity analysis")
 
 *__Figure 10__ Shows the regional diversity analysis interface and a sample query. For regional diversity analysis, you can select the region of interest as well as whether or not to produce various plots (shown in Figure 11). The result has several sections including, how many genotypes each repeat in the region occurs in, a list of all repeats that occur nowhere outside the region, and a list of the various diversity scores as defined in Metric Formulas.*
 
@@ -175,7 +175,7 @@ __Output:__ A printout with all diversity scores, repeat frequencies, unique rep
 
 >__Note__ Length(Genotype) = the number of SSRs in in that genotype
 
-![An example illustrating regional diversity analysis plots](Documentation\RA_fig11.png "An example illustrating regional diversity analysis plots")
+![An example illustrating regional diversity analysis plots](https://github.com/prosaicpudding/RepeatAnalyzer/blob/main/Documentation/RA_fig11.png?raw=true "An example illustrating regional diversity analysis plots")
 
 *__Figure 11__ Shows the plots produced by the regional diversity analysis in Figure 10.*
 
@@ -185,7 +185,7 @@ __Input:__ The ID of the species to be removed (as shown on-screen)
 
 __Output:__ None
 
-![An example illustrating species removal](Documentation\RA_fig12.png "An example illustrating species removal")
+![An example illustrating species removal](https://github.com/prosaicpudding/RepeatAnalyzer/blob/main/Documentation/RA_fig12.png?raw=true "An example illustrating species removal")
 
 *__Figure 12__ Shows the series of commands to remove a species. The first command opens the species removal menu, while the second selects the number of the species to remove.*
 
@@ -195,7 +195,7 @@ __Input:__ The repeat sequence of the strain to remove.
 
 __Output:__ The main menu header will change as appropriate.
 
-![An example illustrating strain removal](Documentation\RA_fig13.png "An example illustrating strain removal")
+![An example illustrating strain removal](https://github.com/prosaicpudding/RepeatAnalyzer/blob/main/Documentation/RA_fig13.png?raw=true "An example illustrating strain removal")
 
 *__Figure 13__ Shows the series of commands to remove a strain. The first command opens the strain removal menu. The second command allows the user to enter the repeat sequence of the strain to be removed. Finally, the third command may either be entered 'y' if the correct strain was selected.*
 
@@ -207,7 +207,7 @@ __Output:__ None
 
 >__Note:__ This function will generate any names for newly input data where the genotype name was listed as year, animalID. There is no direct input or output. While typically this step is done when menu option 5 is run, it can only be completed after geocoding (which requires an internet connection) and so, it may optionally be skipped and run later, via this command.
 
-![An example illustrating strain auto naming](Documentation\RA_fig14.png "An example illustrating strain auto naming")
+![An example illustrating strain auto naming](https://github.com/prosaicpudding/RepeatAnalyzer/blob/main/Documentation/RA_fig14.png?raw=true "An example illustrating strain auto naming")
 
 *__Figure 14__ Shows the command to automatically generate species name for species input with the correct information.*
 
@@ -217,7 +217,7 @@ __Input:__ None
 
 __Output:__ A text printout with a summary of all data, and a spreadsheet with all repeats and their sequences for easy manipulation. These will be located in the same folder as RepeatAnalyzer.py.
 
-![An example illustrating data print](Documentation\RA_fig15.png "An example illustrating data print")
+![An example illustrating data print](https://github.com/prosaicpudding/RepeatAnalyzer/blob/main/Documentation/RA_fig15.png?raw=true "An example illustrating data print")
 
 *__Figure 15__ Shows the command to print a summary of all species data to an external file.*
 
@@ -227,7 +227,7 @@ __Input:__ None
 
 __Output:__ Formats the names of all locations to be uniform (so that USA, U. S. A., and United States all point to the same place) and gets the coordinates for locations that have none. This must be done at least once after adding data for mapping to function properly. Note: there is a y/n option to do this after adding new data as well. An internet connection is required.
 
-![An example illustrating ](Documentation\RA_fig16.png "")
+![An example illustrating geocoding](https://github.com/prosaicpudding/RepeatAnalyzer/blob/main/Documentation/RA_fig16.png?raw=true "An example illustratinggeocoding")
 
 *__Figure 16__ Shows the command to update geographic codings.*
 
