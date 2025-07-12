@@ -1,10 +1,54 @@
 import logging
+import os
 import re
+import sys
+from logging.handlers import RotatingFileHandler
 from typing import Union
 
 from geopy.geocoders import Nominatim
 
 from RepeatAnalyzer.constants import problem_place_names, version
+
+
+def get_working_directory() -> str:
+    """
+    Get the working directory of the script/exe.
+    This allows us to keep data files in the same directory as the script/exe.
+
+    Returns:
+        str: The working directory of the script/file.
+    """
+    if getattr(sys, 'frozen', False):
+        # Running as a PyInstaller bundle
+        return os.path.dirname(sys.executable)
+    else:
+        # Running as a script
+        return os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+
+# Create logger
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)  # Set logger to the lowest level of logging
+
+# File handler for logging DEBUG and above to file
+os.makedirs(os.path.join(get_working_directory(),"logs"), exist_ok=True)
+fh = RotatingFileHandler(
+        os.path.join(get_working_directory(),"logs", "repeatanalyzer.log"),
+        mode="w",
+        encoding="UTF-8",
+        maxBytes=2000000,
+        backupCount=10
+    )
+fh.setLevel(logging.DEBUG)
+log_formatter = logging.Formatter('%(asctime)s: %(levelname)8s: %(message)s')
+fh.setFormatter(log_formatter)
+logger.addHandler(fh)
+
+# Console handler for logging ERROR and above to console
+ch = logging.StreamHandler()
+ch.setLevel(logging.ERROR)
+console_formatter = logging.Formatter('%(levelname)s: %(message)s')
+ch.setFormatter(console_formatter)
+logger.addHandler(ch)
 
 
 # This function takes a given IDlist and returns the earliest unused ID,
@@ -79,7 +123,7 @@ def get_coords_from_location_name(location_name:Union[str,dict], verbose:bool=Tr
     location = geolocator.geocode(location_name, language='en', exactly_one=True)
 
     if location == None:
-        logging.info(f"Failed to find coordinates for {location_name}")
+        logger.info(f"Failed to find coordinates for {location_name}")
         return None, None
 
     return (location.latitude, location.longitude)
@@ -103,7 +147,7 @@ def get_location_name_from_coords(latitude:float, longitude:float, verbose:bool=
     # Accessing the raw JSON data
     address = location.raw['address']
     if verbose:
-        logging.info(f"Full result: {address}")
+        logger.info(f"Full result: {address}")
 
     # Constructing our standardized dictionary
     address_dict = {

@@ -18,9 +18,7 @@
 #    along with RepeatAnalyzer.  If not, see <http://www.gnu.org/licenses/>.
 
 
-import logging
 import os
-from logging.handlers import RotatingFileHandler
 
 import toml
 from matplotlib import pyplot as plt
@@ -30,40 +28,16 @@ from RepeatAnalyzer.RA_DataStructures import (Species, identifystrain,
                                               parserepeats)
 from RepeatAnalyzer.RA_Functions import (exportdata, exportEditDistanceCSV,
                                          exportRepeatCSV, generateAutonames,
-                                         get_working_directory, importdata,
-                                         readdatafromfile, updateGeocoding)
+                                         importdata, readdatafromfile,
+                                         updateGeocoding)
 from RepeatAnalyzer.RA_Interface import (createMap, deployWindow,
                                          getAllLocations, getGDLocation,
                                          printspeciesdata, sanitize,
                                          searchByLocation, searchByRepeat,
                                          searchByStrain, searchWindow)
+from RepeatAnalyzer.utils import logger
 
-# Create logger
-logger = logging.getLogger()
-logger.setLevel(logging.DEBUG)  # Set logger to the lowest level of logging
-
-# File handler for logging DEBUG and above to file
-os.makedirs(os.path.join(get_working_directory(),"logs"), exist_ok=True)
-fh = RotatingFileHandler(
-        os.path.join(get_working_directory(),"logs", "repeatanalyzer.log"),
-        mode="w",
-        encoding="UTF-8",
-        maxBytes=2000,
-        backupCount=10
-    )
-fh.setLevel(logging.DEBUG)
-log_formatter = logging.Formatter('%(asctime)s: %(levelname)8s: %(message)s')
-fh.setFormatter(log_formatter)
-logger.addHandler(fh)
-
-# Console handler for logging ERROR and above to console
-ch = logging.StreamHandler()
-ch.setLevel(logging.ERROR)
-console_formatter = logging.Formatter('%(levelname)s: %(message)s')
-ch.setFormatter(console_formatter)
-logger.addHandler(ch)
-
-logging.info("Starting RepeatAnalyzer...")
+logger.info("Starting RepeatAnalyzer...")
 
 def fancy_dendrogram(*args, **kwargs):
     max_d = kwargs.pop("max_d", None)
@@ -140,7 +114,7 @@ def menuloop(speciesList, currentSpecies):
     goAgain = True
     while goAgain == True:
         print(f"\nWelcome to RepeatAnalyzer {version}.")
-        logging.info(f"RepeatAnalyzer {version} started.")
+        logger.info(f"RepeatAnalyzer {version} started.")
         if speciesList != []:
             print(
                 "Currently working on", speciesList[currentSpecies].name + ":", end=" "
@@ -178,13 +152,13 @@ def menuloop(speciesList, currentSpecies):
         # align.extend([SeqRecord(Seq(repeat.sequence, generic_dna),id=listtostring(repeat.name,"; "))])
 
         if command == 1:  # Find strain from amino acid sequence
-            logging.debug("Identify repeats selected")
+            logger.debug("Identify repeats selected")
             # idprocess=multiprocessing.Process(target=deployWindow, args=(speciesList,currentSpecies))
             # idprocess.start()
             deployWindow(speciesList, currentSpecies)
 
         if command == 2:  # Change current Species
-            logging.debug("Change current species selected")
+            logger.debug("Change current species selected")
             i = 1
             print("0: Add a Species")
             for species in speciesList:
@@ -204,7 +178,7 @@ def menuloop(speciesList, currentSpecies):
                 currentSpecies = new
 
         if command == 3:  # Search by repeat, strain or location
-            logging.debug("Search data selected")
+            logger.debug("Search data selected")
             while goAgain == True:
                 print("\n What criteria would you like to search by?")
                 print("1: Search by repeat")
@@ -223,18 +197,18 @@ def menuloop(speciesList, currentSpecies):
                     goAgain = False
 
                 if command == 1:
-                    logging.debug("Search by repeat selected")
+                    logger.debug("Search by repeat selected")
                     searchByRepeat(speciesList[currentSpecies])
 
                     # raw_input("Press 'Enter' to continue")
 
                 if command == 2:
-                    logging.debug("Search by location selected")
+                    logger.debug("Search by location selected")
                     searchByLocation(speciesList[currentSpecies])
                     # raw_input("Press 'Enter' to continue")
 
                 if command == 3:
-                    logging.debug("Search by strain selected")
+                    logger.debug("Search by strain selected")
                     searchByStrain(speciesList[currentSpecies])
 
                     # raw_input("Press 'Enter' to continue")
@@ -243,11 +217,11 @@ def menuloop(speciesList, currentSpecies):
             continue
 
         if command == 4:  # Search for mapping
-            logging.debug("Map data selected")
+            logger.debug("Map data selected")
             searchWindow(speciesList[currentSpecies])
 
         if command == 10:  # Print summary
-            logging.debug("Print all species data selected")
+            logger.debug("Print all species data selected")
             with open(f"{get_working_directory()}/{speciesList[currentSpecies].name}.txt", "w", encoding="UTF-8") as out:
                 printspeciesdata(speciesList[currentSpecies], out)
 
@@ -257,14 +231,14 @@ def menuloop(speciesList, currentSpecies):
             )
 
         if command == 5:  # Read in data
-            logging.debug("Read data from file selected")
+            logger.debug("Read data from file selected")
             readdatafromfile(
                 str(input("Enter the name of the file where the values are stored: ")),
                 speciesList[currentSpecies],
             )
 
         if command == 6:  # calculate Genetic Diversity
-            logging.debug("Regional diversity analysis selected")
+            logger.debug("Regional diversity analysis selected")
             # find=raw_input("Please enter the name of the location in the form [country](, [state/province/region](, [county/town/city])): ")
             # if len(find.split(","))>3:
             # 	print "Error: too many commas in location. Remember to follow the format"
@@ -273,7 +247,7 @@ def menuloop(speciesList, currentSpecies):
             getGDLocation(speciesList[currentSpecies])
 
         if command == 7:  # Remove species
-            logging.debug("Remove a species selected")
+            logger.debug("Remove a species selected")
             i = 1
             for species in speciesList:
                 print(str(i) + ":", species.name)
@@ -296,7 +270,7 @@ def menuloop(speciesList, currentSpecies):
                     print("Deletion cancelled.")
 
         if command == 8:  # Remove strain
-            logging.debug("Remove a strain selected")
+            logger.debug("Remove a strain selected")
             i = 1
             d = str(
                 input(
@@ -322,18 +296,18 @@ def menuloop(speciesList, currentSpecies):
                     print("Deletion cancelled.")
 
         if command == 11:  # Update geocoding
-            logging.debug("Update geocoding selected")
+            logger.debug("Update geocoding selected")
             updateGeocoding(speciesList[currentSpecies], True)
 
         if command == 12:
-            logging.debug("Export edit distance CSV selected")
+            logger.debug("Export edit distance CSV selected")
             exportEditDistanceCSV(
                 speciesList[currentSpecies],
                 speciesList[currentSpecies].name + "EditDistances.csv",
             )
 
         if command == 9:
-            logging.debug("Generate strain names selected")
+            logger.debug("Generate strain names selected")
             generateAutonames(speciesList[currentSpecies])
 
         input("Press 'Enter' to continue")
@@ -358,7 +332,7 @@ def main():
     # 	print ""
 
     menuloop(speciesList, 0)
-    logging.info("Closing RepeatAnalyzer")
+    logger.info("Closing RepeatAnalyzer")
 
 
 if __name__ == "__main__":

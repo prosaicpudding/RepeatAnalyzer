@@ -1,6 +1,9 @@
 # Version History
 
 ## As of yet unversioned changes
+# 3.0.5
+- Bugfix for identifying strains
+- Extend log length
 
 ## 3.0.4
 - Added basic logging (logs/repeatanalyzer.log)
