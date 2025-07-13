@@ -35,7 +35,7 @@ fh = RotatingFileHandler(
         os.path.join(get_working_directory(),"logs", "repeatanalyzer.log"),
         mode="w",
         encoding="UTF-8",
-        maxBytes=200000,
+        maxBytes=2000000,
         backupCount=10
     )
 fh.setLevel(logging.DEBUG)
