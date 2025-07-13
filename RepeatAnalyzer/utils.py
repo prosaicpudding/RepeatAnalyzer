@@ -45,7 +45,7 @@ logger.addHandler(fh)
 
 # Console handler for logging ERROR and above to console
 ch = logging.StreamHandler()
-ch.setLevel(logging.ERROR)
+ch.setLevel(logging.INFO)
 console_formatter = logging.Formatter('%(levelname)s: %(message)s')
 ch.setFormatter(console_formatter)
 logger.addHandler(ch)
@@ -119,7 +119,7 @@ def get_coords_from_location_name(location_name:Union[str,dict], verbose:bool=Tr
         for key, value in location_name.items():
             location_name[key] = remove_punctuation_except_comma(replace_words(value))
 
-    geolocator = Nominatim(user_agent=f"RepeatAnalyzer_{version}", timeout=10)
+    geolocator = Nominatim(user_agent=f"RepeatAnalyzer_{version}", timeout=12)
     location = geolocator.geocode(location_name, language='en', exactly_one=True)
 
     if location == None:
@@ -139,7 +139,7 @@ def get_location_name_from_coords(latitude:float, longitude:float, verbose:bool=
         dict[str]: A dictionary containing the location name
             ex. {"country":"USA", "province":"Maine"}
     """
-    geolocator = Nominatim(user_agent=f"RepeatAnalyzer_{version}", timeout=10)
+    geolocator = Nominatim(user_agent=f"RepeatAnalyzer_{version}", timeout=12)
     location = geolocator.reverse((latitude, longitude), exactly_one=True, language='en')
     if location == None:
         return None

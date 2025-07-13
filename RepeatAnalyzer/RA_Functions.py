@@ -133,8 +133,11 @@ def updateGeocoding(species:Species, recodeStable:bool=False) -> None:
                 strain.location.remove(l)
         for l in strain.location:
             logger.info("Loading data...")
+            try:
+                l.code_coords()
+            except Exception as e:
+                logger.error(f"Error geocoding {l}, {e}")
 
-            l.code_coords()
             logger.info("wait...")
             time.sleep(.3)
 
