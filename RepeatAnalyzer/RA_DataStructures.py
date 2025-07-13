@@ -18,13 +18,12 @@
 #    along with RepeatAnalyzer.  If not, see <http://www.gnu.org/licenses/>.
 
 
-import logging
 import tkinter.messagebox
 # from Tkinter import *
 from tkinter.scrolledtext import *
 
 from RepeatAnalyzer.utils import (findID, get_coords_from_location_name,
-                                  get_location_name_from_coords, newID,
+                                  get_location_name_from_coords, logger, newID,
                                   sanitize)
 
 
@@ -338,21 +337,21 @@ class Location:
         return length
 
     def code_coords(self) -> None:
-        logging.info(f"Coding coords for {self.__repr__()}...")
+        logger.info(f"Coding coords for {self.__repr__()}...")
         levels = 3
         if self.latitude is None or self.longitude is None:
             levels = len(self) # Make sure we know if
             self.latitude, self.longitude = get_coords_from_location_name(self.getString(country_first=False))
 
         location_dict = get_location_name_from_coords(self.latitude, self.longitude)
-        logging.info(f"Got {location_dict}")
+        logger.info(f"Got {location_dict}")
         self.country = location_dict["country"]
         if levels >= 2:
             self.province = location_dict["province"]
         if levels >= 3:
             self.city = location_dict["city"]
 
-        logging.info(f"Coded as {self.__repr__()}")
+        logger.info(f"Coded as {self.__repr__()}")
 
 # takes a string of whitespace separated repeats and returns a list of repeat ids
 def parserepeats(string, species):  # returns an array of IDs

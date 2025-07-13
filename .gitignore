@@ -32,6 +32,8 @@ MANIFEST
 *.manifest
 build/*
 dist/*
+logs/*
+*.dat*
 
 # Installer logs
 pip-log.txt

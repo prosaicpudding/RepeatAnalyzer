@@ -33,11 +33,12 @@ from scipy import stats
 
 from RepeatAnalyzer.RA_DataStructures import (Location, Paper, Species,
                                               identifystrain, parserepeats)
-from RepeatAnalyzer.utils import findID, sanitize
+from RepeatAnalyzer.utils import (findID, get_working_directory, logger,
+                                  sanitize)
 
 
 def importdata():
-    print("Importing Data...")
+    logger.info("Importing Data...")
     pickle_path = f"{get_working_directory()}/RepeatAnalyzer.dat"
     if os.path.isfile(pickle_path):
         with open(pickle_path, "rb") as data:
@@ -118,30 +119,33 @@ def generateAutonames(species):
             strain.name.remove("")
 
 
-def updateGeocoding(species, recodeStable=False):
+def updateGeocoding(species:Species, recodeStable:bool=False) -> None:
     for ID in species.usedStrainIDs:
         strain = getObjectbyID(ID, species.strains)
         if strain == None:
             continue
         for l in list(strain.location):
-            print(l.getString(coords=True))
+            logger.info(l.getString(coords=True))
             if (l.country == None or l.country == "") and (
                 (l.latitude == None) or (l.longitude == None)
             ):
-                print("Removing blank location")
+                logger.info("Removing blank location")
                 strain.location.remove(l)
         for l in strain.location:
-            print("Loading data...")
+            logger.info("Loading data...")
+            try:
+                l.code_coords()
+            except Exception as e:
+                logger.error(f"Error geocoding {l}, {e}")
 
-            l.code_coords()
-            print("wait...")
+            logger.info("wait...")
             time.sleep(.3)
 
         strain.location = list(set(strain.location))
 
 
 # returns a list as a string with sep separators.
-def listtostring(list, sep):
+def listtostring(list:list, sep:str) -> str:
     string = ""
     if len(list) > 0:
         string += list[0]  # .decode('utf-8')
@@ -427,15 +431,15 @@ def printresult(repeats, species, tabs=""):
                 "\n"
                 + tabs
                 + "\t"
-                + p.line1.decode("utf-8")
+                + p.line1
                 + "\n"
                 + tabs
                 + "\t\t"
-                + p.line2.decode("utf-8")
+                + p.line2
                 + "\n"
                 + tabs
                 + "\t\t"
-                + p.line3.decode("utf-8")
+                + p.line3
             )
 
     res += (
@@ -447,20 +451,6 @@ def printresult(repeats, species, tabs=""):
 
     return res
 
-def get_working_directory() -> str:
-    """
-    Get the working directory of the script/exe.
-    This allows us to keep data files in the same directory as the script/exe.
-
-    Returns:
-        str: The working directory of the script/file.
-    """
-    if getattr(sys, 'frozen', False):
-        # Running as a PyInstaller bundle
-        return os.path.dirname(sys.executable)
-    else:
-        # Running as a script
-        return os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
 def readdatafromfile(file, species):
     if "." not in file:
@@ -849,7 +839,7 @@ def exportEditDistanceCSV(species, file):
     d = [[0 for x in range(len(species.repeats))] for x in range(len(species.repeats))]
 
     with open(f"{get_working_directory()}/{file}", "w") as csv:
-        csv.write("\ufeff".encode("utf-8"))
+        csv.write("\ufeff")
         csv.write(firstline + "\n")
         for ind, repeat in enumerate(species.repeats):
             csv.write(listtostring(repeat.name, ";") + ",")
