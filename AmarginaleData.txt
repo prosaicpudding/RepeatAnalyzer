@@ -1089,43 +1089,43 @@ High genetic diversity of Anaplasma marginale detected from Philippine cattle.
 		:	Ph13 4 4	:	Philippines, Calabarzon, Cavite
 		:	Ph16 Ph17 MGl10	:	Philippines, Calabarzon, Cavite
 		:	Ph15 62	:	Philippines, Calabarzon, Cavite
-		:	13 13 14 14 13 14 14	:	Philippines, Central Visayas, Cebu
-		:	Ph4 17 Ph5 Ph6 Ph5 Ph7	:	Philippines, Central Visayas, Cebu
-		:	13 13 13 14 14	:	Philippines, Central Visayas, Cebu
-		:	Ph12 M Ph12 M M	:	Philippines, Central Visayas, Cebu
-		:	Ph21 62 62 61 61	:	Philippines, Central Visayas, Cebu
-		:	13 13 13 MGl10	:	Philippines, Central Visayas, Cebu
-		:	Ph9 Is1 Is1 Ph10	:	Philippines, Central Visayas, Cebu
-		:	13 14 14	:	Philippines, Central Visayas, Cebu
-		:	13 27 14	:	Philippines, Central Visayas, Cebu
-		:	13 27 27	:	Philippines, Central Visayas, Cebu
-		:	21 M M	:	Philippines, Central Visayas, Cebu
-		:	46 Ph20 46	:	Philippines, Central Visayas, Cebu
-		:	13 27	:	Philippines, Central Visayas, Cebu
-		:	13 MGl10	:	Philippines, Central Visayas, Cebu
-		:	46 46	:	Philippines, Central Visayas, Cebu
-		:	46 F	:	Philippines, Central Visayas, Cebu
-		:	14	:	Philippines, Central Visayas, Cebu
-		:	17	:	Philippines, Central Visayas, Cebu
-		:	Me1	:	Philippines, Central Visayas, Cebu
-		:	Ph8	:	Philippines, Central Visayas, Cebu
-		:	13	:	Philippines, Central Visayas, Cebu
-		:	Ph4 17 Ph5 Ph7 Ph5 Ph7	:	Philippines, Western Visayas, Iloilo
-		:	Ph12 M 3 3 M	:	Philippines, Western Visayas, Iloilo
-		:	Ph4 17 Ph5 Ph5 Ph7	:	Philippines, Western Visayas, Iloilo
-		:	Me1 4 4 4	:	Philippines, Western Visayas, Iloilo
-		:	Ph16 Ph17 MGl10	:	Philippines, Western Visayas, Iloilo
-		:	Ph19 M F	:	Philippines, Western Visayas, Iloilo
-		:	13 27 13 14	:	Philippines, Western Visayas, Iloilo
-		:	Me1 4 M M 4 4	:	Philippines, Western Visayas, Negros Occidental
-		:	Ph21 62 61 62 61 62	:	Philippines, Western Visayas, Negros Occidental
-		:	Me1 4 M M 4	:	Philippines, Western Visayas, Negros Occidental
-		:	Ph2 Is1 Is1 Is1	:	Philippines, Western Visayas, Negros Occidental
-		:	Ph18 MGl10	:	Philippines, Western Visayas, Negros Occidental
-		:	Ph3	:	Philippines, Western Visayas, Negros Occidental
-		:	13 14	:	Philippines, Western Visayas, Negros Occidental
-		:	Ph4 17 Ph5  Ph7 Ph5 Ph7	:	Philippines, Central Visayas, Negros Oriental
-		:	13 27	: Philippines, Central Visayas, Negros Oriental
+		:	13 13 14 14 13 14 14	:	Philippines, Cebu
+		:	Ph4 17 Ph5 Ph6 Ph5 Ph7	:	Philippines, Cebu
+		:	13 13 13 14 14	:	Philippines, Cebu
+		:	Ph12 M Ph12 M M	:	Philippines, Cebu
+		:	Ph21 62 62 61 61	:	Philippines, Cebu
+		:	13 13 13 MGl10	:	Philippines, Cebu
+		:	Ph9 Is1 Is1 Ph10	:	Philippines, Cebu
+		:	13 14 14	:	Philippines, Cebu
+		:	13 27 14	:	Philippines, Cebu
+		:	13 27 27	:	Philippines, Cebu
+		:	21 M M	:	Philippines, Cebu
+		:	46 Ph20 46	:	Philippines, Cebu
+		:	13 27	:	Philippines, Cebu
+		:	13 MGl10	:	Philippines, Cebu
+		:	46 46	:	Philippines, Cebu
+		:	46 F	:	Philippines, Cebu
+		:	14	:	Philippines, Cebu
+		:	17	:	Philippines, Cebu
+		:	Me1	:	Philippines, Cebu
+		:	Ph8	:	Philippines, Cebu
+		:	13	:	Philippines, Cebu
+		:	Ph4 17 Ph5 Ph7 Ph5 Ph7	:	Philippines, Iloilo
+		:	Ph12 M 3 3 M	:	Philippines, Iloilo
+		:	Ph4 17 Ph5 Ph5 Ph7	:	Philippines, Iloilo
+		:	Me1 4 4 4	:	Philippines, Iloilo
+		:	Ph16 Ph17 MGl10	:	Philippines, Iloilo
+		:	Ph19 M F	:	Philippines, Iloilo
+		:	13 27 13 14	:	Philippines, Iloilo
+		:	Me1 4 M M 4 4	:	Philippines, Negros Occidental
+		:	Ph21 62 61 62 61 62	:	Philippines, Negros Occidental
+		:	Me1 4 M M 4	:	Philippines, Negros Occidental
+		:	Ph2 Is1 Is1 Is1	:	Philippines, Negros Occidental
+		:	Ph18 MGl10	:	Philippines, Negros Occidental
+		:	Ph3	:	Philippines, Negros Occidental
+		:	13 14	:	Philippines, Negros Occidental
+		:	Ph4 17 Ph5  Ph7 Ph5 Ph7	:	Philippines, Negros Oriental
+		:	13 27	: Philippines, Negros Oriental
 
 Paper:
 Infection of water buffalo in Rio de Janeiro Brazil with Anaplasma marginale strains also reported in cattle.
